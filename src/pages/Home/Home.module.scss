@@ -1,0 +1,26 @@
+.intro {
+    height: 500px;
+}
+
+.timer {
+    display: grid;
+    height: 150px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.text {
+    background-color: #0F1B1B;
+    padding-top: 25px;
+    padding-left: 50px;
+
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 3px;
+    color: #F4FFFF;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+}
+
+.time {
+    background-color: #0F7184;
+}

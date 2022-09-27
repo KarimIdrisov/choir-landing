@@ -3,6 +3,7 @@ import {useTranslation} from "react-i18next";
 
 import Logo from '../../assets/icons/logo.svg';
 import styles from './Header.module.scss';
+import { Link } from "react-router-dom";
 
 export const Header = () => {
 
@@ -10,9 +11,42 @@ export const Header = () => {
 
     const menu = [
         {
-            name: ''
+            name: 'УСЛОВИЯ УЧАСТИЯ',
+            link: '/rules'
+        },
+        {
+            name: 'ПРОГРАММЫ',
+            link: '/programms'
+        },
+        {
+            name: 'УЧАСТНИКИ',
+            link: '/participants'
+        },
+        {
+            name: 'ЖЮРИ',
+            link: '/jury'
+        },
+        {
+            name: 'МЕСТА ПРОВЕДЕНИЯ',
+            link: '/venues'
+        },
+        {
+            name: 'НОВОСТИ',
+            link: '/news'
+        },
+        {
+            name: 'ФОТО',
+            link: '/photos'
+        },
+        {
+            name: 'ВИДЕО',
+            link: '/videos'
+        },
+        {
+            name: 'РЕЗУЛЬТАТЫ',
+            link: '/results'
         }
-    ]
+    ];
 
     return (
         <header className={styles.header}>
@@ -23,6 +57,19 @@ export const Header = () => {
                 </span>
             </div>
 
+            <menu>
+                <ul className={styles.menu}>
+                    {
+                        menu.map(( menuItem ) => (
+                            <li key={menuItem.link} className={styles.menuItem}>
+                                <Link to={menuItem.link}>
+                                    {menuItem.name}
+                                </Link>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </menu>
         </header>
     )
 };
