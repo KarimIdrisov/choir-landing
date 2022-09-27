@@ -1,0 +1,21 @@
+.header {
+  padding: 25px 0 20px 25px;
+  display: flex;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.logoText {
+  white-space: pre-line;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight:  700;
+  font-family: 'PT Sans', sans-serif;
+}
