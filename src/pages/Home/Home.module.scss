@@ -1,11 +1,61 @@
 .introSection {
-    height: 720px;
+    padding-top: 130px;
+    height: calc(100vh - 130px);
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr 150px;
 }
 
 .intro {
-    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    background-image: url('../../assets/images/vladivostok.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: #002024;
+}
+
+.introTitle {
+    text-align: center;
+    font-family: 'Rodchenko';
+    font-size: 105px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.date {
+    color: #77E9D7;
+    letter-spacing: 5px;
+    font-size: 42px;
+}
+
+.vk {
+    position: absolute;
+    right: 150px;
+    top: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+cursor: pointer;
+}
+
+.youtube {
+    position: absolute;
+    right: 50px;
+    top: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+cursor: pointer;
+}
+
+.choirLogo {
+    margin-bottom: 25px;
 }
 
 .rules {

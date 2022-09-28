@@ -11,6 +11,10 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 import {MapRU} from "../../components/Map/MapRu";
+import choirLogo from '../../assets/images/choirLogo.png';
+import vkLogo from '../../assets/icons/vk-logo.svg';
+import youtubeLogo from '../../assets/icons/youtube.svg';
+
 
 // TODO: connect i18n
 const Home = () => {
@@ -29,7 +33,23 @@ const Home = () => {
         <div>
             <div className={styles.introSection}>
                 <div className={styles.intro}>
+                    <img 
+                        className={styles.choirLogo}
+                        src={choirLogo} 
+                        alt='хоровая олимпиады'
+                        width={253}
+                        height={105}
+                    />
+                    <span className={styles.introTitle}>
+                        ДАЛЬНЕВОСТОЧНАЯ <br/>
+                        ХОРОВАЯ ОЛИМПИАДА
+                    </span>
+                    <span className={styles.date}>
+                        25 - 29 октября | г. Владивосток
+                    </span>
 
+                    <img className={styles.vk} src={vkLogo} alt="Группа олимпиады во вконтакте" width={84} height={84} />
+                    <img className={styles.youtube} src={youtubeLogo} alt='Канал олимпиады на ютубе' width={84} height={84} />
                 </div>
                 <div className={styles.timer}>
                     <div className={styles.text}>
@@ -114,7 +134,7 @@ const Home = () => {
                     <img alt='календарь' />
 
                     <div className={styles.downloadProgram}>
-                        <img alt='pgd logo' />
+                        <img alt='pdf' />
                         СКАЧАТЬ ПРОГРАММУ
                     </div>
                 </div>
@@ -124,31 +144,31 @@ const Home = () => {
             </div>
             <div className={styles.jury}>
                 <div className={styles.juryItem}>
-                    <img alt='photo' />
+                    <img alt='jury' />
                     <span className={styles.juryName}>
                         СЕРГЕЙ <br/> ЕКИМОВ
                     </span>
                 </div>
                 <div className={styles.juryItem}>
-                    <img alt='photo' />
+                    <img alt='jury' />
                     <span className={styles.juryName}>
                         АЛЕКСАНДР <br/> СОЛОВЬЕВ
                     </span>
                 </div>
                 <div className={styles.juryItem}>
-                    <img alt='photo' />
+                    <img alt='jury' />
                     <span className={styles.juryName}>
                         НАТАЛЬЯ <br/> БРЫЗЖИНА
                     </span>
                 </div>
                 <div className={styles.juryItem}>
-                    <img alt='photo' />
+                    <img alt='jury' />
                     <span className={styles.juryName}>
                         ВЛАДИМЕР <br/> СИНЕНКО
                     </span>
                 </div>
                 <div className={styles.juryItem}>
-                    <img alt='photo' />
+                    <img alt='jury' />
                     <span className={styles.juryName}>
                         ЛАРИСА <br/> ШВЕЙКОВСКАЯ
                     </span>
