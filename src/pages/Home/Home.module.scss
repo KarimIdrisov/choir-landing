@@ -1,5 +1,17 @@
+.introSection {
+    height: 720px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
 .intro {
     height: 500px;
+}
+
+.rules {
+    padding: 0 50px;
+    background-color: #B4FEEA;
+    padding-bottom: 35px;
 }
 
 .timer {
@@ -23,4 +35,10 @@
 
 .time {
     background-color: #0F7184;
+}
+
+.verticalTabs {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 50px;
 }
