@@ -154,6 +154,18 @@ const Home = () => {
                     </span>
                 </div>
             </div>
+            <div className={styles.venues} >
+
+            </div>
+            <div className={styles.news} >
+
+            </div>
+            <div className={styles.photos} >
+
+            </div>
+            <div className={styles.results} >
+
+            </div>
         </div>
     )
 };
