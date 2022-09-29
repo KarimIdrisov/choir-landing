@@ -228,3 +228,18 @@ cursor: pointer;
     margin-bottom: 20px;
     color: #223030;
 }
+
+.newsTitle {
+    height: 125px;
+    background-color: #107C91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 80px;
+    color: #F5F8FE;
+}
+
+.newsSwiper {
+    height: 550px;
+}
