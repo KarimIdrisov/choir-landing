@@ -1,10 +1,12 @@
 
 .accordion {
   max-width: 1100px;
-
+width: 100%;
 }
 .accordion__item {
   margin-bottom: 25px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .accordion__button {
@@ -20,12 +22,13 @@
 .accordion__button:before {
   display: inline-block;
   content: '';
-  height: 10px;
-  width: 10px;
+  height: 18px;
+  width: 18px;
   margin-right: 12px;
   border-bottom: 2px solid currentColor;
   border-right: 2px solid currentColor;
   transform: rotate(-45deg);
+  transition: all 0.3s ease-in;
 }
 
 .accordion__button[aria-expanded='true']::before,

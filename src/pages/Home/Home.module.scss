@@ -58,10 +58,43 @@ cursor: pointer;
     margin-bottom: 25px;
 }
 
+.about {
+    text-align: center;
+    padding-top: 25px;
+    height: 400px;
+    background-image: url('../../assets/images/about.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutTitle {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 42px;
+    color: #4A2D05;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.aboutDescription {
+    font-size: 32px;
+    color: #452B00;
+}
+
 .rules {
-    padding: 0 50px;
     background-color: #B4FEEA;
-    padding-bottom: 35px;
+    padding: 25px 50px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rulesTitle {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 42px;
+    color: #303332;
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .timer {
@@ -91,4 +124,107 @@ cursor: pointer;
     display: grid;
     grid-template-rows: 1fr;
     gap: 50px;
+}
+
+.program {
+    height: 560px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.programTitle {
+    background-color: #B0E2FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 80px;
+    line-height: 130px;
+    color: #328590;
+    text-align: center;
+}
+
+.programLink {
+    padding-top: 20px;
+    background-color: #1E3745;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.downloadProgram {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.jury {
+    background-color: #F5FEFE;
+    padding-top: 25px;
+}
+
+.juryTitle {
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #223030;
+}
+
+.juryList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+.juryItem {
+    height: 520px;
+    display: grid;
+    grid-template-rows: 1fr 150px;
+
+}
+
+.juryName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.juryItem:nth-child(2n + 1) {
+    background-color: #3D94A0;
+    .juryName {
+        color: white;
+    }
+}
+
+.juryItem:nth-child(2n) {
+    background-color: #A6ECF2;
+    .juryName {
+        color: #327379;
+    }
+}
+
+.venues {
+    background-color: #F5FEFE;
+    padding: 0 25px 20px;
+}
+
+.venuesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.venuesTitle {
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: #223030;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import {withLayout} from "../../layout/Layout";
 
 import styles from './Home.module.scss';
@@ -14,18 +14,20 @@ import {MapRU} from "../../components/Map/MapRu";
 import choirLogo from '../../assets/images/choirLogo.png';
 import vkLogo from '../../assets/icons/vk-logo.svg';
 import youtubeLogo from '../../assets/icons/youtube.svg';
+import pdfLogo from '../../assets/icons/pdf.svg';
+import {VenueCard} from "../../components/VenueCard/VenueCard";
 
 
 // TODO: connect i18n
 const Home = () => {
 
     const [time, setTime] = useState(+new Date(2022, 10, 25) - +new Date())
-    
+
     useEffect(() => {
         const interval = setInterval(() => {
-          setTime(+new Date(2022, 10, 25) - +new Date());
+            setTime(+new Date(2022, 10, 25) - +new Date());
         }, 1000);
-    
+
         return () => clearInterval(interval);
     }, []);
 
@@ -33,9 +35,9 @@ const Home = () => {
         <div>
             <div className={styles.introSection}>
                 <div className={styles.intro}>
-                    <img 
+                    <img
                         className={styles.choirLogo}
-                        src={choirLogo} 
+                        src={choirLogo}
                         alt='хоровая олимпиады'
                         width={253}
                         height={105}
@@ -48,8 +50,9 @@ const Home = () => {
                         25 - 29 октября | г. Владивосток
                     </span>
 
-                    <img className={styles.vk} src={vkLogo} alt="Группа олимпиады во вконтакте" width={84} height={84} />
-                    <img className={styles.youtube} src={youtubeLogo} alt='Канал олимпиады на ютубе' width={84} height={84} />
+                    <img className={styles.vk} src={vkLogo} alt="Группа олимпиады во вконтакте" width={84} height={84}/>
+                    <img className={styles.youtube} src={youtubeLogo} alt='Канал олимпиады на ютубе' width={84}
+                         height={84}/>
                 </div>
                 <div className={styles.timer}>
                     <div className={styles.text}>
@@ -57,18 +60,18 @@ const Home = () => {
                         ОСТАЛОСЬ
                     </div>
                     <div className={styles.time}>
-                        <Timer time={time} />
+                        <Timer time={time}/>
                     </div>
                 </div>
             </div>
             <div className={styles.about}>
-                <span className={styles.title}>
+                <span className={styles.aboutTitle}>
                     ПЕРВАЯ ХОРОВАЯ ОЛИМПИАДА НА ДАЛЬНЕМ ВОСТОКЕ
                 </span>
 
-                <span className={styles.description}>
+                <span className={styles.aboutDescription}>
                     Первая Дальневосточная хоровая олимпиада обещает стать <br/>
-                    крупнейшим событием в хоровой жизни Дальнего Востока. <br />
+                    крупнейшим событием в хоровой жизни Дальнего Востока. <br/>
                     Мы вместе можем принять участие в формировании нового <br/>
                     фестиваля, найти новых друзей среди участников хоров со всей <br/>
                     страны, сделать хоровую музыку ближе и понятнее для зрителей, <br/>
@@ -76,7 +79,7 @@ const Home = () => {
                 </span>
             </div>
             <div className={styles.rules}>
-                <span className={styles.title}>
+                <span className={styles.rulesTitle}>
                     УСЛОВИЯ УЧАСТИЯ
                 </span>
 
@@ -128,62 +131,79 @@ const Home = () => {
             </div>
             <div className={styles.program}>
                 <div className={styles.programTitle}>
-                    ПРОГРАММА МЕРОПРИЯТИЯ
+                    ПРОГРАММА <br/> МЕРОПРИЯТИЯ
                 </div>
                 <div className={styles.programLink}>
-                    <img alt='календарь' />
+                    <img alt='календарь'/>
 
                     <div className={styles.downloadProgram}>
-                        <img alt='pdf' />
+                        <img alt='pdf' src={pdfLogo} width={80} height={100}/>
                         СКАЧАТЬ ПРОГРАММУ
                     </div>
                 </div>
             </div>
             <div className={styles.partitcipants}>
-                <MapRU />
+                <MapRU/>
             </div>
             <div className={styles.jury}>
-                <div className={styles.juryItem}>
-                    <img alt='jury' />
-                    <span className={styles.juryName}>
-                        СЕРГЕЙ <br/> ЕКИМОВ
-                    </span>
+                <div className={styles.juryTitle}>
+                    ЖЮРИ
                 </div>
-                <div className={styles.juryItem}>
-                    <img alt='jury' />
-                    <span className={styles.juryName}>
+
+                <div className={styles.juryList}>
+                    <div className={styles.juryItem}>
+                        <img alt='jury'/>
+                        <span className={styles.juryName}>
+                            СЕРГЕЙ <br/> ЕКИМОВ
+                        </span>
+                    </div>
+                    <div className={styles.juryItem}>
+                        <img alt='jury'/>
+                        <span className={styles.juryName}>
                         АЛЕКСАНДР <br/> СОЛОВЬЕВ
                     </span>
-                </div>
-                <div className={styles.juryItem}>
-                    <img alt='jury' />
-                    <span className={styles.juryName}>
+                    </div>
+                    <div className={styles.juryItem}>
+                        <img alt='jury'/>
+                        <span className={styles.juryName}>
                         НАТАЛЬЯ <br/> БРЫЗЖИНА
                     </span>
-                </div>
-                <div className={styles.juryItem}>
-                    <img alt='jury' />
-                    <span className={styles.juryName}>
+                    </div>
+                    <div className={styles.juryItem}>
+                        <img alt='jury'/>
+                        <span className={styles.juryName}>
                         ВЛАДИМЕР <br/> СИНЕНКО
                     </span>
-                </div>
-                <div className={styles.juryItem}>
-                    <img alt='jury' />
-                    <span className={styles.juryName}>
+                    </div>
+                    <div className={styles.juryItem}>
+                        <img alt='jury'/>
+                        <span className={styles.juryName}>
                         ЛАРИСА <br/> ШВЕЙКОВСКАЯ
                     </span>
+                    </div>
                 </div>
             </div>
-            <div className={styles.venues} >
+            <div className={styles.venues}>
+                <div className={styles.venuesTitle}>
+                    МЕСТА ПРОВЕДЕНИЯ
+                </div>
+
+                <div className={styles.venuesList}>
+                    <VenueCard img={undefined} place='Концертный зал <br/> "Синий" ДВФУ' />
+                    <VenueCard img={undefined} place='Концертный зал <br/> "Синий" ДВФУ' />
+                    <VenueCard img={undefined} place='Концертный зал <br/> "Синий" ДВФУ' />
+                    <VenueCard img={undefined} place='Концертный зал <br/> "Синий" ДВФУ' />
+                    <VenueCard img={undefined} place='Концертный зал <br/> "Синий" ДВФУ' />
+                    <VenueCard img={undefined} place='Концертный зал <br/> "Синий" ДВФУ' />
+                </div>
+            </div>
+            <div className={styles.news}>
 
             </div>
-            <div className={styles.news} >
+            <div className={styles.photos}>
 
             </div>
-            <div className={styles.photos} >
-
-            </div>
-            <div className={styles.results} >
+            <div className={styles.results}>
 
             </div>
         </div>
