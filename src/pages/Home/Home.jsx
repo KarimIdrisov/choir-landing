@@ -142,8 +142,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={styles.partitcipants}>
+      <div className={styles.participants}>
         <MapRU />
+        <div className={styles.participantsCount}>
+          <span className={styles.count}>
+            30
+          </span>
+          УЧАСТНИКОВ
+        </div>
       </div>
       <div className={styles.jury}>
         <div className={styles.juryTitle}>ЖЮРИ</div>
@@ -218,11 +224,8 @@ const Home = () => {
         slidesPerView={3}
         spaceBetween={30}
         freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
         navigation={true}
-        modules={[FreeMode, Pagination, Navigation]}
+        modules={[FreeMode, Navigation]}
         className={styles.newsSwiper}
       >
         <SwiperSlide>Slide 1</SwiperSlide>
@@ -236,8 +239,40 @@ const Home = () => {
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
       </div>
-      <div className={styles.photos}></div>
-      <div className={styles.results}></div>
+      <div className={styles.photos}>
+        <div className={styles.newsTitle}>ФОТО</div>
+
+        <div className={styles.photoMain}>
+          <div className={styles.photoMainTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>
+        </div>
+
+        <div className={styles.photosAlbums}>
+          <div className={styles.album}>
+
+          </div>
+          <div className={styles.album}>
+
+          </div>
+          <div className={styles.album}>
+
+          </div>
+          <div className={styles.album}>
+
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className={styles.resultsTitle}>
+            РЕЗУЛЬТАТЫ
+        </div>
+
+        <div className={styles.results}>
+          <div className={styles.downloadResult}>
+            <img alt="pdf" src={pdfLogo} width={100} height={125} />
+            Скачать программу
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

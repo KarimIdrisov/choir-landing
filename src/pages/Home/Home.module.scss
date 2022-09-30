@@ -160,6 +160,30 @@ cursor: pointer;
     cursor: pointer;
 }
 
+.participants {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 250px;
+    svg {
+        max-height: 900px;
+        width: 100%;
+    }
+}
+
+.participantsCount {
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+    color: #33838F;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 80px;
+}
+
+.count {
+    font-size: 120px;
+}
+
 .jury {
     background-color: #F5FEFE;
     padding-top: 25px;
@@ -242,4 +266,68 @@ cursor: pointer;
 
 .newsSwiper {
     height: 550px;
+}
+
+.photos {
+    background-color: #FEFEFE;
+}
+
+.photoMain {
+    position: relative;
+    margin: 15px 25px;
+    height: 325px;
+    border-radius: 24px;
+    background-color: #4EDCCC;
+}
+
+.photoMainTitle {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: black;
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.photosAlbums {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 15px 25px;
+}
+
+.album {
+    border-radius: 24px;
+    background-color: #4EDCCC;
+    height: 230px;
+}
+
+.resultsTitle {
+    height: 100px;
+    background-color: #4EDCCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 80px;
+    color: #1A2F2F;
+}
+
+.results {
+    height: 372px;
+    background-color: #C6FFF0;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.downloadResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
 }
