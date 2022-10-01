@@ -1,6 +1,6 @@
 .header {
   width: calc(100vw - 60px);
-  height: 80px;
+  height: 70px;
   position: fixed;
   padding: 25px;
   display: grid;
@@ -35,10 +35,9 @@
 
 .menuItem {
 
-  background-color: #9EE1EA;
   padding: 6px;
   border-radius: 18px;
-  width: 130px;
+  min-width: 60px;
   height: 24px;
 transition: all 0.3s ease;
   
@@ -51,8 +50,8 @@ transition: all 0.3s ease;
     height: 100%;
     text-decoration: none;
     color: #3C8284;
-    font-size: 12px;
-    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
     transition: all 0.3s ease;
   }
 

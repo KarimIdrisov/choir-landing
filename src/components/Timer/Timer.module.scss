@@ -1,9 +1,10 @@
 .timer {
     justify-content: center;
-    padding-left: 150px;
+    padding-left: 180px;
     color: #E8EDE9;
-    display: flex;
-    gap: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
 
     > div {
         width: 70px;
