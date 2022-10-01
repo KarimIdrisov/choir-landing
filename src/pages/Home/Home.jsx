@@ -39,8 +39,8 @@ const Home = () => {
             className={styles.choirLogo}
             src={choirLogo}
             alt="хоровая олимпиады"
-            width={253}
-            height={105}
+            width={260}
+            height={120}
           />
           <span className={styles.introTitle}>
             ДАЛЬНЕВОСТОЧНАЯ <br />
@@ -79,15 +79,15 @@ const Home = () => {
         </span>
 
         <span className={styles.aboutDescription}>
-          Первая Дальневосточная хоровая олимпиада обещает стать <br />
-          крупнейшим событием в хоровой жизни Дальнего Востока. <br />
-          Мы вместе можем принять участие в формировании нового <br />
-          фестиваля, найти новых друзей среди участников хоров со всей <br />
-          страны, сделать хоровую музыку ближе и понятнее для зрителей, <br />
+          Первая Дальневосточная хоровая олимпиада обещает стать
+          крупнейшим событием в хоровой жизни Дальнего Востока. 
+          Мы вместе можем принять участие в формировании нового 
+          фестиваля, найти новых друзей среди участников хоров со всей 
+          страны, сделать хоровую музыку ближе и понятнее для зрителей, 
           получить массу, ярких впечатлений и открыть для себя что-то новое!
         </span>
       </div>
-      <div className={styles.rules}>
+      <div className={styles.rules} id='rules'>
         <span className={styles.rulesTitle}>УСЛОВИЯ УЧАСТИЯ</span>
 
         <Accordion allowZeroExpanded>
@@ -129,7 +129,7 @@ const Home = () => {
           </AccordionItem>
         </Accordion>
       </div>
-      <div className={styles.program}>
+      <div className={styles.program} id='program'>
         <div className={styles.programTitle}>
           ПРОГРАММА <br /> МЕРОПРИЯТИЯ
         </div>
@@ -142,7 +142,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={styles.participants}>
+      <div className={styles.participants} id='participants'>
         <MapRU />
         <div className={styles.participantsCount}>
           <span className={styles.count}>
@@ -151,7 +151,7 @@ const Home = () => {
           УЧАСТНИКОВ
         </div>
       </div>
-      <div className={styles.jury}>
+      <div className={styles.jury} id='jury'>
         <div className={styles.juryTitle}>ЖЮРИ</div>
 
         <div className={styles.juryList}>
@@ -187,7 +187,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={styles.venues}>
+      <div className={styles.venues} id='venues'>
         <div className={styles.venuesTitle}>МЕСТА ПРОВЕДЕНИЯ</div>
 
         <div className={styles.venuesList}>
@@ -217,7 +217,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className={styles.news}>
+      <div className={styles.news} id='news'>
         <div className={styles.newsTitle}>НОВОСТИ</div>
 
         <Swiper
@@ -239,7 +239,7 @@ const Home = () => {
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
       </div>
-      <div className={styles.photos}>
+      <div className={styles.photos} id='photos'>
         <div className={styles.newsTitle}>ФОТО</div>
 
         <div className={styles.photoMain}>
@@ -261,7 +261,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div id='results'>
         <div className={styles.resultsTitle}>
             РЕЗУЛЬТАТЫ
         </div>

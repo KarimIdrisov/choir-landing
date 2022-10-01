@@ -1,6 +1,8 @@
 .timer {
+    padding-top: 5px;
     justify-content: center;
     padding-left: 180px;
+    padding-right: 200px;
     color: #E8EDE9;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -14,16 +16,54 @@
         align-items: center;
         justify-content: center ;
     }
+
+    @media (max-width: 1250px) {
+        padding-left: 120px;
+    }
+
+    @media (max-width: 1050px) {
+        padding-left: 70px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: 770px) {
+        > div {
+            width: 50px;
+            gap: 6px
+        }
+        padding-top: 25px;
+    }
+
+    @media (max-width: 600px) {
+        > div {
+            width: 40px;
+            gap: 6px
+        }
+        padding-top: 40px;
+    }
 }
 
 .text {
     font-size: 14px;
     display: flex;
     justify-content: center;
+    
 }
 
 .time {
     font-size: 80px;
     font-style: italic;
     font-weight: bold;
+
+    @media (max-width: 900px) {
+        font-size: 60px;
+    }
+
+    @media (max-width: 770px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 32px;
+    }
 }
