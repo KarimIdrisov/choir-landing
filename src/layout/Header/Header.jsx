@@ -47,7 +47,7 @@ const menu = [
     },
     {
       name: "ПРОГРАММЫ",
-      link: "#programms",
+      link: "#program",
     },
     {
       name: "УЧАСТНИКИ",
@@ -67,7 +67,7 @@ const menu = [
     },
     {
       name: "ФОТО",
-      link: "/photos",
+      link: "#photos",
     },
     {
       name: "ВИДЕО",
@@ -79,10 +79,12 @@ const menu = [
     },
   ];
   
-const Navigation = () => (
+const Navigation = ({ toggleOpen }) => (
     <motion.ul variants={variants} className={styles.mobuleUl}>
       {menu.map(i => (
-        <MenuItem i={i} key={i.link} />
+        <div onClick={() => toggleOpen()}>
+          <MenuItem i={i} key={i.link} />
+        </div>
       ))}
     </motion.ul>
   );
@@ -95,6 +97,22 @@ export const Header = () => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
+  const handleAnchorClick = () => {
+
+    const { hash } = window.location;
+    const elementToScroll = document.getElementById(hash?.replace("#", ""));
+
+    if (!elementToScroll) {
+      return;
+    }
+
+    window.scrollTo({
+      top: elementToScroll.offsetTop - 100,
+      behavior: "smooth"
+    });
+    window.addEventListener("hashchange", handleAnchorClick);
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -106,7 +124,7 @@ export const Header = () => {
         <ul className={styles.menu}>
           {menu.map((menuItem) => (
             <li key={menuItem.link} className={styles.menuItem}>
-              <Link to={menuItem.link}>{menuItem.name}</Link>
+              <Link onClick={handleAnchorClick} to={menuItem.link}>{menuItem.name}</Link>
             </li>
           ))}
         </ul>
@@ -118,7 +136,7 @@ export const Header = () => {
             ref={containerRef}
           >
             <motion.div className="background" variants={sidebar} />
-            <Navigation />
+            <Navigation toggleOpen={toggleOpen} />
             <MenuToggle toggle={() => toggleOpen()} />
           </motion.nav>
       </menu>
