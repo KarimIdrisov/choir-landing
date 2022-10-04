@@ -51,6 +51,7 @@
     color: #77E9D7;
     letter-spacing: 5px;
     font-size: 42px;
+    font-family: Calibri, 'sans-serif';
 
     @media (max-width: 900px) {
         font-size: 32px;
@@ -113,6 +114,7 @@ cursor: pointer;
     padding-left: 50px;
 
     font-size: 48px;
+    font-family: 'Century', 'sans-serif';
     letter-spacing: 3px;
     color: #F4FFFF;
     font-weight: 500;
@@ -154,8 +156,8 @@ cursor: pointer;
 }
 
 .aboutTitle {
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 42px;
+    font-family: 'Pribambas', sans-serif;
+    font-size: 60px;
     color: #4A2D05;
     display: block;
     margin-bottom: 25px;
@@ -164,8 +166,9 @@ cursor: pointer;
 }
 
 .aboutDescription {
-    font-size: 32px;
+    font-size: 36px;
     color: #452B00;
+    font-family: 'Century', 'sans-serif';
 }
 
 .rules {
@@ -177,8 +180,8 @@ cursor: pointer;
 }
 
 .rulesTitle {
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 42px;
+    font-family: 'Pribambas', sans-serif;
+    font-size: 60px;
     color: #303332;
     display: block;
     margin-bottom: 25px;
@@ -202,8 +205,8 @@ cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 80px;
+    font-family: 'Pribambas', sans-serif;
+    font-size: 100px;
     line-height: 130px;
     color: #328590;
     text-align: center;
@@ -265,10 +268,10 @@ cursor: pointer;
 
 .participantsCount {
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     left: 30px;
     color: #33838F;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Pribambas', sans-serif;
     font-size: 80px;
     @media (max-width: 1240px) {
         bottom: 100px;
@@ -306,8 +309,8 @@ cursor: pointer;
 
 .juryTitle {
     text-align: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 80px;
+    font-family: 'Pribambas', sans-serif;
+    font-size: 100px;
     margin-bottom: 20px;
     color: #223030;
 }
@@ -335,6 +338,7 @@ cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Natasha', 'sans-serif';
     text-align: center;
     font-size: 32px;
     font-weight: bold;
@@ -376,8 +380,8 @@ cursor: pointer;
 
 .venuesTitle {
     text-align: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 80px;
+    font-family: 'Pribambas', sans-serif;
+    font-size: 100px;
     margin-bottom: 20px;
     color: #223030;
 }
@@ -388,8 +392,8 @@ cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 80px;
+    font-family: 'Pribambas', sans-serif;
+    font-size: 100px;
     color: #F5F8FE;
 }
 
@@ -415,7 +419,7 @@ cursor: pointer;
     bottom: 15px;
     color: black;
     font-size: 32px;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Natasha', sans-serif;
 }
 
 .photosAlbums {

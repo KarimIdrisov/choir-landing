@@ -19,9 +19,10 @@
 .logoText {
   white-space: pre-line;
   font-size: 14px;
+  font-family: "Century", 'sans-serif';
   line-height: 16px;
   text-transform: uppercase;
-  font-weight:  700;
+  font-weight: 700;
 }
 
 .menu {
@@ -100,6 +101,7 @@ transition: all 0.3s ease;
   a {
     color: #3C8284;
     font-size: 16px;
+    
     font-weight: bold;
     text-decoration: none;
   }
