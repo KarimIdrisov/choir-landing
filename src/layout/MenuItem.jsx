@@ -23,13 +23,30 @@ const variants = {
 };
 
 export const MenuItem = ({ i }) => {
+
+  const handleAnchorClick = () => {
+
+    const { hash } = window.location;
+    const elementToScroll = document.getElementById(hash?.replace("#", ""));
+
+    if (!elementToScroll) {
+      return;
+    }
+
+    window.scrollTo({
+      top: elementToScroll.offsetTop - 80,
+      behavior: "smooth"
+    });
+    window.addEventListener("hashchange", handleAnchorClick);
+  }
+
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-        <HashLink smooth to={i.link}>{i.name}</HashLink>
+        <Link onClick={handleAnchorClick} to={i.link}>{i.name}</Link>
     </motion.li>
   );
 };

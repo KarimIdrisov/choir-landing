@@ -16,8 +16,8 @@ import vkLogo from "../../assets/icons/vk-logo.svg";
 import youtubeLogo from "../../assets/icons/youtube.svg";
 import pdfLogo from "../../assets/icons/pdf.svg";
 import { VenueCard } from "../../components/VenueCard/VenueCard";
-import { FreeMode, Pagination, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Slider from "react-slick";
+import {useWindowSize} from "../../common/useWindowSize";
 
 // TODO: connect i18n
 const Home = () => {
@@ -30,6 +30,57 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const width = useWindowSize().width;
+  const [settingsNews, setSettingsNews] = useState({
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  })
+
+  const [settingsVideos, setSettingsVideos] = useState({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  })
+
+  useEffect(() => {
+    if (width < 1300 && width > 980) {
+      setSettingsNews({
+        ...settingsNews,
+        slidesToShow: 2
+      })
+      setSettingsVideos({
+        ...settingsVideos,
+        slidesToShow: 2
+      })
+      return;
+    }
+
+    if (width < 980) {
+      setSettingsNews({
+        ...settingsNews,
+        slidesToShow: 1
+      })
+      setSettingsVideos({
+        ...settingsVideos,
+        slidesToShow: 1
+      })
+      return;
+    }
+
+    setSettingsNews({
+      ...settingsNews,
+      slidesToShow: 3
+    })
+    setSettingsVideos({
+      ...settingsVideos,
+      slidesToShow: 3
+    })
+  }, [width])
 
   return (
     <div>
@@ -220,24 +271,53 @@ const Home = () => {
       <div className={styles.news} id='news'>
         <div className={styles.newsTitle}>НОВОСТИ</div>
 
-        <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        freeMode={true}
-        navigation={true}
-        modules={[FreeMode, Navigation]}
-        className={styles.newsSwiper}
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
+        <Slider {...settingsNews} className={styles.newsSwiper}>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.newsItemTitle}>
+                Название новости
+              </div>
+              <div className={styles.newsDate}>
+                Октябрь 25, 2022
+              </div>
+            </div>
+          </div>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.newsItemTitle}>
+                Название новости
+              </div>
+              <div className={styles.newsDate}>
+                Октябрь 25, 2022
+              </div>
+            </div>
+          </div>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.newsItemTitle}>
+                Название новости
+              </div>
+              <div className={styles.newsDate}>
+                Октябрь 25, 2022
+              </div>
+            </div>
+          </div>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.newsItemTitle}>
+                Название новости
+              </div>
+              <div className={styles.newsDate}>
+                Октябрь 25, 2022
+              </div>
+            </div>
+          </div>
+
+        </Slider>
       </div>
       <div className={styles.photos} id='photos'>
         <div className={styles.newsTitle}>ФОТО</div>
@@ -260,6 +340,44 @@ const Home = () => {
 
           </div>
         </div>
+      </div>
+      <div className={styles.videos} id='videos'>
+        <div className={styles.newsTitle}>ВИДЕО</div>
+
+        <Slider {...settingsVideos} className={styles.videoSwiper}>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.videoTitle}>
+                Название видео
+              </div>
+            </div>
+          </div>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.videoTitle}>
+                Название видео
+              </div>
+            </div>
+          </div>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.videoTitle}>
+                Название видео
+              </div>
+            </div>
+          </div>
+          <div className={styles.newsItem}>
+            <div>
+              <img width={365} height={380} className={styles.newsImage} />
+              <div className={styles.videoTitle}>
+                Название видео
+              </div>
+            </div>
+          </div>
+        </Slider>
       </div>
       <div id='results'>
         <div className={styles.resultsTitle}>

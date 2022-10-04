@@ -9,8 +9,18 @@ export const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.contacts}>
-                Контакты
+                    <span>
+                        Контакты
+                    </span>
+                <span>
+                    +7 999 999 99 99
+                </span>
+                <span>
+                    test@gmail.com
+                </span>
+
             </div>
+
             <div className={styles.links}>
                 <img
                     className={styles.vk}

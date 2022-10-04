@@ -1,4 +1,22 @@
 .footer {
-  height: 250px;
+  height: 200px;
   background-color: #141917;
+  padding: 25px 50px;
+  color: #F5F5F5;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.contacts {
+  font-family: 'Century', 'sans-serif';
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
 }

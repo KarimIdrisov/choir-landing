@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { MenuToggle } from "./MenuToggle";
 import { useDimensions } from "../../common/useDimensions";
 import { MenuItem } from "../MenuItem";
+import classNames from "classnames";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -135,7 +136,9 @@ export const Header = () => {
             custom={height}
             ref={containerRef}
           >
-            <motion.div className="background" variants={sidebar} />
+            <motion.div className={classNames("background", {
+                [styles.over]: isOpen
+            })} variants={sidebar} />
             <Navigation toggleOpen={toggleOpen} />
             <MenuToggle toggle={() => toggleOpen()} />
           </motion.nav>
