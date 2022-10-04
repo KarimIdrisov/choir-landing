@@ -85,10 +85,11 @@ transition: all 0.3s ease;
 }
 
 .mobuleUl {
-  width: 100%;
   padding: 25px;
   position: absolute;
   top: 100px;
+  left: 0;
+  right: 0;
   z-index: 1002;
   display: flex;
   align-items: center;
@@ -117,6 +118,7 @@ transition: all 0.3s ease;
   .logoText {
     display: none;
   }
+
 }
 
 @media (max-width: 1300px) {
@@ -131,4 +133,12 @@ transition: all 0.3s ease;
 .mobileNav {
   display: block;
   }
+  .header {
+    width: 100%;
+  }
+  .toggle {
+    right: 60px;
+  }
 }
+
+
