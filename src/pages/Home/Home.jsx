@@ -87,7 +87,7 @@ const Home = () => {
           получить массу, ярких впечатлений и открыть для себя что-то новое!
         </span>
       </div>
-      <div className={styles.rules} id='rules'>
+      <div className={styles.rules} id={'rules'}>
         <span className={styles.rulesTitle}>УСЛОВИЯ УЧАСТИЯ</span>
 
         <Accordion allowZeroExpanded>
