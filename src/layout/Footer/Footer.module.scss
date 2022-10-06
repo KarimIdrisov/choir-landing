@@ -5,6 +5,12 @@
   color: #F5F5F5;
   display: grid;
   grid-template-columns: 1fr auto;
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    height: 100%;
+  }
 }
 
 .contacts {
