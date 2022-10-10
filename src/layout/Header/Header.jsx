@@ -43,7 +43,7 @@ const variants = {
 
 const menu = [
     {
-      name: "УСЛОВИЯ УЧАСТИЯ",
+      name: "ВОЗМОЖНОСТИ УЧАСТИЯ",
       link: "#rules",
     },
     {

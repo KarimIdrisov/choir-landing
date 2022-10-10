@@ -23,6 +23,30 @@
     background-color: #002024;
 }
 
+.introDesc {
+    text-align: center;
+    font-family: 'Rodchenko';
+    font-size: 54px;
+    color: white;
+    margin-bottom: 15px;
+
+    @media (max-width: 1150px) {
+        font-size: 85px;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 62px;
+    }
+
+    @media (max-width: 770px) {
+        font-size: 48px;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 32px;
+    }
+}
+
 .introTitle {
     text-align: center;
     font-family: 'Rodchenko';
@@ -166,8 +190,6 @@ cursor: pointer;
     color: #4A2D05;
     display: block;
     margin-bottom: 25px;
-
-    
 }
 
 .aboutDescription {
@@ -189,7 +211,8 @@ cursor: pointer;
     font-size: 60px;
     color: #303332;
     display: block;
-    margin-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
@@ -253,59 +276,13 @@ cursor: pointer;
 }
 
 .participants {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 250px;
-    svg {
-        max-height: 900px;
-        width: 100%;
-    }
 
-    @media (max-width: 1440px) {
-        margin-left: 150px;
-    }
-
-    @media (max-width: 920px) {
-        margin-left: 50px;
-    }
 }
 
-.participantsCount {
-    position: absolute;
-    bottom: 100px;
-    left: 30px;
-    color: #33838F;
-    font-family: 'Pribambas', sans-serif;
-    font-size: 80px;
-    @media (max-width: 1240px) {
-        bottom: 100px;
-    }
+.participantsTable {
 
-    @media (max-width: 1080px) {
-        bottom: 140px;
-        font-size: 60px;
-    }
-
-    @media (max-width: 920px) {
-        bottom: 220px;
-        font-size: 40px;
-    }
-
-    @media (max-width: 660px) {
-        bottom: 260px;
-    }
 }
 
-.count {
-    font-size: 120px;
-    @media (max-width: 1080px) {
-        font-size: 100px;
-    }
-    @media (max-width: 920px) {
-        font-size: 60px;
-    }
-}
 
 .jury {
     background-color: #F5FEFE;
