@@ -1,12 +1,12 @@
 .timer {
-    padding-top: 5px;
+    padding-top: 15px;
     justify-content: center;
     padding-left: 180px;
     padding-right: 200px;
     color: #E8EDE9;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 25px;
+    gap: 20px;
 
     > div {
         width: 70px;
@@ -55,9 +55,13 @@
 }
 
 .text {
-    font-size: 14px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 650px) {
+        font-size: 14px;
+    }
 
     @media (max-width: 550px) {
         font-size: 10px;
@@ -65,7 +69,7 @@
 }
 
 .time {
-    font-size: 80px;
+    font-size: 110px;
     font-style: italic;
     font-weight: bold;
     font-family: 'Air', 'sans-serif';
