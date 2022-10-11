@@ -1,9 +1,10 @@
 .card {
   display: grid;
-  grid-template-rows: 1fr 50px;
+  grid-template-rows: 1fr 65px;
   gap: 25px;
-  height: 280px;
-  width: 240px;
+  height: 320px;
+  width: 300px;
+
 }
 
 .place {
@@ -15,6 +16,13 @@
   justify-content: center;
   text-align: center;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   white-space: pre-line;
+}
+
+.img {
+  max-width: 100%;
+  width: 300px;
+  height: 220px;
+  border-radius: 24px;
 }

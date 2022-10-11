@@ -1,5 +1,5 @@
 .footer {
-  height: 200px;
+  min-height: 200px;
   background-color: #141917;
   padding: 25px 50px;
   color: #F5F5F5;
@@ -19,6 +19,14 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 }
 
 .links {

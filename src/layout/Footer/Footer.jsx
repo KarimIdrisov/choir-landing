@@ -13,12 +13,20 @@ export const Footer = () => {
                         Контакты
                     </span>
                 <span>
-                    +7 999 999 99 99
+                    Художественный руководитель – Елена Петухова
                 </span>
                 <span>
-                    test@gmail.com
+                    +79242366703
                 </span>
-
+                <span>
+                    Менеджер по работе с участниками – Юлия Новикова
+                </span>
+                <span>
+                    +79146905713
+                </span>
+                <span>
+                    fareastchoir@gmail.com
+                </span>
             </div>
 
             <div className={styles.links}>

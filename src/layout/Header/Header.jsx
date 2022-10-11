@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useCycle } from "framer-motion";
 
@@ -80,10 +80,12 @@ const menu = [
     },
   ];
   
-const Navigation = ({ toggleOpen }) => (
-    <motion.ul variants={variants} className={styles.mobuleUl}>
+const Navigation = ({ toggleOpen, open }) => (
+    <motion.ul variants={variants} className={classNames(styles.mobileUl, {
+        [styles.under]: !open
+    })}>
       {menu.map(i => (
-        <div onClick={() => toggleOpen()}>
+        <div onClick={() => toggleOpen()} key={i.link}>
           <MenuItem i={i} key={i.link} />
         </div>
       ))}
@@ -98,9 +100,8 @@ export const Header = () => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
-  const handleAnchorClick = () => {
+  const handleAnchorClick = (hash) => {
 
-    const { hash } = window.location;
     const elementToScroll = document.getElementById(hash?.replace("#", ""));
 
     if (!elementToScroll) {
@@ -125,7 +126,7 @@ export const Header = () => {
         <ul className={styles.menu}>
           {menu.map((menuItem) => (
             <li key={menuItem.link} className={styles.menuItem}>
-              <Link onClick={handleAnchorClick} to={menuItem.link}>{menuItem.name}</Link>
+              <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link}>{menuItem.name}</Link>
             </li>
           ))}
         </ul>
@@ -139,7 +140,7 @@ export const Header = () => {
             <motion.div className={classNames("background", {
                 [styles.over]: isOpen
             })} variants={sidebar} />
-            <Navigation toggleOpen={toggleOpen} />
+            <Navigation toggleOpen={toggleOpen} open={isOpen} />
             <MenuToggle toggle={() => toggleOpen()} />
           </motion.nav>
       </menu>
