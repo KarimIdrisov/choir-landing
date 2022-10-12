@@ -15,8 +15,8 @@ export const ControlledRefModalPart = ({ item }) => {
                 <LazyImage src={item.image}
                            alt={item.short}
                            className={styles.participantImage}
-                           width={280}
-                           height={200} />
+                           width={380}
+                           height={300} />
 
                 <div className={styles.participantTitle}>
                     {item.short}

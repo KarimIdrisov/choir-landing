@@ -315,21 +315,27 @@ cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: stretch;
-    justify-content: stretch;
-    gap: 45px;
-    padding: 0 50px;
+    justify-items: center;
+    gap: 8px;
+    padding: 0 25px;
     margin-bottom: 50px;
 
-    @media (max-width: 1400px) {
+    @media (max-width: 1680px) {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        gap: 50px;
+
+        div {
+            flex: 33%;
+        }
     }
 }
 
 .participantImage img {
     border-radius: 12px;
+    max-width: 100%;
 }
 
 .participantModalImage {
@@ -391,8 +397,8 @@ cursor: pointer;
 }
 
 .participantTitle {
-    font-size: 18px;
-    min-height: 78px;
+    font-size: 16px;
+    min-height: 130px;
 }
 
 .closeButton {
