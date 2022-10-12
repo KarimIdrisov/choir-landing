@@ -6,6 +6,14 @@ import youtubeLogo from "../../assets/icons/youtube.svg";
 
 export const Footer = () => {
 
+    const openVk = () => {
+        window.open("https://vk.com/fareastchoirolympic", "_blank");
+      };
+    
+      const openYoutube = () => {
+        window.open("https://www.youtube.com/channel/UCEPYTlA03JIdsYQmwMdAhbQ/featured", "_blank");
+      };
+
     return (
         <footer className={styles.footer}>
             <div className={styles.contacts}>
@@ -36,6 +44,7 @@ export const Footer = () => {
                     alt="Группа олимпиады во вконтакте"
                     width={84}
                     height={84}
+                    onClick={openVk}
                 />
                 <img
                     className={styles.youtube}
@@ -43,6 +52,7 @@ export const Footer = () => {
                     alt="Канал олимпиады на ютубе"
                     width={84}
                     height={84}
+                    onClick={openYoutube}
                 />
             </div>
         </footer>

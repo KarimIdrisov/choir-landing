@@ -9,6 +9,7 @@ import { MenuToggle } from "./MenuToggle";
 import { useDimensions } from "../../common/useDimensions";
 import { MenuItem } from "../MenuItem";
 import classNames from "classnames";
+import { useWindowSize } from "../../common/useWindowSize";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -47,7 +48,7 @@ const menu = [
       link: "#rules",
     },
     {
-      name: "ПРОГРАММЫ",
+      name: "РАСПИСАНИЕ",
       link: "#program",
     },
     {
@@ -99,6 +100,7 @@ export const Header = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const width = useWindowSize().width;
 
   const handleAnchorClick = (hash) => {
 
@@ -115,12 +117,84 @@ export const Header = () => {
     window.addEventListener("hashchange", handleAnchorClick);
   }
 
+  const prevScrollY = useRef(0);
+
+  const [goingUp, setGoingUp] = useState(false);
+  const [activeHash, setActiveHash] = useState('intro');
+
+  const hashMap = {
+    'rules': "ВОЗМОЖНОСТИ УЧАСТИЯ",
+    'program': 'РАСПИСАНИЕ',
+    'participants': 'УЧАСТНИКИ',
+    'jury': 'ЖЮРИ',
+    'venues': 'МЕСТА ПРОВЕДЕНИЯ',
+    'news': 'НОВОСТИ',
+    'photos': 'ФОТО',
+    'videos': 'ВИДЕО',
+    'results': 'РЕЗУЛЬТАТЫ'
+  }
+
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    
+    return (
+      rect.top < window.innerHeight && rect.bottom >= 0
+    );
+}
+
+  useEffect(() => {
+
+    
+    const handleScroll = () => {
+      const intro = document.getElementById('intro');
+  const rules = document.getElementById('rules');
+  const program = document.getElementById('program');
+  const participants = document.getElementById('participants');
+  const jury = document.getElementById('jury');
+  const venues = document.getElementById('venues');
+  const news = document.getElementById('news');
+  const photos = document.getElementById('photos');
+  const videos = document.getElementById('videos');
+  const results = document.getElementById('results');
+
+  const sections = [
+    intro, rules, program, participants, jury, venues, news, photos, videos, results
+  ];
+      const currentScrollY = window.scrollY;
+
+      for (let i = 0; i < 10; i += 1) {
+        if (isInViewport(sections[i])) {
+          setActiveHash(sections[i].id);
+          break;
+        }
+      }
+
+      if (prevScrollY.current < currentScrollY && goingUp) {
+        setGoingUp(false);
+      }
+      if (prevScrollY.current > currentScrollY && !goingUp) {
+        setGoingUp(true);
+      }
+
+      prevScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [goingUp]);
+
   return (
     <div className={styles.wrapper}>
         <header className={styles.header}>
-            <div className={styles.logo}>
+            <div className={styles.logo} style={{ display: width < 1300 && activeHash !== 'intro' ? 'none' : 'flex' }}>
                 <img src={Logo} alt="Logo" width={53} height={64} />
                 <span className={styles.logoText}>{t("header.logoText")}</span>
+                
+            </div>
+
+            <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>
+                  {hashMap[activeHash]}
             </div>
 
             <menu>

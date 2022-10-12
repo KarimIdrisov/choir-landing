@@ -56,6 +56,10 @@ width: 100%;
   font-weight: 400;
   animation: fadein 0.35s ease-in;
 
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
+
   @media (max-width: 700px) {
     font-size: 16px;
   }
@@ -84,11 +88,40 @@ width: 100%;
     padding: 6px;
     font-size: 24px;
     font-weight: 400;
+
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 660px) {
+      font-size: 13px;
+    }
   }
   thead {
 
     align-items: center;
     font-size: 24px;
+
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+    @media (max-width: 700px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 660px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.tableHead {
+  @media (max-width: 660px) {
+    display: none;
   }
 }
 
