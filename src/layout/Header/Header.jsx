@@ -116,34 +116,36 @@ export const Header = () => {
   }
 
   return (
-    <header className={styles.header}>
-      <div className={styles.logo}>
-        <img src={Logo} alt="Logo" width={53} height={64} />
-        <span className={styles.logoText}>{t("header.logoText")}</span>
-      </div>
+    <div className={styles.wrapper}>
+        <header className={styles.header}>
+            <div className={styles.logo}>
+                <img src={Logo} alt="Logo" width={53} height={64} />
+                <span className={styles.logoText}>{t("header.logoText")}</span>
+            </div>
 
-      <menu>
-        <ul className={styles.menu}>
-          {menu.map((menuItem) => (
-            <li key={menuItem.link} className={styles.menuItem}>
-              <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link}>{menuItem.name}</Link>
-            </li>
-          ))}
-        </ul>
-        <motion.nav
-            initial={false}
-            className={styles.mobileNav}
-            animate={isOpen ? "open" : "closed"}
-            custom={height}
-            ref={containerRef}
-          >
-            <motion.div className={classNames("background", {
-                [styles.over]: isOpen
-            })} variants={sidebar} />
-            <Navigation toggleOpen={toggleOpen} open={isOpen} />
-            <MenuToggle toggle={() => toggleOpen()} />
-          </motion.nav>
-      </menu>
-    </header>
+            <menu>
+                <ul className={styles.menu}>
+                    {menu.map((menuItem) => (
+                        <li key={menuItem.link} className={styles.menuItem}>
+                            <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link}>{menuItem.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+                <motion.nav
+                    initial={false}
+                    className={styles.mobileNav}
+                    animate={isOpen ? "open" : "closed"}
+                    custom={height}
+                    ref={containerRef}
+                >
+                    <motion.div className={classNames("background", {
+                        [styles.over]: isOpen
+                    })} variants={sidebar} />
+                    <Navigation toggleOpen={toggleOpen} open={isOpen} />
+                    <MenuToggle toggle={() => toggleOpen()} />
+                </motion.nav>
+            </menu>
+        </header>
+    </div>
   );
 };

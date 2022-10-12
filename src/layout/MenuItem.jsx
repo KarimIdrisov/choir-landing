@@ -24,9 +24,7 @@ const variants = {
 
 export const MenuItem = ({ i }) => {
 
-  const handleAnchorClick = () => {
-
-    const { hash } = window.location;
+  const handleAnchorClick = (hash) => {
     const elementToScroll = document.getElementById(hash?.replace("#", ""));
 
     if (!elementToScroll) {
@@ -46,7 +44,7 @@ export const MenuItem = ({ i }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-        <Link onClick={handleAnchorClick} to={i.link}>{i.name}</Link>
+        <Link onClick={() => handleAnchorClick(i.link)} to={i.link}>{i.name}</Link>
     </motion.li>
   );
 };
