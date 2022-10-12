@@ -1158,116 +1158,133 @@ const Home = () => {
             <div className={styles.news} id='news'>
                 <div className={styles.newsTitle}>НОВОСТИ</div>
 
-                <Slider {...settingsNews} className={styles.newsSwiper}>
-                        <div className={styles.newsItem}>
-                            <div>
-                                <img width={365} height={380} className={styles.newsImage}/>
-                                <div className={styles.newsItemTitle}>
-                                    Название новости
-                                </div>
-                                <div className={styles.newsDate}>
-                                    Октябрь 25, 2022
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.newsItem}>
-                            <div>
-                                <img width={365} height={380} className={styles.newsImage}/>
-                                <div className={styles.newsItemTitle}>
-                                    Название новости
-                                </div>
-                                <div className={styles.newsDate}>
-                                    Октябрь 25, 2022
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.newsItem}>
-                            <div>
-                                <img width={365} height={380} className={styles.newsImage}/>
-                                <div className={styles.newsItemTitle}>
-                                    Название новости
-                                </div>
-                                <div className={styles.newsDate}>
-                                    Октябрь 25, 2022
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.newsItem}>
-                            <div>
-                                <img width={365} height={380} className={styles.newsImage}/>
-                                <div className={styles.newsItemTitle}>
-                                    Название новости
-                                </div>
-                                <div className={styles.newsDate}>
-                                    Октябрь 25, 2022
-                                </div>
-                            </div>
-                        </div>
-                </Slider>
+                <div className={styles.wait}>
+                    Данный раздел будет обновляться
+                </div>
+
+                {/*<Slider {...settingsNews} className={styles.newsSwiper}>*/}
+                {/*        <div className={styles.newsItem}>*/}
+                {/*            <div>*/}
+                {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
+                {/*                <div className={styles.newsItemTitle}>*/}
+                {/*                    Название новости*/}
+                {/*                </div>*/}
+                {/*                <div className={styles.newsDate}>*/}
+                {/*                    Октябрь 25, 2022*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*        <div className={styles.newsItem}>*/}
+                {/*            <div>*/}
+                {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
+                {/*                <div className={styles.newsItemTitle}>*/}
+                {/*                    Название новости*/}
+                {/*                </div>*/}
+                {/*                <div className={styles.newsDate}>*/}
+                {/*                    Октябрь 25, 2022*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*        <div className={styles.newsItem}>*/}
+                {/*            <div>*/}
+                {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
+                {/*                <div className={styles.newsItemTitle}>*/}
+                {/*                    Название новости*/}
+                {/*                </div>*/}
+                {/*                <div className={styles.newsDate}>*/}
+                {/*                    Октябрь 25, 2022*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*        <div className={styles.newsItem}>*/}
+                {/*            <div>*/}
+                {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
+                {/*                <div className={styles.newsItemTitle}>*/}
+                {/*                    Название новости*/}
+                {/*                </div>*/}
+                {/*                <div className={styles.newsDate}>*/}
+                {/*                    Октябрь 25, 2022*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*</Slider>*/}
             </div>
             <div className={styles.photos} id='photos'>
                 <div className={styles.newsTitle}>ФОТО</div>
 
-                <div className={styles.photoMain}>
-                    <div className={styles.photoMainTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>
+                <div className={styles.wait}>
+                    Данный раздел будет обновляться
                 </div>
 
-                <div className={styles.photosAlbums}>
-                    <div className={styles.album}>
-                        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>
-                    </div>
-                    <div className={styles.album}>
-                        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>
-                    </div>
-                    <div className={styles.album}>
-                        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>
-                    </div>
-                    <div className={styles.album}>
-                        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>
-                    </div>
-                </div>
+                {/*<div className={styles.photoMain}>*/}
+                {/*    <div className={styles.photoMainTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>*/}
+                {/*</div>*/}
+
+                {/*<div className={styles.photosAlbums}>*/}
+                {/*    <div className={styles.album}>*/}
+                {/*        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>*/}
+                {/*    </div>*/}
+                {/*    <div className={styles.album}>*/}
+                {/*        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>*/}
+                {/*    </div>*/}
+                {/*    <div className={styles.album}>*/}
+                {/*        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>*/}
+                {/*    </div>*/}
+                {/*    <div className={styles.album}>*/}
+                {/*        <div className={styles.photosAlbumsTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
             <div className={styles.videos} id='videos'>
                 <div className={styles.newsTitle}>ВИДЕО</div>
 
-                <Slider {...settingsVideos} className={styles.videoSwiper}>
-                    <div className={styles.newsItem}>
-                        <div>
-                            <img width={365} height={380} className={styles.newsImage}/>
-                            <div className={styles.videoTitle}>
-                                Название видео
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.newsItem}>
-                        <div>
-                            <img width={365} height={380} className={styles.newsImage}/>
-                            <div className={styles.videoTitle}>
-                                Название видео
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.newsItem}>
-                        <div>
-                            <img width={365} height={380} className={styles.newsImage}/>
-                            <div className={styles.videoTitle}>
-                                Название видео
-                            </div>
-                        </div>
-                    </div>
-                </Slider>
+                <div className={styles.wait}>
+                    Данный раздел будет обновляться
+                </div>
+
+                {/*<Slider {...settingsVideos} className={styles.videoSwiper}>*/}
+                {/*    <div className={styles.newsItem}>*/}
+                {/*        <div>*/}
+                {/*            <img width={365} height={380} className={styles.newsImage}/>*/}
+                {/*            <div className={styles.videoTitle}>*/}
+                {/*                Название видео*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*    <div className={styles.newsItem}>*/}
+                {/*        <div>*/}
+                {/*            <img width={365} height={380} className={styles.newsImage}/>*/}
+                {/*            <div className={styles.videoTitle}>*/}
+                {/*                Название видео*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*    <div className={styles.newsItem}>*/}
+                {/*        <div>*/}
+                {/*            <img width={365} height={380} className={styles.newsImage}/>*/}
+                {/*            <div className={styles.videoTitle}>*/}
+                {/*                Название видео*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</Slider>*/}
             </div>
             <div id='results'>
                 <div className={styles.resultsTitle}>
                     РЕЗУЛЬТАТЫ
                 </div>
 
-                <div className={styles.results}>
-                    <div className={styles.downloadResult}>
-                        <img alt="pdf" src={pdfLogo} width={100} height={125}/>
-                        Скачать результаты
-                    </div>
+
+                <div className={styles.waitResults}>
+                    Данный раздел будет обновлен после завершения Олимпиады
                 </div>
+
+                {/*<div className={styles.results}>*/}
+                {/*    <div className={styles.downloadResult}>*/}
+                {/*        <img alt="pdf" src={pdfLogo} width={100} height={125}/>*/}
+                {/*        Скачать результаты*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </div>
     );
