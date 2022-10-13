@@ -331,6 +331,10 @@ cursor: pointer;
             flex: 33%;
         }
     }
+
+    @media (max-width: 450px) {
+        padding: 0 50px;
+    }
 }
 
 .participantImage img {
