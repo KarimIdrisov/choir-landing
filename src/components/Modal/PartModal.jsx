@@ -31,6 +31,7 @@ export const ControlledRefModalPart = ({ item }) => {
                     src={item.image}
                     alt={item.short}
                     className={styles.participantModalImage}
+                    width={600}
                     height={400}
                 />
                 <div className={styles.participantModalDesc}>

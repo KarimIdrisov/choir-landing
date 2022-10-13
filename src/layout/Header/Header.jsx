@@ -10,6 +10,7 @@ import { useDimensions } from "../../common/useDimensions";
 import { MenuItem } from "../MenuItem";
 import classNames from "classnames";
 import { useWindowSize } from "../../common/useWindowSize";
+import viewportCheckerUmd from "viewport-checker";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -142,6 +143,10 @@ export const Header = () => {
     );
 }
 
+new viewportCheckerUmd('rules', {
+  classToAdd: 'visible',
+});
+
   useEffect(() => {
 
     
@@ -201,7 +206,9 @@ export const Header = () => {
                 <ul className={styles.menu}>
                     {menu.map((menuItem) => (
                         <li key={menuItem.link} className={styles.menuItem}>
-                            <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link}>{menuItem.name}</Link>
+                            <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
+                              [styles.activeLink]: activeHash === menuItem.link.slice(1)
+                            })}>{menuItem.name}</Link>
                         </li>
                     ))}
                 </ul>
@@ -215,7 +222,7 @@ export const Header = () => {
                     <motion.div className={classNames("background", {
                         [styles.over]: isOpen
                     })} variants={sidebar} />
-                    <Navigation toggleOpen={toggleOpen} open={isOpen} />
+                    <Navigation toggleOpen={toggleOpen} open={isOpen} active={activeHash} />
                     <MenuToggle toggle={() => toggleOpen()} />
                 </motion.nav>
             </menu>

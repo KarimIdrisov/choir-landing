@@ -185,7 +185,7 @@ cursor: pointer;
     background-image: url('../../assets/images/about.png');
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 25px;
+    padding-bottom: 45px;
 }
 
 .aboutTitle {
@@ -311,6 +311,30 @@ cursor: pointer;
     }
 }
 
+.moreButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+    
+    button {
+        height: 80px;
+    width: 300px;
+    font-size: 28px;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background-color: #FEB678;
+    transition: all 0.2s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+}
+
 .participantsTable {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -319,6 +343,7 @@ cursor: pointer;
     gap: 8px;
     padding: 0 25px;
     margin-bottom: 50px;
+    overflow: hidden;
 
     @media (max-width: 1680px) {
         display: flex;
@@ -358,6 +383,7 @@ cursor: pointer;
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    overflow-y: auto;
     
     @media (max-width: 1000px) {
         flex-direction: column;
@@ -451,7 +477,7 @@ cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
-    @media (max-width: 1600px) {
+    @media (max-width: 1200px) {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -464,7 +490,6 @@ cursor: pointer;
 
 .juryItem {
     cursor: pointer;
-    min-width: 300px;
     height: 520px;
     display: grid;
     grid-template-rows: 1fr 150px;
@@ -568,6 +593,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 27px;
     font-family: 'Pribambas', sans-serif;
     font-size: 100px;
     color: #F5F8FE;

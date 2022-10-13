@@ -1,4 +1,6 @@
 @import "accordion";
+@import 'animate.css';
+
 
 *, body {
   margin: 0;
@@ -58,7 +60,6 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-
 
 .background {
   position: absolute;
@@ -195,4 +196,17 @@ width: 50px !important;
 }
 .popup-content {
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
