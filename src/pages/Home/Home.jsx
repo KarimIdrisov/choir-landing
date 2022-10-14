@@ -1156,7 +1156,7 @@ const Home = () => {
           <ControlledRefModalJury
             trigger={
               <div className={styles.juryItem}>
-                <img src={J1} width={265} height={365} alt="jury" />
+                <img src={J1} width={265} height={345} alt="jury" />
                 <span className={styles.juryName}>
                   АЛЕКСАНДР <br /> СОЛОВЬЕВ
                 </span>
@@ -1174,7 +1174,7 @@ const Home = () => {
           <ControlledRefModalJury
             trigger={
               <div className={styles.juryItem}>
-                <img src={J2} width={265} height={365} alt="jury" />
+                <img src={J2} alt="jury" />
                 <span className={styles.juryName}>
                   СЕРГЕЙ <br /> ЕКИМОВ
                 </span>
@@ -1191,7 +1191,7 @@ const Home = () => {
           <ControlledRefModalJury
             trigger={
               <div className={styles.juryItem}>
-                <img src={J3} width={265} height={365} alt="jury" />
+                <img src={J3} alt="jury" />
                 <span className={styles.juryName}>
                   МИХАИЛ <br /> СЛАВКИН
                 </span>
@@ -1207,7 +1207,7 @@ const Home = () => {
           <ControlledRefModalJury
             trigger={
               <div className={styles.juryItem}>
-                <img src={J4} width={265} height={365} alt="jury" />
+                <img src={J4} alt="jury" />
                 <span className={styles.juryName}>
                   ВЛАДИМИР <br /> СИНЕНКО
                 </span>
@@ -1223,7 +1223,7 @@ const Home = () => {
           <ControlledRefModalJury
             trigger={
               <div className={styles.juryItem}>
-                <img src={J5} width={265} height={365} alt="jury" />
+                <img src={J5} alt="jury" />
                 <span className={styles.juryName}>
                   НАТАЛЬЯ <br /> БРЫЗЖИНА
                 </span>

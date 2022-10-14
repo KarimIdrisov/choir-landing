@@ -474,15 +474,22 @@ cursor: pointer;
 }
 
 .juryList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    div {
+        flex: 20%;
+    }
+    img {
+        width: 100%;
+        height: 345px;
+    }
 
-    @media (max-width: 13s00px) {
-        display: flex;
-        justify-content: center;
+    @media (max-width: 1550px) {
         flex-wrap: wrap;
-        align-items: center;
-        padding-bottom: 45px;
+        justify-content: center;
+
+        div {
+            max-width: 360px;
+        }
     }
 }
 
@@ -495,9 +502,6 @@ cursor: pointer;
     display: grid;
     grid-template-rows: 1fr 150px;
 
-img {
-    width: 100%;
-}
 }
 
 .juryName {
