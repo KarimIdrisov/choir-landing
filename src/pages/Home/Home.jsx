@@ -98,11 +98,11 @@ import P78 from "../../assets/images/76. Народный хор русской 
 import P79 from "../../assets/images/77. Анс. Жаворонки (Полянская)-min.jpg";
 import P80 from "../../assets/images/78. Ак.хор ДВФУ-min.jpg";
 
-import J1 from "../../assets/images/Жюри - Соловьев.jpg";
-import J2 from "../../assets/images/Жюри - Екимов.jpeg";
-import J3 from "../../assets/images/Жюри - Славкин.jpg";
-import J4 from "../../assets/images/Жюри - Синенко.jpg";
-import J5 from "../../assets/images/Жюри - Брызжина.jpg";
+import J1 from "../../assets/images/Соловьев.jpg";
+import J2 from "../../assets/images/Екимов.jpg";
+import J3 from "../../assets/images/Славкин.jpg";
+import J4 from "../../assets/images/Синенко.jpg";
+import J5 from "../../assets/images/Брызжина.jpg";
 import { ControlledRefModalJury } from "../../components/Modal/JuryModal";
 import { ControlledRefModalPart } from "../../components/Modal/PartModal";
 
