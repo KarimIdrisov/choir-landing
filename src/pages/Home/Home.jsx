@@ -19,85 +19,84 @@ import Slider from "react-slick";
 import { useWindowSize } from "../../common/useWindowSize";
 import calendar from "../../assets/images/calendar.png";
 
-import P1 from "../../assets/images/1.Возрождение-min.jpg";
-import P2 from "../../assets/images/2.Калина-min.jpg";
-import P3 from "../../assets/images/3.УРФУ-min.jpg";
-import P4 from "../../assets/images/4.Felicita мальчики-min.jpg";
-import P5 from "../../assets/images/5.Кокуй-min.jpg";
-import P6 from "../../assets/images/6.Кантабиле-min.jpg";
-import P7 from "../../assets/images/7.Весна-min.jpg";
-import P8 from "../../assets/images/8.Хор ЛЭТИ-min.jpg";
-import P9 from "../../assets/images/9.Фантазия-min.jpg";
-import P10 from "../../assets/images/10. Концертый ХККИ-min.JPG";
-import P11 from "../../assets/images/11. Дольче-min.JPG";
-import P12 from "../../assets/images/12.Кампанелла-min.JPG";
-import P13 from "../../assets/images/13.ННГУ-min.jpg";
+import P1 from "../../assets/images/1. Возрождение-min.jpg";
+import P2 from "../../assets/images/2. Калина-min.jpg";
+import P3 from "../../assets/images/3. УРФУ-min.jpg";
+import P4 from "../../assets/images/4. Felicita мальчики-min.jpg";
+import P5 from "../../assets/images/5. Кокуй-min.jpg";
+import P6 from "../../assets/images/6. Кантабиле-min.jpg";
+import P7 from "../../assets/images/7. Весна-min.jpg";
+import P8 from "../../assets/images/8. Хор ЛЭТИ-min.jpg";
+import P9 from "../../assets/images/9. Фантазия-min.jpg";
+import P10 from "../../assets/images/10. Концертный ХККИ-min.jpg";
+import P11 from "../../assets/images/11. Дольче-min.jpg";
+import P12 from "../../assets/images/12. Кампанелла-min.jpg";
+import P13 from "../../assets/images/13. ННГУ-min.jpg";
 import P14 from "../../assets/images/14. РОНДО-min.jpg";
-import P15 from "../../assets/images/15. Соловушка Нерюнгри-min.JPG";
+import P15 from "../../assets/images/15. Соловушка Нерюнгри-min.jpg";
 import P16 from "../../assets/images/16. ХГИК-min.jpg";
-import P17 from "../../assets/images/17. Аюшки-min.JPG";
+import P17 from "../../assets/images/17. Аюшки-min.jpg";
 import P18 from "../../assets/images/18. Ala-major-min.jpg";
 import P19 from "../../assets/images/19. Серышево-min.jpg";
-import P20 from "../../assets/images/20.Байкал-хор-min.jpg";
+import P20 from "../../assets/images/20. Байкал-хор-min.jpg";
 import P21 from "../../assets/images/21. Весенние голоса-min.jpg";
 import P22 from "../../assets/images/22. Веснушки-min.jpg";
-import P23 from "../../assets/images/23.Радуга-min.jpg";
-import P24 from "../../assets/images/24.Русские потешки-min.jpg";
-import P25 from "../../assets/images/25.Камертон Чита-min.jpg";
+import P23 from "../../assets/images/23. Радуга-min.jpg";
+import P24 from "../../assets/images/24. Русские потешки-min.jpg";
+import P25 from "../../assets/images/25. Камертон Чита-min.jpg";
 import P26 from "../../assets/images/26. Кантилена-min.jpg";
 import P27 from "../../assets/images/27. Берегиня-min.jpg";
 import P28 from "../../assets/images/28. Купаленка-min.jpg";
-import P29 from "../../assets/images/29.Забайкальские узоры-min.JPG";
-import P30 from "../../assets/images/30. Кредо-min.jpeg";
-import P31 from "../../assets/images/31. Прелестные глазки-min.jpeg";
-import P32 from "../../assets/images/32.Вок-хор анс.Соловушка, с.Рощино-min.jpg";
-import P33 from "../../assets/images/33.Solo-хор-min.JPG";
-import P34 from "../../assets/images/34.Покров-min.jpg";
+import P29 from "../../assets/images/29. Забайкальские узоры-min.jpg";
+import P30 from "../../assets/images/30. Кредо-min.jpg";
+import P31 from "../../assets/images/31. Прелестные глазки-min.jpg";
+import P32 from "../../assets/images/32. Вок-хор анс.Соловушки, с.Рощино-min.jpg";
+import P33 from "../../assets/images/33. Solo-хор-min.jpg";
+import P34 from "../../assets/images/34. Покров-min.jpg";
 import P35 from "../../assets/images/35. Хор Аллегри-min.jpg";
-import P36 from "../../assets/images/36.Перезвон-min.jpg";
-import P37 from "../../assets/images/37.Перезвончики-min.jpg";
-import P38 from "../../assets/images/38.Старший хор Камертон (Новикова)-min.jpeg";
-import P39 from "../../assets/images/39.Младший хор Камертон (Козенко)-min.jpg";
-import P40 from "../../assets/images/40.Хор мальчиков ДХС Камертон-min.jpg";
-import P41 from "../../assets/images/41. Хор Фантазия ДШИ 8 (Красавина)-min.png";
+import P36 from "../../assets/images/36. Перезвон-min.jpg";
+import P37 from "../../assets/images/37. Перезвончики-min.jpg";
+import P38 from "../../assets/images/38. Старший хор Камертон (Новикова)-min.jpg";
+import P39 from "../../assets/images/39. Младший хор Камертон (Козенко)-min.jpg";
+import P40 from "../../assets/images/40. Хор мальчиков ДХС Камертон-min.jpg";
+import P41 from "../../assets/images/41. Хор Фантазия ДШИ 8 (Красавина)-min.jpg";
 import P42 from "../../assets/images/42. София 2022-min.jpg";
 import P43 from "../../assets/images/43. Хор Проект (Смирнова)-min.jpg";
 import P44 from "../../assets/images/44. Вокальный ансамбль Проект (Смирнова)-min.jpg";
-import P45 from "../../assets/images/45.Музыкальный калейдоскоп (Зайцева)-min.jpg";
-import P46 from "../../assets/images/46. Ансамбль казач.пес.Казачата (Маярович)-min.jpg";
-import P47 from "../../assets/images/47.Ансамб.Верея (Савченко)-min.jpeg";
-import P48 from "../../assets/images/48.Русский терем (Мельниченко)-min.jpg";
-import P49 from "../../assets/images/49.Зарянка(Фунтова)-min.jpg";
-import P50 from "../../assets/images/50. Ансамбль Үрдэл-min.jpeg";
-import P51 from "../../assets/images/51.С песней по жизни-min.jpeg";
-import P52 from "../../assets/images/52. Вок.Анс.Горизонт (Юрченко)-min.jpg";
-import P53 from "../../assets/images/53. Хор ДМШ Амруск (Головкина)-min.jpg";
-import P54 from "../../assets/images/54. Вок.анс.ДМШ Амурск (Головкина)-min.jpg";
-import P55 from "../../assets/images/55.Приморские узоры (Козлова)-min.jpg";
-import P56 from "../../assets/images/56. Женский хор ПККИ (Лупач)-min.jpeg";
-import P57 from "../../assets/images/57. Хор Ассоль ДШИ №3-min.jpeg";
-import P58 from "../../assets/images/58. Млада (Митрофанова)-min.JPG";
-import P60 from "../../assets/images/60. Млада (Митрофанова)-min.JPG";
-import P61 from "../../assets/images/61. Серебряные нотки-min.jpg";
-import P62 from "../../assets/images/62. Черемушки-min.jpg";
-import P63 from "../../assets/images/63. Хорошки (Павликов)-min.JPG";
-import P64 from "../../assets/images/64. Анс.Елань (Пестерева)-min.jpg";
-import P65 from "../../assets/images/65. Вьюнок-min.jpg";
-import P66 from "../../assets/images/66. Оберег (Телепайло)-min.jpg";
-import P67 from "../../assets/images/67.Белые россы (Дементьева)-min.jpg";
-import P68 from "../../assets/images/68. Кросно-min.jpg";
-import P69 from "../../assets/images/69. Народный хор Улыбка (Николаева)-min.jpg";
-import P70 from "../../assets/images/70.Хор Горлица (Москаленко)-min.jpg";
-import P71 from "../../assets/images/71. Дети войны (Стрельников)-min.jpg";
-import P72 from "../../assets/images/72. Звонница-min.jpg";
-import P73 from "../../assets/images/73. Ансамбль ОСХНП ПККИ-min.jpg";
-import P74 from "../../assets/images/74. Светлячок-min.jpg";
-import P75 from "../../assets/images/75. Хор Маячок (Потопяк)-min.jpeg";
-import P76 from "../../assets/images/76. Хор ДВГИИ (Потопяк)-min.jpeg";
-import P77 from "../../assets/images/77. Калинка (Терней) (Тимкив)-min.jpg";
-import P78 from "../../assets/images/78. Народный хор русской песни (Ксеневич)-min.jpg";
-import P79 from "../../assets/images/79. Анс.Жавороншки (Полянская)-min.jpg";
-import P80 from "../../assets/images/80. Ак хор ДВФУ-min.JPG";
+import P45 from "../../assets/images/45. Музыкальный калейдоскоп (Зайцева)-min.jpg";
+import P46 from "../../assets/images/46. Ансабль казач.пес. Казачата (Маярович)-min.jpg";
+import P47 from "../../assets/images/47. Ансамб. Верея (Савченко)-min.jpg";
+import P48 from "../../assets/images/48. Русский терем (Мельниченко)-min.jpg";
+import P50 from "../../assets/images/49. Ансамбль Урдэл-min.jpg";
+import P51 from "../../assets/images/50. С песней по жизни-min.jpg";
+import P52 from "../../assets/images/51. Вок.анс. Горизонт (Юрченко)-min.jpg";
+import P53 from "../../assets/images/52. Хор ДМШ Амурск (Головкина)-min.jpg";
+import P54 from "../../assets/images/53. Вок.анс. ДМШ Амурск (Головкина)-min.jpg";
+import P55 from "../../assets/images/54. Приморские узоры (Козлова)-min.jpg";
+import P56 from "../../assets/images/55. Женский хор ПККИ (Лупач)-min.jpg";
+import P57 from "../../assets/images/56. Хор Ассоль ДШИ №3-min.jpg";
+import P58 from "../../assets/images/57. Млада (Митрофанова)-min.jpg";
+import P60 from "../../assets/images/58. Млада (Митрофанова)-min.jpg";
+import P61 from "../../assets/images/59. Серебряные нотки-min.jpg";
+import P62 from "../../assets/images/60. Черемушки-min.jpg";
+import P63 from "../../assets/images/61. Хорошки (Павликов)-min.jpg";
+import P64 from "../../assets/images/62. Анс. Елань (Пестерева)-min.jpg";
+import P65 from "../../assets/images/63. Вьюнок-min.jpg";
+import P66 from "../../assets/images/64. Оберег (Телепайло)-min.jpg";
+import P67 from "../../assets/images/65. Белые россы (Дементьева)-min.jpg";
+import P68 from "../../assets/images/66. Кросно-min.jpg";
+import P69 from "../../assets/images/67. Народный хор Улыбка (Николаева)-min.jpg";
+import P70 from "../../assets/images/68. Хор Горлица (Москаленко)-min.jpg";
+import P71 from "../../assets/images/69. Дети войны (Стрельников)-min.jpg";
+import P72 from "../../assets/images/70. Звонница-min.jpg";
+import P73 from "../../assets/images/71. Ансамбль ОСХНП ПККИ-min.jpg";
+import P74 from "../../assets/images/72. Светлячок-min.jpg";
+import P75 from "../../assets/images/73. Хор Маячок (Потопяк)-min.jpg";
+import P76 from "../../assets/images/74. Хор ДВГИИ-min.jpg";
+import P77 from "../../assets/images/75. Калинка (Терней) (Тимкив)-min.jpg";
+import P78 from "../../assets/images/76. Народный хор русской песни (Ксеневич)-min.jpg";
+import P79 from "../../assets/images/77. Анс. Жаворонки (Полянская)-min.jpg";
+import P80 from "../../assets/images/78. Ак.хор ДВФУ-min.jpg";
 
 import J1 from "../../assets/images/Жюри - Соловьев.jpg";
 import J2 from "../../assets/images/Жюри - Екимов.jpeg";
@@ -638,15 +637,6 @@ const Home = () => {
       short: "Ансамбль «Русский терем» (Южно-Сахалинск) | B3",
       long: "Ансамбль «Русский терем» (Южно-Сахалинск)",
       bio: "Ансамбль современной народной песни «Русский терем» был создан в 2008 году. За эти годы коллектив дал сотни концертов, включая гастроли в странах Азиатско-Тихоокеанского региона. «Русский терем» - многократный призер муниципальных, региональных, всероссийских и международных фестивалей и конкурсов. Ансамбль ведет не только концертную, но и просветительскую деятельность, выступая в разных городах области. Концерты коллектива имеют широкий общественный резонанс, пользуются успехом как у жителей города и области, так и у зарубежных гостей. В репертуаре коллектива более 150 разножанровых и разнохарактерных песен и вокально-хореографических композиций. Творчество ансамбля многократно освещается в СМИ, песни в его исполнении часто транслируются по местному радио и телевидению.",
-    },
-    {
-      image: P49,
-      short: "Ансамбль народной песни «Зарянка» (г. Дальнегорск) | B3",
-      long: "Ансамбль народной песни «Зарянка» (г. Дальнегорск)",
-      bio:
-        "Детский творческий коллектив - ансамбль народной песни «Зарянка» был создан в 2014 году на базе Муниципального бюджетного учреждения дополнительного образования «Детская школа искусств г. Дальнегорска». Участниками коллектива являются учащиеся музыкального отделения Детской школы искусств. С ноября 2015 года ансамблем народной песни «Зарянка» руководит Фунтова Татьяна Александровна, которая работает преподавателем Муниципального учреждения дополнительного образования «Детская школа искусств г. Дальнегорска» с 2015 года, имеет высшую квалификационную категорию. \n" +
-        "В репертуар ансамбля входят русские народные песни, песни советских и современных авторов, народные песни в современной обработке, музыкальные композиции и постановки. Тесным сотрудничеством ансамбль связан с учреждениями культуры Дальнегорского городского округа. «Зарянка» всегда является желанным гостем на концертных площадках ДК химиков, ДК «Горняк», Центра культуры и досуга «Бриз». Без участия ансамбля «Зарянка» невозможно представить «Ночь в музее» и «Библионочь», городские праздники «Масленица» и «Ивана Купала». \n" +
-        "Воспитанники ансамбля не раз становились победителями многих краевых, региональных, Российских и Международных конкурсов и фестивалей.\n",
     },
     {
       image: P50,
