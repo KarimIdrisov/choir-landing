@@ -299,9 +299,10 @@ cursor: pointer;
     align-items: center;
 }
 
-.downloadProgram {
+.downloadProgram  a{
     display: flex;
     align-items: center;
+    text-decoration: none;
     color: white;
     font-size: 32px;
     cursor: pointer;
