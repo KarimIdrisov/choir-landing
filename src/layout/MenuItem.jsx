@@ -31,8 +31,10 @@ export const MenuItem = ({ i }) => {
       return;
     }
 
+    elementToScroll.parentNode.classList.add('is-visible');
+
     window.scrollTo({
-      top: elementToScroll.offsetTop - 80,
+      top: elementToScroll.parentNode.offsetTop - 100,
       behavior: "smooth"
     });
     window.addEventListener("hashchange", handleAnchorClick);

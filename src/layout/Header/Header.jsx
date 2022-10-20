@@ -104,15 +104,17 @@ export const Header = () => {
   const width = useWindowSize().width;
 
   const handleAnchorClick = (hash) => {
-
     const elementToScroll = document.getElementById(hash?.replace("#", ""));
 
     if (!elementToScroll) {
       return;
     }
 
+    elementToScroll.parentNode.classList.add('is-visible');
+    setActiveHash(hash);
+
     window.scrollTo({
-      top: elementToScroll.offsetTop - 100,
+      top: elementToScroll.parentNode.offsetTop - 100,
       behavior: "smooth"
     });
     window.addEventListener("hashchange", handleAnchorClick);
