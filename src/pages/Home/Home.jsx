@@ -107,7 +107,7 @@ import { ControlledRefModalJury } from "../../components/Modal/JuryModal";
 import { ControlledRefModalPart } from "../../components/Modal/PartModal";
 
 import V1 from "../../assets/images/Синий зал ДВФУ.jpg";
-import V2 from "../../assets/images/Конференц зал Сопка ДВФУ.jpg";
+import V2 from "../../assets/images/Средний зал.jpg";
 import V3 from "../../assets/images/Мариинка.jpg";
 import V4 from "../../assets/images/Приморская краевая филармония.jpg";
 import V5 from "../../assets/images/Евангелическо-Лютеранская церковь.jpg";
@@ -1244,7 +1244,7 @@ const Home = () => {
 
           <div className={styles.venuesList}>
             <VenueCard img={V1} place='Концертный зал <br/> "Синий" ДВФУ' />
-            <VenueCard img={V2} place="Конференц-зал <br/> «Сопка» ДВФУ" />
+            <VenueCard img={V2} place="Конференц-зал <br/> «Средний» ДВФУ" />
             <VenueCard
               img={V3}
               place="Большой зал <br/> Приморской сцены Мариинского театра"
