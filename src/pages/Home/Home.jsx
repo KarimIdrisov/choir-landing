@@ -113,6 +113,9 @@ import V4 from "../../assets/images/Приморская краевая фила
 import V5 from "../../assets/images/Евангелическо-Лютеранская церковь.jpg";
 import V6 from '../../assets/images/Собор.jpg'
 
+import N1 from '../../assets/images/цифры дхо.jpg'
+import { redirect, useNavigate } from "react-router-dom";
+
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef();
@@ -911,6 +914,11 @@ const Home = () => {
 
   const [fullPart, setFullPart] = useState(false);
 
+  const navigate = useNavigate();
+  const redirect = (path) => {
+      navigate(path);
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.introSection} id={"intro"}>
@@ -1265,54 +1273,22 @@ const Home = () => {
         <div className={styles.news} id="news">
           <div className={styles.newsTitle}>НОВОСТИ</div>
 
-          <div className={styles.wait}>Данный раздел будет обновляться</div>
-
-          {/*<Slider {...settingsNews} className={styles.newsSwiper}>*/}
-          {/*        <div className={styles.newsItem}>*/}
-          {/*            <div>*/}
-          {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
-          {/*                <div className={styles.newsItemTitle}>*/}
-          {/*                    Название новости*/}
-          {/*                </div>*/}
-          {/*                <div className={styles.newsDate}>*/}
-          {/*                    Октябрь 25, 2022*/}
-          {/*                </div>*/}
-          {/*            </div>*/}
-          {/*        </div>*/}
-          {/*        <div className={styles.newsItem}>*/}
-          {/*            <div>*/}
-          {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
-          {/*                <div className={styles.newsItemTitle}>*/}
-          {/*                    Название новости*/}
-          {/*                </div>*/}
-          {/*                <div className={styles.newsDate}>*/}
-          {/*                    Октябрь 25, 2022*/}
-          {/*                </div>*/}
-          {/*            </div>*/}
-          {/*        </div>*/}
-          {/*        <div className={styles.newsItem}>*/}
-          {/*            <div>*/}
-          {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
-          {/*                <div className={styles.newsItemTitle}>*/}
-          {/*                    Название новости*/}
-          {/*                </div>*/}
-          {/*                <div className={styles.newsDate}>*/}
-          {/*                    Октябрь 25, 2022*/}
-          {/*                </div>*/}
-          {/*            </div>*/}
-          {/*        </div>*/}
-          {/*        <div className={styles.newsItem}>*/}
-          {/*            <div>*/}
-          {/*                <img width={365} height={380} className={styles.newsImage}/>*/}
-          {/*                <div className={styles.newsItemTitle}>*/}
-          {/*                    Название новости*/}
-          {/*                </div>*/}
-          {/*                <div className={styles.newsDate}>*/}
-          {/*                    Октябрь 25, 2022*/}
-          {/*                </div>*/}
-          {/*            </div>*/}
-          {/*        </div>*/}
-          {/*</Slider>*/}
+          {/* <Slider {...settingsNews} className={styles.newsSwiper}> */}
+                 <div className={styles.newsWrapper}>
+                 <div className={styles.newsItem} onClick={() => redirect('/news1')}>
+                     <div>
+                         <img src={N1} width={365} height={380} className={styles.newsImage}/>
+                         <div className={styles.newsItemTitle}>
+                            Дальневосточная хоровая олимпиада в цифрах: что ждет участников и зрителей
+                         </div>
+                         <div className={styles.newsDate}>
+                             Октябрь 24, 2022
+                         </div>
+                     </div>
+                 </div>
+                 </div>
+                 
+          {/* </Slider> */}
         </div>
       </FadeInSection>
       <FadeInSection>
