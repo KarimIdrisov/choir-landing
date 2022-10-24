@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { withLayout } from '../layout/Layout';
 import styles from './News.module.scss';
 
 export const News1 = withLayout(
     () => {
+
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [])
 
         const navigate = useNavigate();
         const onMain = () => {
