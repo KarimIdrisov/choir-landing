@@ -4,7 +4,7 @@ import { motion, useCycle } from "framer-motion";
 
 import Logo from "../../assets/icons/logo.svg";
 import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MenuToggle } from "./MenuToggle";
 import { useDimensions } from "../../common/useDimensions";
 import { MenuItem } from "../MenuItem";
@@ -46,39 +46,39 @@ const variants = {
 const menu = [
     {
       name: "ВОЗМОЖНОСТИ УЧАСТИЯ",
-      link: "#rules",
+      link: "/#rules",
     },
     {
       name: "РАСПИСАНИЕ",
-      link: "#program",
+      link: "/#program",
     },
     {
       name: "УЧАСТНИКИ",
-      link: "#participants",
+      link: "/#participants",
     },
     {
       name: "ЖЮРИ",
-      link: "#jury",
+      link: "/#jury",
     },
     {
       name: "МЕСТА ПРОВЕДЕНИЯ",
-      link: "#venues",
+      link: "/#venues",
     },
     {
       name: "НОВОСТИ",
-      link: "#news",
+      link: "/#news",
     },
     {
       name: "ФОТО",
-      link: "#photos",
+      link: "/#photos",
     },
     {
       name: "ВИДЕО",
-      link: "#videos",
+      link: "/#videos",
     },
     {
       name: "РЕЗУЛЬТАТЫ",
-      link: "#results",
+      link: "/#results",
     },
   ];
   
@@ -104,6 +104,7 @@ export const Header = () => {
   const width = useWindowSize().width;
 
   const handleAnchorClick = (hash) => {
+
     const elementToScroll = document.getElementById(hash?.replace("#", ""));
 
     if (!elementToScroll) {

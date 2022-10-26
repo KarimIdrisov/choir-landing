@@ -113,6 +113,14 @@ import V4 from "../../assets/images/Приморская краевая фила
 import V5 from "../../assets/images/Евангелическо-Лютеранская церковь.jpg";
 import V6 from '../../assets/images/Собор.jpg'
 
+import A1 from '../../assets/images/IMG_1354.jpg';
+import A2 from '../../assets/images/IMG_1358.jpg';
+import A3 from '../../assets/images/IMG_1369.jpg';
+import A4 from '../../assets/images/IMG_1428.jpg';
+import A5 from '../../assets/images/IMG_1573.jpg';
+import A6 from '../../assets/images/IMG_1646.jpg';
+import A7 from '../../assets/images/IMG_1672.jpg';
+
 import N1 from '../../assets/images/цифры дхо.jpg'
 import { redirect, useNavigate } from "react-router-dom";
 
@@ -146,11 +154,11 @@ function FadeInSection(props) {
 
 // TODO: connect i18n
 const Home = () => {
-  const [time, setTime] = useState(+new Date(2022, 10, 25) - +new Date());
+  const [time, setTime] = useState(+new Date(2022, 10, 29) - +new Date());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(+new Date(2022, 10, 25) - +new Date());
+      setTime(+new Date(2022, 10, 29) - +new Date());
     }, 1000);
 
     return () => clearInterval(interval);
@@ -958,8 +966,8 @@ const Home = () => {
         </div>
         <div className={styles.timer}>
           <div className={styles.text}>
-            ДО НАЧАЛА <br />
-            ОСТАЛОСЬ
+            ОЛИМПИАДА <br/>
+            НАЧАЛАСЬ
           </div>
           <div className={styles.time}>
             <Timer time={time} />
@@ -1295,11 +1303,10 @@ const Home = () => {
         <div className={styles.photos} id="photos">
           <div className={styles.newsTitle}>ФОТО</div>
 
-          <div className={styles.wait}>Данный раздел будет обновляться</div>
-
-          {/*<div className={styles.photoMain}>*/}
-          {/*    <div className={styles.photoMainTitle}>НАЗВАНИЕ ФОТОАЛЬБОМА</div>*/}
-          {/*</div>*/}
+          <div className={styles.photoMain} onClick={() => redirect('/photo-album-1')}>
+             <img src={A1} className={styles.backPhoto}/>
+             <div className={styles.photoMainTitle}>Церемония открытия Олимпиады</div>
+          </div>
 
           {/*<div className={styles.photosAlbums}>*/}
           {/*    <div className={styles.album}>*/}
