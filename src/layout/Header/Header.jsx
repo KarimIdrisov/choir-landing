@@ -46,39 +46,39 @@ const variants = {
 const menu = [
     {
       name: "ВОЗМОЖНОСТИ УЧАСТИЯ",
-      link: "/#rules",
+      link: "#rules",
     },
     {
       name: "РАСПИСАНИЕ",
-      link: "/#program",
+      link: "#program",
     },
     {
       name: "УЧАСТНИКИ",
-      link: "/#participants",
+      link: "#participants",
     },
     {
       name: "ЖЮРИ",
-      link: "/#jury",
+      link: "#jury",
     },
     {
       name: "МЕСТА ПРОВЕДЕНИЯ",
-      link: "/#venues",
+      link: "#venues",
     },
     {
       name: "НОВОСТИ",
-      link: "/#news",
+      link: "#news",
     },
     {
       name: "ФОТО",
-      link: "/#photos",
+      link: "#photos",
     },
     {
       name: "ВИДЕО",
-      link: "/#videos",
+      link: "#videos",
     },
     {
       name: "РЕЗУЛЬТАТЫ",
-      link: "/#results",
+      link: "#results",
     },
   ];
   
