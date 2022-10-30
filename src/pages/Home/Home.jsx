@@ -1362,16 +1362,14 @@ const Home = () => {
         <div id="results">
           <div className={styles.resultsTitle}>РЕЗУЛЬТАТЫ</div>
 
-          <div className={styles.waitResults}>
-            Данный раздел будет обновлен после завершения Олимпиады
+          <div className={styles.results}>
+             <div className={styles.downloadResult}>
+             <a href='/Результаты.pdf' download={'Результаты.pdf'}>
+             <img alt="pdf" src={pdfLogo} width={100} height={125}/>
+             Скачать результаты
+              </a>
+             </div>
           </div>
-
-          {/*<div className={styles.results}>*/}
-          {/*    <div className={styles.downloadResult}>*/}
-          {/*        <img alt="pdf" src={pdfLogo} width={100} height={125}/>*/}
-          {/*        Скачать результаты*/}
-          {/*    </div>*/}
-          {/*</div>*/}
         </div>
       </FadeInSection>
     </div>
