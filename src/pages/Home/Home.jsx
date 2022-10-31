@@ -1364,7 +1364,7 @@ const Home = () => {
 
           <div className={styles.results}>
              <div className={styles.downloadResult}>
-             <a href='/Результаты1.pdf' download={'Результаты.pdf'}>
+             <a href='/Результаты2.pdf' download={'Результаты.pdf'}>
              <img alt="pdf" src={pdfLogo} width={100} height={125}/>
              Скачать результаты
               </a>
