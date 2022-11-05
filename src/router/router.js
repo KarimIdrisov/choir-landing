@@ -6,6 +6,7 @@ import { PhotoAlbum1 } from "../photos/PhotoAlbum1";
 import { PhotoAlbum2 } from "../photos/PhotoAlbum2";
 import { PhotoAlbum3 } from "../photos/PhotoAlbum3";
 import { PhotoAlbum4 } from "../photos/PhotoAlbum4";
+import { PhotoAlbum5 } from "../photos/PhotoAlbum5";
 
 const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ const AppRouter = () => {
         <Route path="/photo-album-2" element={<PhotoAlbum2 />} />
         <Route path="/photo-album-3" element={<PhotoAlbum3 />} />
         <Route path="/photo-album-4" element={<PhotoAlbum4 />} />
+        <Route path="/photo-album-5" element={<PhotoAlbum5 />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
