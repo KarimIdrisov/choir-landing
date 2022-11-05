@@ -116,7 +116,7 @@ import V6 from "../../assets/images/Собор.jpg";
 import A1 from "../../assets/images/IMG_1354.jpg";
 import A2 from "../../assets/images/BA2A8620-min.jpg";
 import A3 from "../../assets/images/IMG_2010.jpg";
-import A4 from "../../assets/images/IMG_1428.jpg";
+import A4 from "../../assets/images/IMG_5258-min.jpg";
 import A5 from "../../assets/images/IMG_1573.jpg";
 import A6 from "../../assets/images/IMG_1646.jpg";
 import A7 from "../../assets/images/IMG_1672.jpg";
@@ -1358,9 +1358,9 @@ const Home = () => {
               className={styles.photoMain}
               onClick={() => redirect("/photo-album-4")}
             >
-              <img src={A1} className={styles.backPhoto} />
+              <img src={A4} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-                Церемония открытия Олимпиады
+              Концерт академических хоров в Мариинском театре 26.10
               </div>
             </div>
 

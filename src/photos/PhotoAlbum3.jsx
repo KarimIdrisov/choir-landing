@@ -5,7 +5,7 @@ import styles from "./PhotoAlbum.module.scss";
 
 import A1 from '../assets/images/IMG_1743.jpg';
 import A2 from '../assets/images/IMG_1748.jpg';
-import A3 from '../assets/images/IMG-1766.jpg';
+import A3 from '../assets/images/IMG_1766.jpg';
 import A4 from '../assets/images/IMG_1779.jpg';
 import A5 from '../assets/images/IMG_1780.jpg';
 import A6 from '../assets/images/IMG_1791.jpg';
