@@ -279,10 +279,6 @@ export const PhotoAlbum5 = withLayout(() => {
       thumbnail: A40
     },
     {
-      original: A40,
-      thumbnail: A40
-    },
-    {
       original: A41,
       thumbnail: A41
     },

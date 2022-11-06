@@ -120,7 +120,7 @@ import A4 from "../../assets/images/IMG_5258-min.jpg";
 import A5 from "../../assets/images/BA2A0695-min.jpg";
 import A6 from "../../assets/images/IMG_2087-min.jpg";
 import A7 from "../../assets/images/IMG_5197-min.jpg";
-import A8 from "../../assets/images/IMG_5197-min.jpg";
+import A8 from "../../assets/images/IMG_3448-min.jpg";
 
 import N1 from "../../assets/images/цифры дхо.jpg";
 import { redirect, useNavigate } from "react-router-dom";

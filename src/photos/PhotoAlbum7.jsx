@@ -31,10 +31,10 @@ import A25 from '../assets/images/0N4A8206-min.jpg';
 import A26 from '../assets/images/0N4A8212-min.jpg';
 import A27 from '../assets/images/0N4A8217-min.jpg';
 import A28 from '../assets/images/0N4A8227-min.jpg';
-import A29 from '../assets/images/0N4A8237-5-min.jpg';
+import A29 from '../assets/images/0N4A8237-min.jpg';
 import A30 from '../assets/images/IMG_5180-min.jpg';
 import A31 from '../assets/images/IMG_5191-min.jpg';
-import A32 from '../assets/images/IMG_5197-4-min.jpg';
+import A32 from '../assets/images/IMG_5197-min.jpg';
 
 import ImageGallery from 'react-image-gallery';
 
