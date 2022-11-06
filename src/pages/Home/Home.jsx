@@ -119,7 +119,8 @@ import A3 from "../../assets/images/IMG_2010.jpg";
 import A4 from "../../assets/images/IMG_5258-min.jpg";
 import A5 from "../../assets/images/BA2A0695-min.jpg";
 import A6 from "../../assets/images/IMG_2087-min.jpg";
-import A7 from "../../assets/images/IMG_1672.jpg";
+import A7 from "../../assets/images/IMG_5197-min.jpg";
+import A8 from "../../assets/images/IMG_5197-min.jpg";
 
 import N1 from "../../assets/images/цифры дхо.jpg";
 import { redirect, useNavigate } from "react-router-dom";
@@ -1388,9 +1389,9 @@ const Home = () => {
               className={styles.photoMain}
               onClick={() => redirect("/photo-album-7")}
             >
-              <img src={A1} className={styles.backPhoto} />
+              <img src={A7} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-                Церемония открытия Олимпиады
+              Концерт духовной музыки 28.10
               </div>
             </div>
 
@@ -1398,9 +1399,9 @@ const Home = () => {
               className={styles.photoMain}
               onClick={() => redirect("/photo-album-8")}
             >
-              <img src={A1} className={styles.backPhoto} />
+              <img src={A8} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-                Церемония открытия Олимпиады
+              Церемония закрытия
               </div>
             </div>
           </div>
