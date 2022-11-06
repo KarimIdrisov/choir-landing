@@ -118,7 +118,7 @@ import A2 from "../../assets/images/BA2A8620-min.jpg";
 import A3 from "../../assets/images/IMG_2010.jpg";
 import A4 from "../../assets/images/IMG_5258-min.jpg";
 import A5 from "../../assets/images/BA2A0695-min.jpg";
-import A6 from "../../assets/images/IMG_1646.jpg";
+import A6 from "../../assets/images/IMG_2087-min.jpg";
 import A7 from "../../assets/images/IMG_1672.jpg";
 
 import N1 from "../../assets/images/цифры дхо.jpg";
@@ -1378,9 +1378,9 @@ const Home = () => {
               className={styles.photoMain}
               onClick={() => redirect("/photo-album-6")}
             >
-              <img src={A1} className={styles.backPhoto} />
+              <img src={A6} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-                Церемония открытия Олимпиады
+              Дружеский концерт 27.10
               </div>
             </div>
 
