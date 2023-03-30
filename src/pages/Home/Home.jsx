@@ -122,6 +122,8 @@ import A6 from "../../assets/images/IMG_2087-min.jpg";
 import A7 from "../../assets/images/IMG_5197-min.jpg";
 import A8 from "../../assets/images/IMG_3448-min.jpg";
 
+import S1 from '../../assets/images/Slide1.jpg'
+
 import N1 from "../../assets/images/цифры дхо.jpg";
 import { redirect, useNavigate } from "react-router-dom";
 
@@ -184,6 +186,19 @@ const Home = () => {
     slidesToScroll: 1,
     swipe: true,
     draggable: true,
+  });
+
+  const [settingsIntro, setSettingsIntro] = useState({
+    dots: true,
+    infinite: true,
+    arrows: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+    draggable: true,
+    autoplay: true,
+  autoplaySpeed: 4000,
   });
 
   const openVk = () => {
@@ -954,38 +969,56 @@ const Home = () => {
     <div className={styles.wrapper}>
       <div className={styles.introSection} id={"intro"}>
         <div className={styles.intro}>
-          <img
-            className={styles.choirLogo}
-            src={choirLogo}
-            alt="хоровая олимпиады"
-            width={260}
-            height={120}
-          />
-          <span className={styles.introDesc}>
-            Первый Всероссийский хоровой фестиваль и конкурс
-          </span>
-          <span className={styles.introTitle}>
-            ДАЛЬНЕВОСТОЧНАЯ <br />
-            ХОРОВАЯ ОЛИМПИАДА
-          </span>
-          <span className={styles.date}>25 - 29 октября | г. Владивосток</span>
+          <Slider {...settingsIntro}>
+            <div className={styles.slideImage}>
+              <img
+                src={S1}
+                width={'100%'}
+                height={'100%'}
 
-          <img
-            className={styles.vk}
-            onClick={openVk}
-            src={vkLogo}
-            alt="Группа олимпиады во вконтакте"
-            width={84}
-            height={84}
-          />
-          <img
-            className={styles.youtube}
-            src={youtubeLogo}
-            alt="Канал олимпиады на ютубе"
-            width={84}
-            height={84}
-            onClick={openYoutube}
-          />
+              />
+            </div>
+            <div className={styles.slideImage}>
+              <img
+                src={S1}
+                width={'100%'}
+                height={'100%'}
+
+              />
+            </div>
+            <div className={styles.slideImage}>
+              <img
+                src={S1}
+                width={'100%'}
+                height={'100%'}
+
+              />
+            </div>
+            <div className={styles.slideImage}>
+              <img
+                src={S1}
+                width={'100%'}
+                height={'100%'}
+
+              />
+            </div>
+            <div className={styles.slideImage}>
+              <img
+                src={S1}
+                width={'100%'}
+                height={'100%'}
+
+              />
+            </div>
+          </Slider>
+          <div className={styles.introText}>
+            <span className={styles.olympTitle}>
+            II Дальневосточная <br/> хоровая олимпиада
+            </span>
+            <span className={styles.olympDate}>
+            24–28 октября 2023 <br/> Владивосток
+            </span>
+          </div>
         </div>
         <div className={styles.timer}>
           <div className={styles.time}>ОЛИМПИАДА ЗАВЕРШЕНА</div>
@@ -1361,7 +1394,7 @@ const Home = () => {
             >
               <img src={A4} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-              Концерт академических хоров в Мариинском театре 26.10
+                Концерт академических хоров в Мариинском театре 26.10
               </div>
             </div>
 
@@ -1371,7 +1404,7 @@ const Home = () => {
             >
               <img src={A5} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-              Конкурсные прослушивания 27.10
+                Конкурсные прослушивания 27.10
               </div>
             </div>
 
@@ -1381,7 +1414,7 @@ const Home = () => {
             >
               <img src={A6} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-              Дружеский концерт 27.10
+                Дружеский концерт 27.10
               </div>
             </div>
 
@@ -1391,7 +1424,7 @@ const Home = () => {
             >
               <img src={A7} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-              Концерт духовной музыки 28.10
+                Концерт духовной музыки 28.10
               </div>
             </div>
 
@@ -1401,7 +1434,7 @@ const Home = () => {
             >
               <img src={A8} className={styles.backPhoto} />
               <div className={styles.photoMainTitle}>
-              Церемония закрытия
+                Церемония закрытия
               </div>
             </div>
           </div>

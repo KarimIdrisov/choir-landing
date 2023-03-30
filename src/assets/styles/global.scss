@@ -5,7 +5,8 @@
 *, body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Commissioner', sans-serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -14,51 +15,9 @@ html {
 
 
 @font-face {
-  font-family: 'Rodchenko';
-  src: url('../fonts/rodchenko-bold.ttf') format('truetype');
+  font-family: 'FoglihtenNo06';
+  src: url('../fonts/FoglihtenNo06_076.otf') format('truetype');
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Century';
-  src: url('../fonts/centurygothic_bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Century';
-  src: url('../fonts/centurygothic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Calibri';
-  src: url('../fonts/calibri.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Air';
-  src: url('../fonts/Air.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Pribambas';
-  src: url('../fonts/pribambas.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Natasha';
-  src: url('../fonts/Natasha.ttf') format('truetype');
-  font-weight: normal;
   font-style: normal;
 }
 
@@ -161,18 +120,25 @@ width: 50px !important;
 }
 
 .slick-dots {
-  top: -20px!important;
+  bottom: 20px!important;
   left: 0px !important;
+  
 
   button:before {
-    font-size: 28px!important;
-    color: #ACE9EC!important;
+    font-size: 8px!important;
+    color:  rgba(255, 255, 255, 0.5) !important;
     opacity: 1!important;
+    
   }
+  li {
+    width: 8px !important;
+    height: 8px;
+  }
+  z-index: 51;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #52B8BA!important;
+  color: #FFFFFF!important;
   opacity: 1!important;
 }
 

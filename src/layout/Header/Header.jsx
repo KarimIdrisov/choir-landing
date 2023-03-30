@@ -1,8 +1,7 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useCycle } from "framer-motion";
 
-import Logo from "../../assets/icons/logo.svg";
 import styles from "./Header.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { MenuToggle } from "./MenuToggle";
@@ -11,6 +10,9 @@ import { MenuItem } from "../MenuItem";
 import classNames from "classnames";
 import { useWindowSize } from "../../common/useWindowSize";
 import viewportCheckerUmd from "viewport-checker";
+import { Logo } from "../../components/Logo";
+import vkLogo from "../../assets/icons/vk-logo.svg";
+import youtubeLogo from "../../assets/icons/youtube.svg";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -44,55 +46,39 @@ const variants = {
 };
 
 const menu = [
-    {
-      name: "ВОЗМОЖНОСТИ УЧАСТИЯ",
-      link: "#rules",
-    },
-    {
-      name: "РАСПИСАНИЕ",
-      link: "#program",
-    },
-    {
-      name: "УЧАСТНИКИ",
-      link: "#participants",
-    },
-    {
-      name: "ЖЮРИ",
-      link: "#jury",
-    },
-    {
-      name: "МЕСТА ПРОВЕДЕНИЯ",
-      link: "#venues",
-    },
-    {
-      name: "НОВОСТИ",
-      link: "#news",
-    },
-    {
-      name: "ФОТО",
-      link: "#photos",
-    },
-    {
-      name: "ВИДЕО",
-      link: "#videos",
-    },
-    {
-      name: "РЕЗУЛЬТАТЫ",
-      link: "#results",
-    },
-  ];
-  
+  {
+    name: "Документы",
+    link: "#documents",
+  },
+  {
+    name: "Участники",
+    link: "#participants",
+  },
+  {
+    name: "Жюри",
+    link: "#jury",
+  },
+  {
+    name: "Галерея",
+    link: "#galery",
+  },
+  {
+    name: "Результаты",
+    link: "#results",
+  },
+];
+
 const Navigation = ({ toggleOpen, open }) => (
-    <motion.ul variants={variants} className={classNames(styles.mobileUl, {
-        [styles.under]: !open
-    })}>
-      {menu.map(i => (
-        <div onClick={() => toggleOpen()} key={i.link}>
-          <MenuItem i={i} key={i.link} />
-        </div>
-      ))}
-    </motion.ul>
-  );
+  <motion.ul variants={variants} className={classNames(styles.mobileUl, {
+    [styles.under]: !open
+  })}>
+    {menu.map(i => (
+      <div onClick={() => toggleOpen()} key={i.link}>
+        <MenuItem i={i} key={i.link} />
+      </div>
+    ))}
+  </motion.ul>
+);
 
 
 export const Header = () => {
@@ -140,34 +126,32 @@ export const Header = () => {
 
   function isInViewport(el) {
     const rect = el.getBoundingClientRect();
-    
+
     return (
       rect.top < window.innerHeight && rect.bottom >= 0
     );
-}
+  }
 
-new viewportCheckerUmd('rules', {
-  classToAdd: 'visible',
-});
+  new viewportCheckerUmd('rules', {
+    classToAdd: 'visible',
+  });
 
   useEffect(() => {
-
-    
     const handleScroll = () => {
       const intro = document.getElementById('intro');
-  const rules = document.getElementById('rules');
-  const program = document.getElementById('program');
-  const participants = document.getElementById('participants');
-  const jury = document.getElementById('jury');
-  const venues = document.getElementById('venues');
-  const news = document.getElementById('news');
-  const photos = document.getElementById('photos');
-  const videos = document.getElementById('videos');
-  const results = document.getElementById('results');
+      const rules = document.getElementById('rules');
+      const program = document.getElementById('program');
+      const participants = document.getElementById('participants');
+      const jury = document.getElementById('jury');
+      const venues = document.getElementById('venues');
+      const news = document.getElementById('news');
+      const photos = document.getElementById('photos');
+      const videos = document.getElementById('videos');
+      const results = document.getElementById('results');
 
-  const sections = [
-    intro, rules, program, participants, jury, venues, news, photos, videos, results
-  ];
+      const sections = [
+        intro, rules, program, participants, jury, venues, news, photos, videos, results
+      ];
       const currentScrollY = window.scrollY;
 
       for (let i = 0; i < 10; i += 1) {
@@ -192,44 +176,72 @@ new viewportCheckerUmd('rules', {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [goingUp]);
 
+  const openVk = () => {
+    window.open("https://vk.com/fareastchoirolympic", "_blank");
+  };
+
+  const openYoutube = () => {
+    window.open(
+      "https://www.youtube.com/channel/UCEPYTlA03JIdsYQmwMdAhbQ/featured",
+      "_blank"
+    );
+  };
+
   return (
     <div className={styles.wrapper}>
-        <header className={styles.header}>
-            <div className={styles.logo} style={{ display: width < 1300 && activeHash !== 'intro' ? 'none' : 'flex' }}>
-                <img src={Logo} alt="Logo" width={53} height={64} />
-                <span className={styles.logoText}>{t("header.logoText")}</span>
-                
-            </div>
+      <header className={styles.header}>
+        <div className={styles.logo} style={{ display: width < 1300 && activeHash !== 'intro' ? 'none' : 'flex' }}>
+          <Logo />
+        </div>
 
-            <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>
-                  {hashMap[activeHash]}
-            </div>
+        <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>
+          {hashMap[activeHash]}
+        </div>
 
-            <menu>
-                <ul className={styles.menu}>
-                    {menu.map((menuItem) => (
-                        <li key={menuItem.link} className={styles.menuItem}>
-                            <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
-                              [styles.activeLink]: activeHash === menuItem.link.slice(1)
-                            })}>{menuItem.name}</Link>
-                        </li>
-                    ))}
-                </ul>
-                <motion.nav
-                    initial={false}
-                    className={styles.mobileNav}
-                    animate={isOpen ? "open" : "closed"}
-                    custom={height}
-                    ref={containerRef}
-                >
-                    <motion.div className={classNames("background", {
-                        [styles.over]: isOpen
-                    })} variants={sidebar} />
-                    <Navigation toggleOpen={toggleOpen} open={isOpen} active={activeHash} />
-                    <MenuToggle toggle={() => toggleOpen()} />
-                </motion.nav>
-            </menu>
-        </header>
+        <menu className={styles.menuWrapper}>
+          <ul className={styles.menu}>
+            {menu.map((menuItem) => (
+              <li key={menuItem.link} className={styles.menuItem}>
+                <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
+                  [styles.activeLink]: activeHash === menuItem.link.slice(1)
+                })}>{menuItem.name}</Link>
+              </li>
+            ))}
+          </ul>
+          <motion.nav
+            initial={false}
+            className={styles.mobileNav}
+            animate={isOpen ? "open" : "closed"}
+            custom={height}
+            ref={containerRef}
+          >
+            <motion.div className={classNames("background", {
+              [styles.over]: isOpen
+            })} variants={sidebar} />
+            <Navigation toggleOpen={toggleOpen} open={isOpen} active={activeHash} />
+            <MenuToggle toggle={() => toggleOpen()} />
+          </motion.nav>
+        </menu>
+
+        <div className={styles.networks}>
+          <img
+            className={styles.vk}
+            onClick={openVk}
+            src={vkLogo}
+            alt="Группа олимпиады во вконтакте"
+            width={24}
+            height={24}
+          />
+          <img
+            className={styles.youtube}
+            src={youtubeLogo}
+            alt="Канал олимпиады на ютубе"
+            width={24}
+            height={24}
+            onClick={openYoutube}
+          />
+        </div>
+      </header>
     </div>
   );
 };

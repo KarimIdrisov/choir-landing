@@ -1,74 +1,84 @@
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .header {
-  width: 1870px;
-  height: 70px;
   position: fixed;
-  padding: 25px;
-  background-color: #F8FDFE;
   display: grid;
-
-  grid-template-columns: 1fr auto;
-  z-index: 1;
-
-  @media (max-width: 1920px) {
-    width: calc(100vw - 93px);
-
-  }
+  align-items: center;
+  width: 1920px;
+  height: 60px;
+  background-color: #ffffff;
+  padding: 20px;
+  grid-template-columns: auto 1fr auto;
+  z-index: 100;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 5px;
-}
-
-.logoText {
-  white-space: pre-line;
-  font-size: 14px;
-  font-family: "Century", 'sans-serif';
-  line-height: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
+  width: 146px;
+  height: 60px;
 }
 
 .menu {
   display: flex;
   list-style: none;
   height: 100%;
-  gap: 5px;
+  gap: 32px;
   align-items: center;
 }
 
-.menuItem {
+.menuWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  ul {
+    max-width: 100%;
+  }
+}
 
+.menuItem {
   padding: 6px;
   min-width: 60px;
   height: 24px;
-transition: all 0.3s ease;
-  
+  transition: all 0.3s ease;
+
 
   a {
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: #3C8284;
-    font-size: 16px;
-    font-weight: bold;
     transition: all 0.3s ease;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303030;
   }
 
   &:hover {
     a {
       color: black;
     }
+  }
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  img {
+    cursor: pointer;
   }
 }
 
@@ -109,11 +119,11 @@ transition: all 0.3s ease;
   gap: 25px;
   list-style: none;
   text-decoration: none;
-    
+
   a {
     color: #3C8284;
     font-size: 16px;
-    
+
     font-weight: bold;
     text-decoration: none;
   }
@@ -135,6 +145,12 @@ transition: all 0.3s ease;
   display: none;
 }
 
+@media (max-width: 1920px) {
+  .header {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1490px) {
   .logoText {
     display: none;
@@ -146,21 +162,24 @@ transition: all 0.3s ease;
     display: none;
 
   }
+
   .logoText {
     display: block;
   }
-  
+
   .toggle {
     display: block;
   }
-  
-.mobileNav {
-  display: block;
+
+  .mobileNav {
+    display: block;
   }
+
   .header {
     width: 100%;
     grid-template-columns: 1fr;
   }
+
   .toggle {
     right: 60px;
   }
