@@ -198,7 +198,7 @@ const Home = () => {
     swipe: true,
     draggable: true,
     autoplay: true,
-  autoplaySpeed: 4000,
+    autoplaySpeed: 4000,
   });
 
   const openVk = () => {
@@ -1013,172 +1013,161 @@ const Home = () => {
           </Slider>
           <div className={styles.introText}>
             <span className={styles.olympTitle}>
-            II Дальневосточная <br/> хоровая олимпиада
+              II Дальневосточная <br /> хоровая олимпиада
             </span>
             <span className={styles.olympDate}>
-            24–28 октября 2023 <br/> Владивосток
+              24–28 октября 2023 <br /> Владивосток
             </span>
           </div>
-        </div>
-        <div className={styles.timer}>
-          <div className={styles.time}>ОЛИМПИАДА ЗАВЕРШЕНА</div>
         </div>
       </div>
       <FadeInSection>
         <div className={styles.about}>
-          <span className={styles.aboutTitle}>
-            ПЕРВАЯ ХОРОВАЯ ОЛИМПИАДА НА ДАЛЬНЕМ ВОСТОКЕ
-          </span>
+          <div className={styles.title}>
+            <span className={styles.aboutTitle}>
+              хоровая олимпиада
+            </span>
+            <span className={styles.aboutTitleBottom}>
+              на Дальнем Востоке
+            </span>
+          </div>
 
-          <span className={styles.aboutDescription}>
-            В 2022 году во Владивостоке впервые пройдет открытый конкурс и
-            фестиваль хоровой музыки Дальневосточная хоровая олимпиада. Среди
-            участников Олимпиады детские и взрослые хоровые коллективы со всей
-            страны, которые в течение пяти дней представят свое мастерство
-            членам жюри – известным хоровым дирижерам и композиторам, а также
-            подарят праздник хоровой музыки всем гостям и зрителям фестиваля.
-            Таким образом, Дальневосточная хоровая олимпиада обещает стать новой
-            культурной точкой притяжения на Дальнем Востоке, которая сделает
-            хоровую музыку ближе и доступнее для зрителей!
-          </span>
+          <div className={styles.aboutDescription}>
+            <div className={styles.left}>
+              С 24 по 28 октября 2023 года во Владивостоке пройдет
+              II Дальневосточная хоровая олимпиада. Вторая хоровая олимпиада –
+              это всероссийский фестиваль и конкурс хорового искусства с международным участием.
+              Олимпиада включает в себя конкурсные прослушивания в 12 номинациях, фестивальные
+              концерты, мастер-классы от членов жюри мирового уровня, торжественные церемонии
+              открытия и закрытия, а также незабываемый заряд вдохновения.
+            </div>
+            <div className={styles.right}>
+              Первая хоровая олимпиада собрала более
+              2000 участников и стала настоящим праздником хоровой музыки.
+              Вместе с вами мы можем сделать Олимпиаду доброй традицией и
+              внести небольшой, но значимый вклад в поддержку и развитие
+              хорового искусства!
+            </div>
+          </div>
+
+          <div className={styles.video}>
+            <video controls>
+              <source src="https://www.youtube.com/watch?v=YtvkS0BfCgA&t=9s" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </FadeInSection>
       <FadeInSection>
         <div className={styles.rules} id={"rules"}>
-          <span className={styles.rulesTitle}>ВОЗМОЖНОСТИ УЧАСТИЯ</span>
-
-          <Accordion allowZeroExpanded>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>КОНКУРС</AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <table border="black">
-                  <thead className="tableHead">
-                    <th>Обозначение</th>
-                    <th>
-                      Название <br /> категории
-                    </th>
-                    <th>
-                      Возраст <br />
-                      участников
-                    </th>
-                    <th>
-                      Количество <br />
-                      участников
-                    </th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>А1</td>
-                      <td>Младшие детские хоры</td>
-                      <td>7–11 лет</td>
-                      <td rowSpan={3}>от 16</td>
-                    </tr>
-                    <tr>
-                      <td>А2</td>
-                      <td>Старшие детские хоры</td>
-                      <td>11-17 лет</td>
-                    </tr>
-                    <tr>
-                      <td>А3</td>
-                      <td>Хоры мальчиков и юношей</td>
-                      <td>7–17 лет</td>
-                    </tr>
-                    <tr>
-                      <td>А4</td>
-                      <td>Детские вокальные ансамбли</td>
-                      <td>7–17 лет</td>
-                      <td>6–16</td>
-                    </tr>
-                    <tr>
-                      <td>B1</td>
-                      <td>Однородные хоры</td>
-                      <td rowSpan={4}>без возрастных ограничений</td>
-                      <td rowSpan={2}>от 16</td>
-                    </tr>
-                    <tr>
-                      <td>B2</td>
-                      <td>Смешанные хоры</td>
-                    </tr>
-                    <tr>
-                      <td>B3</td>
-                      <td>Народные хоры/ансамбли</td>
-                      <td>от 12</td>
-                    </tr>
-                    <tr>
-                      <td>B4</td>
-                      <td>Взрослые вокальные ансамбли</td>
-                      <td>6–16</td>
-                    </tr>
-                    <tr>
-                      <td>С1</td>
-                      <td>Духовная музыка</td>
-                      <td rowSpan={2}>без возрастных ограничений</td>
-                      <td rowSpan={2}>от 6</td>
-                    </tr>
-                    <tr>
-                      <td>С2</td>
-                      <td>Современная музыка</td>
-                    </tr>
-                  </tbody>
-                </table>
-                Допускается участие коллективов в нескольких категориях (не
-                более трех).
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>ФЕСТИВАЛЬ</AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>
-                  В рамках Дальневосточной хоровой олимпиады пройдут
-                  торжественные церемонии открытия и закрытия, а также
-                  фестивальные концерты участников на лучших площадках
-                  Владивостока и других городов Приморского края.
-                </p>
-              </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton>МАСТЕР-КЛАССЫ</AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <p>
-                  Все участники хоровой олимпиады получат доступ к тематическим
-                  мастер-классам от членов жюри. Первая Дальневосточная хоровая
-                  олимпиада также предусматривает возможность прохождения курсов
-                  повышения квалификации хоровых дирижеров с оформлением
-                  сертификата. На курсы повышения квалификации можно записаться
-                  не зависимо от участия в конкурсной и фестивальной программе
-                  хоровой олимпиады.
-                </p>
-              </AccordionItemPanel>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </FadeInSection>
-      <FadeInSection>
-        <div className={styles.program} id="program">
-          <div className={styles.programTitle}>
-            ПРОГРАММА <br /> МЕРОПРИЯТИЙ
-          </div>
-          <div className={styles.programLink}>
-            <img
-              className={styles.programImage}
-              alt="календарь"
-              src={calendar}
-              width={458}
-              height={308}
-            />
-
+          <span className={styles.rulesTitle}>ПРОГРАММА</span>
+          <div className={styles.rulesContent}>
             <div className={styles.downloadProgram}>
               <a href="/Расписание.pdf" download={"Расписание.pdf"}>
                 <img alt="pdf" src={pdfLogo} width={80} height={100} />
-                СКАЧАТЬ ПРОГРАММУ
+                СКАЧАТЬ <br/> ПРОГРАММУ
               </a>
             </div>
+            <Accordion allowZeroExpanded>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>КОНКУРС</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <table border="black">
+                    <thead className="tableHead">
+                      <th>Обозначение</th>
+                      <th>
+                        Название <br /> категории
+                      </th>
+                      <th>
+                        Возраст <br />
+                        участников
+                      </th>
+                      <th>
+                        Количество <br />
+                        участников
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>А1</td>
+                        <td>Младшие детские хоры</td>
+                        <td>7–11 лет</td>
+                        <td rowSpan={3}>от 16</td>
+                      </tr>
+                      <tr>
+                        <td>А2</td>
+                        <td>Старшие детские хоры</td>
+                        <td>11-17 лет</td>
+                      </tr>
+                      <tr>
+                        <td>А3</td>
+                        <td>Хоры мальчиков и юношей</td>
+                        <td>7–17 лет</td>
+                      </tr>
+                      <tr>
+                        <td>А4</td>
+                        <td>Детские вокальные ансамбли</td>
+                        <td>7–17 лет</td>
+                        <td>6–16</td>
+                      </tr>
+                      <tr>
+                        <td>B1</td>
+                        <td>Однородные хоры</td>
+                        <td rowSpan={4}>без возрастных ограничений</td>
+                        <td rowSpan={2}>от 16</td>
+                      </tr>
+                      <tr>
+                        <td>B2</td>
+                        <td>Смешанные хоры</td>
+                      </tr>
+                      <tr>
+                        <td>B3</td>
+                        <td>Народные хоры/ансамбли</td>
+                        <td>от 12</td>
+                      </tr>
+                      <tr>
+                        <td>B4</td>
+                        <td>Взрослые вокальные ансамбли</td>
+                        <td>6–16</td>
+                      </tr>
+                      <tr>
+                        <td>С1</td>
+                        <td>Духовная музыка</td>
+                        <td rowSpan={2}>без возрастных ограничений</td>
+                        <td rowSpan={2}>от 6</td>
+                      </tr>
+                      <tr>
+                        <td>С2</td>
+                        <td>Современная музыка</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  Допускается участие коллективов в нескольких категориях (не
+                  более трех).
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>ФЕСТИВАЛЬ</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p>
+                  В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока и других городов Приморского края
+                  </p>
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>МАСТЕР-КЛАССЫ</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <p>
+                  Все участники хоровой олимпиады получат доступ к тематическим мастер-классам от членов жюри. Первая Дальневосточная хоровая олимпиада также предусматривает возможность прохождения курсов повышения квалификации хоровых дирижеров с оформлением сертификата. На курсы повышения квалификации можно записаться не зависимо от участия в конкурсной и фестивальной программе хоровой олимпиады
+                  </p>
+                </AccordionItemPanel>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </FadeInSection>

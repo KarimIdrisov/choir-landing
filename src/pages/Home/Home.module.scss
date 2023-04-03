@@ -229,62 +229,93 @@
 }
 
 .about {
-    text-align: center;
-    padding-top: 50px;
+    max-width: 892px;
+    margin: 0 auto;
+    padding-top: 125px;
     min-height: 400px;
-    background-image: url('../../assets/images/about.png');
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 45px;
+    padding-bottom: 125px;
 }
 
 .aboutTitle {
-    font-family: 'Pribambas', sans-serif;
-    font-size: 60px;
-    color: #4A2D05;
     display: block;
-    margin-bottom: 25px;
-    padding-top: 15px;
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 66px;
 
-    @media (max-width: 600px) {
-        padding-top: 25px;
-        font-size: 32px;
-    }
+    color: #086DA6;
+}
+
+.aboutTitleBottom {
+    display: block;
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 66px;
+
+    color: #303030;
+}
+
+.title {
+    display: block;
+    margin-bottom: 32px;
 }
 
 .aboutDescription {
-    font-size: 36px;
-    color: #452B00;
-    font-family: 'Century', 'sans-serif';
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
 
-    @media (max-width: 600px) {
-        font-size: 24px;
-    }
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+
+    color: #000000;
+}
+
+.video {
+    margin-top: 50px;
+    
+}
+
+.video video {
+    width: 100%;
+    height: 461px;
 }
 
 .rules {
-    background-color: #B4FEEA;
-    padding: 25px 50px 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    @media (max-width: 660px) {
-        padding: 25px 15px 35px;
-    }
+.rulesContent {
+    display: grid;
+    grid-template-columns: 206px 1fr;
+    gap: 102px;
 }
 
 .rulesTitle {
-    font-family: 'Pribambas', sans-serif;
-    font-size: 60px;
-    color: #303332;
     display: block;
-    margin-bottom: 25px;
-    text-align: center;
+    font-family: 'FoglihtenNo06';
+font-style: normal;
+font-weight: 500;
+font-size: 64px;
+line-height: 81px;
 
-    @media (max-width: 600px) {
-        font-size: 36px;
-    }
+/* Text / Primary */
+
+margin-bottom: 20px;
+color: #303030;
+
 }
 
 .verticalTabs {
@@ -349,17 +380,27 @@
     align-items: center;
 }
 
+.downloadProgram {
+    border: 2px solid #134D6F;
+border-radius: 8px;
+height: 176px;
+}
+
 .downloadProgram a {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-decoration: none;
-    color: white;
-    font-size: 32px;
+    font-style: normal;
     cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
 
-    @media (max-width: 900px) {
-        font-size: 24px;
-    }
+    text-align: center;
+
+    color: #134D6F;
 }
 
 .moreButton {

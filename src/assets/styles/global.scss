@@ -93,10 +93,10 @@ html {
 }
 
 .slick-arrow {
-  background-color: #CDF4F0 !important;
 width: 50px !important;
   height: 50px !important;
   border-radius: 50%;
+  z-index: 100;
 }
 
 .slick-arrow:before {
@@ -104,7 +104,10 @@ width: 50px !important;
 }
 
 .slick-prev {
-  left: 10px !important;
+  top: inherit !important;
+  right: 180px !important;
+  bottom: 40px !important;
+  left: inherit !important;
   background-image: url('../icons/right.svg') !important;
   background-repeat: no-repeat !important;
   background-size: auto !important;
@@ -112,15 +115,18 @@ width: 50px !important;
 }
 
 .slick-next {
-  right: 10px !important;
+  right: 120px !important;
+  bottom: 40px !important;
   background-image: url('../icons/left.svg') !important;
   background-repeat: no-repeat !important;
   background-size: auto !important;
   background-position: center !important;
+  left:inherit;
+  top: inherit !important
 }
 
 .slick-dots {
-  bottom: 20px!important;
+  bottom:60px!important;
   left: 0px !important;
   
 
