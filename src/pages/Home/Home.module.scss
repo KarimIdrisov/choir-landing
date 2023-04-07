@@ -4,7 +4,7 @@
 }
 
 .introSection {
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 .intro {
@@ -383,6 +383,16 @@
     height: 176px;
 }
 
+.downloadProgram:hover {
+    background: rgba(17, 69, 100, 0.05);
+}
+
+.downloadProgram:active {
+    background: rgba(17, 69, 100, 0.05);
+    color: #317197;
+    border: 2px solid #317197;
+}
+
 .downloadProgram a {
     display: flex;
     align-items: center;
@@ -424,6 +434,17 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.documentsButtons div:hover {
+    background: rgba(17, 69, 100, 0.05);
+}
+
+.documentsButtons div:active {
+    background: rgba(17, 69, 100, 0.05);
+    color: #317197;
+    border: 2px solid #317197;
 }
 
 .documentsTitle {
@@ -824,6 +845,17 @@
     text-transform: uppercase;
 
     color: #134D6F;
+    transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+    background: rgba(17, 69, 100, 0.05);
+}
+
+.primaryButton:active {
+    background: rgba(17, 69, 100, 0.05);
+    border: 2px solid #317197;
+    color: #317197;
 }
 
 .center {
@@ -841,4 +873,19 @@
 
     text-align: left;
     color: #303030;
-}   
+}
+
+.upButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    border: none;
+}

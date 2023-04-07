@@ -1,15 +1,23 @@
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
+  height: 100px;
   background-color: #ffffff;
 }
 
-.header {
+.full {
+  width: 100vw;
+  height: 100px;
   position: fixed;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+
+.header {
   display: grid;
   align-items: center;
-  width: 1920px;
-  height: 60px;
+  height: 100px;
   background-color: #ffffff;
   padding: 20px;
   grid-template-columns: auto 1fr auto;
@@ -72,6 +80,10 @@
     a {
       color: black;
     }
+  }
+
+  &:active {
+    color: #317197;
   }
 }
 
@@ -195,5 +207,17 @@
 }
 
 .activeLink {
-  color: #FEB678 !important;
+  color: #134D6F !important;
+}
+
+.vk,
+.youtube {
+  cursor: pointer;
+  fill: #92C4CA;
+  transition: all 0.3s ease;
+}
+
+.vk:hover,
+.youtube:hover {
+  fill: #317197;
 }

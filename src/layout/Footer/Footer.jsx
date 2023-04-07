@@ -61,8 +61,8 @@ export const Footer = () => {
                                 Социальные сети
                             </div>
                             <div className={styles.info}>
-                                <Icons type='vk' className={styles.vk} width={24} height={24}/>
-                                <Icons type='youtube' className={styles.youtube} width={24} height={24}/>
+                                <Icons type='vk' className={styles.vk} width={24} height={24} onClick={() => openVk()}/>
+                                <Icons type='youtube' className={styles.youtube} width={24} height={24} onClick={() => openYoutube()}/>
                             </div>
                         </div>
                     </div>

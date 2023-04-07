@@ -13,6 +13,7 @@ import viewportCheckerUmd from "viewport-checker";
 import { Logo } from "../../components/Logo";
 import vkLogo from "../../assets/icons/vk-logo.svg";
 import youtubeLogo from "../../assets/icons/youtube.svg";
+import Icons from "../../common/icons";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -60,7 +61,7 @@ const menu = [
   },
   {
     name: "Галерея",
-    link: "#galery",
+    link: "#gallery",
   },
   {
     name: "Результаты",
@@ -101,7 +102,7 @@ export const Header = () => {
     setActiveHash(hash);
 
     window.scrollTo({
-      top: elementToScroll.parentNode.offsetTop - 100,
+      top: elementToScroll.parentNode.offsetTop - 120,
       behavior: "smooth"
     });
     window.addEventListener("hashchange", handleAnchorClick);
@@ -113,15 +114,11 @@ export const Header = () => {
   const [activeHash, setActiveHash] = useState('intro');
 
   const hashMap = {
-    'rules': "ВОЗМОЖНОСТИ УЧАСТИЯ",
-    'program': 'РАСПИСАНИЕ',
-    'participants': 'УЧАСТНИКИ',
-    'jury': 'ЖЮРИ',
-    'venues': 'МЕСТА ПРОВЕДЕНИЯ',
-    'news': 'НОВОСТИ',
-    'photos': 'ФОТО',
-    'videos': 'ВИДЕО',
-    'results': 'РЕЗУЛЬТАТЫ'
+    'documents': "Документы",
+    'participants': 'Участники',
+    'jury': 'Жюри',
+    'gallery': 'Галерея',
+    'results': 'Результаты'
   }
 
   function isInViewport(el) {
@@ -138,19 +135,14 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const intro = document.getElementById('intro');
-      const rules = document.getElementById('rules');
-      const program = document.getElementById('program');
+      const documents = document.getElementById('documents');
       const participants = document.getElementById('participants');
       const jury = document.getElementById('jury');
-      const venues = document.getElementById('venues');
-      const news = document.getElementById('news');
-      const photos = document.getElementById('photos');
-      const videos = document.getElementById('videos');
+      const galery = document.getElementById('galery');
       const results = document.getElementById('results');
 
       const sections = [
-        intro, rules, program, participants, jury, venues, news, photos, videos, results
+        documents, participants, jury, galery, results
       ];
       const currentScrollY = window.scrollY;
 
@@ -188,60 +180,48 @@ export const Header = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <header className={styles.header}>
-        <div className={styles.logo} style={{ display: width < 1300 && activeHash !== 'intro' ? 'none' : 'flex' }}>
-          <Logo className={styles.logotype} />
-        </div>
+    <div className={styles.full}>
+      <div className={styles.wrapper}>
+        <header className={styles.header}>
+          <div className={styles.logo} style={{ display: width < 1300 && activeHash !== 'intro' ? 'none' : 'flex' }}>
+            <Logo className={styles.logotype} />
+          </div>
 
-        <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>
-          {hashMap[activeHash]}
-        </div>
+          <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>
+            {hashMap[activeHash]}
+          </div>
 
-        <menu className={styles.menuWrapper}>
-          <ul className={styles.menu}>
-            {menu.map((menuItem) => (
-              <li key={menuItem.link} className={styles.menuItem}>
-                <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
-                  [styles.activeLink]: activeHash === menuItem.link.slice(1)
-                })}>{menuItem.name}</Link>
-              </li>
-            ))}
-          </ul>
-          <motion.nav
-            initial={false}
-            className={styles.mobileNav}
-            animate={isOpen ? "open" : "closed"}
-            custom={height}
-            ref={containerRef}
-          >
-            <motion.div className={classNames("background", {
-              [styles.over]: isOpen
-            })} variants={sidebar} />
-            <Navigation toggleOpen={toggleOpen} open={isOpen} active={activeHash} />
-            <MenuToggle toggle={() => toggleOpen()} />
-          </motion.nav>
-        </menu>
+          <menu className={styles.menuWrapper}>
+            <ul className={styles.menu}>
+              {menu.map((menuItem) => (
+                <li key={menuItem.link} className={styles.menuItem}>
+                  <Link onClick={() => handleAnchorClick(menuItem.link)} to={menuItem.link} className={classNames({
+                    [styles.activeLink]: activeHash === menuItem.link.slice(1)
+                  })}>{menuItem.name}</Link>
+                </li>
+              ))}
+            </ul>
+            <motion.nav
+              initial={false}
+              className={styles.mobileNav}
+              animate={isOpen ? "open" : "closed"}
+              custom={height}
+              ref={containerRef}
+            >
+              <motion.div className={classNames("background", {
+                [styles.over]: isOpen
+              })} variants={sidebar} />
+              <Navigation toggleOpen={toggleOpen} open={isOpen} active={activeHash} />
+              <MenuToggle toggle={() => toggleOpen()} />
+            </motion.nav>
+          </menu>
 
-        <div className={styles.networks}>
-          <img
-            className={styles.vk}
-            onClick={openVk}
-            src={vkLogo}
-            alt="Группа олимпиады во вконтакте"
-            width={24}
-            height={24}
-          />
-          <img
-            className={styles.youtube}
-            src={youtubeLogo}
-            alt="Канал олимпиады на ютубе"
-            width={24}
-            height={24}
-            onClick={openYoutube}
-          />
-        </div>
-      </header>
+          <div className={styles.networks}>
+            <Icons type='vk' className={styles.vk} width={24} height={24} onClick={() => openVk()} />
+            <Icons type='youtube' className={styles.youtube} width={24} height={24} onClick={() => openYoutube()} />
+          </div>
+        </header>
+      </div>
     </div>
   );
 };

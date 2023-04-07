@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { withLayout } from "../../layout/Layout";
+import { useAnimation, motion } from "framer-motion";
 
 import styles from "./Home.module.scss";
 import Timer from "../../components/Timer/Timer";
@@ -42,6 +43,7 @@ import A8 from "../../assets/images/IMG_3448-min.jpg";
 
 import S1 from '../../assets/images/Slide1.jpg'
 import { useNavigate } from "react-router-dom";
+import Icons from "../../common/icons";
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -117,15 +119,30 @@ const Home = () => {
     autoplaySpeed: 4000,
   });
 
-  const openVk = () => {
-    window.open("https://vk.com/fareastchoirolympic", "_blank");
+
+  const contentRef = useRef(null);
+  const controls = useAnimation();
+  const [scrollY, setScrollY] = useState(0);
+  const handleScroll = () => {
+    if (contentRef.current) {
+      const currentScrollY = contentRef.current.scrollTop
+      setScrollY(currentScrollY);
+    }
   };
 
-  const openYoutube = () => {
-    window.open(
-      "https://www.youtube.com/channel/UCEPYTlA03JIdsYQmwMdAhbQ/featured",
-      "_blank"
-    );
+  useEffect(() => {
+    if (contentRef.current) {
+      controls.start({ opacity: scrollY / contentRef.current.scrollHeight });
+    }
+  }, [scrollY, controls]);
+
+  const scrollToTop = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
@@ -182,7 +199,11 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div
+    style={{ position: 'relative'}}
+      ref={contentRef}
+      onScroll={handleScroll}
+    >
       <div className={styles.introSection} id={"intro"}>
         <div className={styles.intro}>
           <Slider {...settingsIntro}>
@@ -421,7 +442,6 @@ const Home = () => {
         <div className={styles.wrapper}>
           <div className={styles.participants} id="participants">
             <div className={styles.paragraphTitle}>участники</div>
-
             Список участников будет добавлен позже
           </div>
         </div>
