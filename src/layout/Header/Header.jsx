@@ -191,7 +191,7 @@ export const Header = () => {
     <div className={styles.wrapper}>
       <header className={styles.header}>
         <div className={styles.logo} style={{ display: width < 1300 && activeHash !== 'intro' ? 'none' : 'flex' }}>
-          <Logo />
+          <Logo className={styles.logotype} />
         </div>
 
         <div className={styles.activeHash} style={{ display: width < 1300 && activeHash !== 'intro' ? 'block' : 'none' }}>

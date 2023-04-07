@@ -1,36 +1,90 @@
 .footer {
-  min-height: 200px;
-  background-color: #141917;
-  padding: 25px 50px;
-  color: #F5F5F5;
-  display: grid;
-  grid-template-columns: 1fr auto;
-
-  @media (max-width: 650px) {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    height: 100%;
-  }
+  width: 100%;
+  height: 100%;
+  background: #114564;
+  padding-top: 90px;
+  padding-bottom: 40px;
 }
 
 .contacts {
-  font-family: 'Century', 'sans-serif';
-  font-size: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 90px;
+}
 
-  @media (max-width: 1440px) {
-    font-size: 24px;
-  }
+.title {
+  font-family: 'FoglihtenNo06';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 81px;
 
-  @media (max-width: 650px) {
-    font-size: 16px;
-  }
+  color: #FFFFFF;
+}
+
+.contactTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 20px;
+}
+
+.info {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #FFFFFF;
+}
+
+.doubleRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 31px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .links {
-  margin-top: 15px;
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.vk {
+  margin-right: 20px;
+  fill: #ffffff;
+}
+
+.youtube {
+  fill: #ffffff;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 50px;
+}
+
+.choir {
+  width: 146px;
+  height: 60px;
+  fill: #ffffff;
+}
+
+.copyright {
+  font-family: 'Commissioner';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.5);
 }

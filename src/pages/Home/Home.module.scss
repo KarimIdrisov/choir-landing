@@ -9,7 +9,6 @@
 
 .intro {
     width: 100%;
-    height: 800px;
     position: relative;
 }
 
@@ -283,7 +282,7 @@
 
 .video {
     margin-top: 50px;
-    
+
 }
 
 .video video {
@@ -295,6 +294,7 @@
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 125px;
 }
 
 .rulesContent {
@@ -306,15 +306,12 @@
 .rulesTitle {
     display: block;
     font-family: 'FoglihtenNo06';
-font-style: normal;
-font-weight: 500;
-font-size: 64px;
-line-height: 81px;
-
-/* Text / Primary */
-
-margin-bottom: 20px;
-color: #303030;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 81px;
+    margin-bottom: 20px;
+    color: #303030;
 
 }
 
@@ -382,11 +379,71 @@ color: #303030;
 
 .downloadProgram {
     border: 2px solid #134D6F;
-border-radius: 8px;
-height: 176px;
+    border-radius: 8px;
+    height: 176px;
 }
 
 .downloadProgram a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-style: normal;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    text-align: center;
+
+    color: #134D6F;
+}
+
+.documents {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 125px;
+}
+
+.documentsContent {
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #303030;
+
+    max-width: 585px;
+    margin: 0 auto;
+}
+
+.documentsButtons {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.documentsTitle {
+    display: block;
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 81px;
+    margin-bottom: 20px;
+    color: #303030;
+}
+
+.documentsButton {
+    border: 2px solid #134D6F;
+    border-radius: 8px;
+    height: 176px;
+}
+
+.documentsButton a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,6 +483,32 @@ height: 176px;
         transform: scale(1.05);
     }
 }
+
+.participants {
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 150px;
+
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #303030;
+}
+
+.paragraphTitle {
+    text-align: center;
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 81px;
+
+    color: #303030;
+}
+
 
 .participantsTable {
     display: grid;
@@ -550,316 +633,163 @@ height: 176px;
 
 
 .jury {
-    background-color: #F5FEFE;
-    padding-top: 25px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 120px;
 }
 
-.juryTitle {
-    text-align: center;
-    font-family: 'Pribambas', sans-serif;
-    font-size: 100px;
-    margin-bottom: 50px;
-    color: #223030;
-
-    @media (max-width: 600px) {
-        font-size: 48px;
-    }
+.juryItem {
+    cursor: pointer;
 }
 
 .juryList {
     display: flex;
-
-    div {
-        flex: 20%;
-    }
-
-    img {
-        width: 100%;
-        height: 345px;
-    }
-
-    @media (max-width: 1550px) {
-        flex-wrap: wrap;
-        justify-content: center;
-
-        div {
-            max-width: 360px;
-        }
-    }
+    gap: 30px;
 }
 
-
-
-.juryItem {
-    cursor: pointer;
-    min-width: 300px;
-    height: 520px;
-    display: grid;
-    grid-template-rows: 1fr 150px;
-
+.juryList img {
+    width: 216px;
+    height: 240px;
+    border-radius: 8px;
 }
 
 .juryName {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Natasha', 'sans-serif';
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
 
-    @media (max-width: 1440px) {
-        font-size: 24px;
-    }
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #303030;
 }
 
-.juryItem:nth-child(2n + 1) {
-    background-color: #3D94A0;
-
-    .juryName {
-        color: white;
-    }
-}
-
-.juryItem:nth-child(2n) {
-    background-color: #A6ECF2;
-
-    .juryName {
-        color: #327379;
-    }
+.bgWrapper {
+    width: 100%;
+    height: 100%;
+    background: #F2F8F9;
 }
 
 .venues {
-    background-color: #F5FEFE;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 150px;
 
 }
 
 .venuesList {
-    background-color: #C6FFF0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 60px;
-    padding: 45px;
-    justify-content: center;
-
-    @media (max-width: 1440px) {
-        display: flex;
-        gap: 25px;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    gap: 31px;
 }
 
 .venuesTitle {
-    text-align: center;
-    font-family: 'Pribambas', sans-serif;
-    font-size: 100px;
-    margin-bottom: 50px;
-    background-color: #F5FEFE;
-    color: #223030;
-
-    @media (max-width: 600px) {
-        font-size: 48px;
-    }
+    padding-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 24px;
 }
 
-.newsWrapper {
+.venuesTitle .title {
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 66px;
+    color: #303030;
+}
+
+.venuesTitle .places {
     display: flex;
-    padding: 12px 45px;
-
-    @media (max-width: 600px) {
-        padding: 12px 15px;
-    }
 }
 
-.newsItem {
-    cursor: pointer;
-    max-width: 365px;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media (max-width: 600px) {
-        img {
-            width: 280px;
-            height: 300px;
-        }
-
-        >div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    @media (max-width: 460px) {
-        img {
-            width: 210px;
-            height: 250px;
-        }
-    }
+.blue {
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 66px;
+    color: #086DA6;
 }
 
-
-.newsTitle {
-    height: 125px;
-    background-color: #107C91;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 27px;
-    font-family: 'Pribambas', sans-serif;
-    font-size: 100px;
-    color: #F5F8FE;
-
-    @media (max-width: 600px) {
-        font-size: 48px;
-    }
+.galleryTitle {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
 }
 
-.newsSwiper {
-    height: 100%;
-    margin-bottom: 25px;
-    padding: 0 65px;
-}
-
-.videoSwiper {
-    height: 100%;
-    margin-bottom: 25px;
-    margin-top: 50px;
-    padding: 0 65px;
-}
-
-.newsImage {
-
-    background-color: black;
+.galleryTitle div {
     margin-bottom: 20px;
-    margin-top: 25px;
-    border-radius: 12px;
-}
-
-.newsItemTitle {
-    font-family: 'Century', 'sans-serif';
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 12px;
-
-    @media (max-width: 600px) {
-        font-size: 16px;
-    }
-}
-
-.videoTitle {
-    font-family: 'Century', 'sans-serif';
-    font-size: 38px;
-    font-weight: bold;
-    text-align: center;
-
-    @media (max-width: 600px) {
-        font-size: 24px;
-    }
-}
-
-.newsDate {
-    font-size: 24px;
-
-    @media (max-width: 600px) {
-        font-size: 18px;
-    }
+    text-align: left !important;
 }
 
 .photos {
-    background-color: #FEFEFE;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+.resultsWrapper {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 150px;
 }
 
 .backPhoto {
 
-    width: 100%;
-    height: 100%;
+    width: 277px;
+    height: 220px;
     z-index: 1;
     overflow: hidden;
     border-radius: 24px;
 }
 
 .photoMain {
-    display: flex;
-    flex-direction: column;
-    position: relative;
     cursor: pointer;
-    margin: 15px 60px;
-    max-width: 465px;
-    gap: 25px;
-    width: 100%;
-    height: 400px;
-    border-radius: 24px;
-    background-color: transparent;
-    overflow: hidden;
+    min-width: 277px;
+    width: 277px;
+    height: 288px;
+    margin-bottom: 20px;
 }
 
-.photoMainTitle {
-    font-family: 'Century', 'sans-serif';
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: black;
+.galleryButtons {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
 
-    @media (max-width: 600px) {
-        font-size: 16px;
-    }
+.galleryButtons button {
+    height: 36px;
+    width: 36px;
+    border: none;
+    outline: none;
+    background-color: inherit;
 }
 
 .photosAlbums {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px 25px;
-}
-
-.photosAlbumsTitle {
-    font-family: 'Century', 'sans-serif';
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: black;
-
-    @media (max-width: 600px) {
-        font-size: 16px;
-    }
-}
-
-.album {
-    border-radius: 24px;
-    background-color: #4EDCCC;
-    height: 230px;
-    position: relative;
-}
-
-.resultsTitle {
-    height: 100px;
-    background-color: #4EDCCC;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 80px;
-    color: #1A2F2F;
-
-    @media (max-width: 600px) {
-        font-size: 48px;
-    }
+    overflow: hidden;
+    gap: 30px;
 }
 
-.results {
-    height: 372px;
-    background-color: #C6FFF0;
+.photoMainTitle {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #303030;
 }
 
 .results {
     display: flex;
     align-items: center;
     padding: 15px 25px;
-    height: 400px;
+    height: 200px;
 }
 
 .downloadResult a {
@@ -872,48 +802,43 @@ height: 176px;
     text-decoration: none;
 }
 
-.videoItem {
-    margin-top: 55px;
-}
-
-.videoImage {
-    width: 365px;
-    height: 380px;
-    background-color: black;
-}
-
-.wait {
-    padding-top: 60px;
+.primaryButton {
+    cursor: pointer;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 80px;
-    padding-bottom: 60px;
-    text-align: center;
+    padding: 20px 46px;
+    gap: 10px;
+    background-color: inherit;
 
-    @media (max-width: 1100px) {
-        font-size: 24px;
-    }
+    border: 2px solid #134D6F;
+    border-radius: 8px;
+
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #134D6F;
 }
 
-.waitResults {
-    padding-top: 60px;
+.center {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 80px;
-    padding-bottom: 60px;
-    background-color: #C6FFF0;
-    text-align: center;
-
-    @media (max-width: 1100px) {
-        font-size: 24px;
-    }
+    justify-content: center;
 }
 
-.news {
-    height: 100%;
-    min-height: 400px;
-}
+.resultsTitle {
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 66px;
+
+    text-align: left;
+    color: #303030;
+}   
