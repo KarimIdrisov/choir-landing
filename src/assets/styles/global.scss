@@ -11,6 +11,11 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 
@@ -24,13 +29,12 @@ html {
 .background {
   position: absolute;
   top: 0;
-  right: 7px;
+  right: 0;
   left: 0;
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 12;
-  background: #F8FDFE;
+  z-index: 101;
 }
 
 .ul,
@@ -96,7 +100,7 @@ html {
 width: 50px !important;
   height: 50px !important;
   border-radius: 50%;
-  z-index: 100;
+  z-index: 51;
 }
 
 .slick-arrow:before {

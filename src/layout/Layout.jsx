@@ -3,6 +3,7 @@ import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 import { useAnimation, motion } from "framer-motion";
 import Icons from "../common/icons";
+import styles from './Layout.module.scss';
 
 const Layout = ({ children }) => {
 
@@ -33,7 +34,7 @@ const Layout = ({ children }) => {
 
     return (
         <div
-            style={{ position: 'relative', height: '100%' }}
+            style={{ position: 'relative', height: '100%', overflow: 'auto' }}
             ref={contentRef}
             onScroll={handleScroll}
         >
@@ -41,7 +42,7 @@ const Layout = ({ children }) => {
             {children}
             <Footer />
             <motion.div animate={controls} initial={{ opacity: 0 }}>
-                <button  onClick={scrollToTop}>
+                <button className={styles.upButton} onClick={scrollToTop}>
                     <Icons type='top' /> <br />
                     НАВЕРХ
                 </button>

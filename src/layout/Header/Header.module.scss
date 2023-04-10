@@ -118,7 +118,7 @@
 }
 
 .mobileNav {
-  display: none;
+  display: none; 
   width: 100vw;
 }
 
@@ -155,6 +155,7 @@
 
 .over {
   z-index: 3;
+  background-color: #F2F8F9;
 }
 
 .hidden {
@@ -198,6 +199,10 @@
 
   .toggle {
     right: 60px;
+  }
+
+  .networks {
+    display: none;
   }
 }
 

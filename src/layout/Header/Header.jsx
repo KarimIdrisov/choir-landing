@@ -138,7 +138,7 @@ export const Header = () => {
       const documents = document.getElementById('documents');
       const participants = document.getElementById('participants');
       const jury = document.getElementById('jury');
-      const galery = document.getElementById('galery');
+      const galery = document.getElementById('gallery');
       const results = document.getElementById('results');
 
       const sections = [
