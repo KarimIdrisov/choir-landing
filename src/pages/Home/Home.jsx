@@ -670,9 +670,9 @@ const Home = () => {
 
 
               <div className={styles.center}>
-                <button className={styles.primaryButton}>
+                <a className={styles.primaryButton} href="/gallery">
                   перейти в галерею
-                </button>
+                </a>
               </div>
             </div>
           </div>

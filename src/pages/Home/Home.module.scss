@@ -574,8 +574,8 @@
     padding: 20px 60px;
     max-height: 600px;
     margin: 0 25px 0 25px;
-    background-color: #F5FEFE;
-    border-radius: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
     -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
@@ -641,7 +641,11 @@
 }
 
 .participantModalDesc {
+    font-style: normal;
+    font-weight: 400;
     font-size: 18px;
+    line-height: 28px;
+    color: #303030;
 
     @media (max-width: 800px) {
         font-size: 16px;
@@ -824,6 +828,7 @@
 }
 
 .primaryButton {
+    text-decoration: none;
     cursor: pointer;
     display: flex;
     flex-direction: row;
