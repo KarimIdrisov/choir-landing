@@ -528,6 +528,10 @@
     line-height: 81px;
 
     color: #303030;
+
+    @media (max-width: 800px) {
+        font-size: 38px;
+    }
 }
 
 
@@ -704,6 +708,26 @@
 .venuesList {
     display: flex;
     gap: 31px;
+
+    .places {
+        display: none;
+    }
+
+    @media (max-width: 1290px) {
+        .places {
+            display: flex;
+            gap: 28px
+        }
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 700px) {
+        .places {
+            flex-direction: column;
+        }
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .venuesTitle {
@@ -712,6 +736,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin-bottom: 24px;
+
+    @media (max-width: 1290px) {
+        grid-template-columns: 1fr;
+
+        .places {
+            display: none !important;
+        }
+    }
 }
 
 .venuesTitle .title {
@@ -723,10 +755,6 @@
     color: #303030;
 }
 
-.venuesTitle .places {
-    display: flex;
-}
-
 .blue {
     font-family: 'FoglihtenNo06';
     font-style: normal;
@@ -734,12 +762,20 @@
     font-size: 52px;
     line-height: 66px;
     color: #086DA6;
+
+    @media (max-width: 800px) {
+        font-size: 38px;
+    }
 }
 
 .galleryTitle {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 12px;
+
+    @media (max-width: 1280px) {
+        margin: 0 20px;
+    }
 }
 
 .galleryTitle div {
@@ -759,6 +795,10 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 150px;
+
+    @media (max-width: 1200px) {
+        margin: 0 20px;
+    }
 }
 
 .backPhoto {
@@ -799,7 +839,13 @@
     align-items: center;
     overflow: hidden;
     gap: 30px;
+    transition: all 0.3s ease;
+
+    @media (max-width: 1280px) {
+        margin: 0 20px;
+    }
 }
+
 
 .photoMainTitle {
     text-align: left;
@@ -878,6 +924,10 @@
 
     text-align: left;
     color: #303030;
+
+    @media (max-width: 800px) {
+        font-size: 38px;
+    }
 }
 
 .upButton {
