@@ -1,8 +1,6 @@
 import React from "react";
 
 import styles from './Footer.module.scss';
-import vkLogo from "../../assets/icons/vk-logo.svg";
-import youtubeLogo from "../../assets/icons/youtube.svg";
 import Icons from "../../common/icons";
 import { Logo } from "../../components/Logo";
 

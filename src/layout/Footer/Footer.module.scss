@@ -4,12 +4,21 @@
   background: #114564;
   padding-top: 90px;
   padding-bottom: 40px;
+
+  @media (max-width: 1300px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .contacts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 90px;
+
+  @media (max-width: 1300px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .title {
@@ -45,6 +54,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 31px;
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .wrapper {

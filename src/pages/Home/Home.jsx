@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { withLayout } from "../../layout/Layout";
-import { useAnimation, motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
 
 import styles from "./Home.module.scss";
-import Timer from "../../components/Timer/Timer";
 import {
   Accordion,
   AccordionItem,
@@ -43,7 +42,6 @@ import A8 from "../../assets/images/IMG_3448-min.jpg";
 
 import S1 from '../../assets/images/Slide1.jpg'
 import { useNavigate } from "react-router-dom";
-import Icons from "../../common/icons";
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -75,15 +73,6 @@ function FadeInSection(props) {
 
 // TODO: connect i18n
 const Home = () => {
-  const [time, setTime] = useState(+new Date(2022, 10, 29) - +new Date());
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(+new Date(2022, 10, 29) - +new Date());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const width = useWindowSize().width;
   const [settingsNews, setSettingsNews] = useState({
@@ -180,8 +169,6 @@ const Home = () => {
     });
   }, [width]);
 
-  const [fullPart, setFullPart] = useState(false);
-
   const navigate = useNavigate();
   const redirect = (path) => {
     navigate(path);
@@ -190,12 +177,26 @@ const Home = () => {
 
   const nextSlide = () => {
     const container = document.querySelector(`.${styles.photosAlbums}`);
-    container.scrollLeft = 320;
+    let scrollAmount = 0;
+    const slideTimer = setInterval(function(){
+      container.scrollLeft += 20;
+      scrollAmount += 10;
+      if(scrollAmount >= 320){
+        window.clearInterval(slideTimer);
+      }
+    }, 25);
   };
 
   const prevSlide = () => {
     const container = document.querySelector(`.${styles.photosAlbums}`);
-    container.scrollLeft -= 320;
+    let scrollAmount = 0;
+    const slideTimer = setInterval(function(){
+      container.scrollLeft -= 20;
+      scrollAmount += 10;
+      if(scrollAmount >= 320){
+        window.clearInterval(slideTimer);
+      }
+    }, 25);
   }
 
   return (
@@ -554,6 +555,11 @@ const Home = () => {
               </div>
 
               <div className={styles.venuesList}>
+
+                <div className={styles.places}>
+                  <VenueCard img={V1} place='Концертный зал "Синий" ДВФУ' />
+                  <VenueCard img={V2} place="Конференц-зал «Средний» ДВФУ" />
+                </div>
                 <VenueCard
                   img={V3}
                   place="Большой зал <br/> Приморской сцены Мариинского театра"
