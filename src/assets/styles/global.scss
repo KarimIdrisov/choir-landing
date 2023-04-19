@@ -116,6 +116,10 @@ width: 50px !important;
   background-repeat: no-repeat !important;
   background-size: auto !important;
   background-position: center !important;
+
+  @media (max-width: 620px) {
+    display: none !important;
+  }
 }
 
 .slick-next {
@@ -126,7 +130,11 @@ width: 50px !important;
   background-size: auto !important;
   background-position: center !important;
   left:inherit;
-  top: inherit !important
+  top: inherit !important;
+
+  @media (max-width: 620px) {
+    display: none !important;
+  }
 }
 
 .slick-dots {
