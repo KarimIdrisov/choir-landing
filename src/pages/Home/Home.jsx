@@ -595,7 +595,7 @@ const Home = () => {
               <div className={styles.photosAlbums}>
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-1")}
+                  onClick={() => redirect("/gallery-album/Церемония открытия Олимпиады")}
                 >
                   <img src={A1} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -605,7 +605,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-2")}
+                  onClick={() => redirect("/gallery-album/Конкурсные прослушивания 26.10")}
                 >
                   <img src={A2} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -615,7 +615,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-3")}
+                  onClick={() => redirect("/gallery-album/Концерт народных хоров в Филармонии 26.10")}
                 >
                   <img src={A3} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -625,7 +625,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-4")}
+                  onClick={() => redirect("/gallery-album/Концерт академических хоров в Мариинском театре 26.10")}
                 >
                   <img src={A4} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -635,7 +635,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-5")}
+                  onClick={() => redirect("/gallery-album/Конкурсные прослушивания 27.10")}
                 >
                   <img src={A5} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -645,7 +645,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-6")}
+                  onClick={() => redirect("/gallery-album/Дружеский концерт 27.10")}
                 >
                   <img src={A6} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -655,7 +655,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-7")}
+                  onClick={() => redirect("/gallery-album/Концерт духовной музыки 28.10")}
                 >
                   <img src={A7} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -665,7 +665,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-8")}
+                  onClick={() => redirect("/gallery-album/Церемония закрытия")}
                 >
                   <img src={A8} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
