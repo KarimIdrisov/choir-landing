@@ -42,6 +42,7 @@ import A8 from "../../assets/images/IMG_3448-min.jpg";
 
 import S1 from '../../assets/images/Slide1.jpg'
 import { useNavigate } from "react-router-dom";
+import ReactPlayer from "react-player/youtube";
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -178,10 +179,10 @@ const Home = () => {
   const nextSlide = () => {
     const container = document.querySelector(`.${styles.photosAlbums}`);
     let scrollAmount = 0;
-    const slideTimer = setInterval(function(){
+    const slideTimer = setInterval(function () {
       container.scrollLeft += 20;
       scrollAmount += 10;
-      if(scrollAmount >= 320){
+      if (scrollAmount >= 320) {
         window.clearInterval(slideTimer);
       }
     }, 25);
@@ -190,10 +191,10 @@ const Home = () => {
   const prevSlide = () => {
     const container = document.querySelector(`.${styles.photosAlbums}`);
     let scrollAmount = 0;
-    const slideTimer = setInterval(function(){
+    const slideTimer = setInterval(function () {
       container.scrollLeft -= 20;
       scrollAmount += 10;
-      if(scrollAmount >= 320){
+      if (scrollAmount >= 320) {
         window.clearInterval(slideTimer);
       }
     }, 25);
@@ -201,7 +202,7 @@ const Home = () => {
 
   return (
     <div
-    style={{ position: 'relative'}}
+      style={{ position: 'relative' }}
       ref={contentRef}
       onScroll={handleScroll}
     >
@@ -290,9 +291,7 @@ const Home = () => {
             </div>
 
             <div className={styles.video}>
-              <video controls>
-                <source src="https://www.youtube.com/watch?v=YtvkS0BfCgA&t=9s" type="video/mp4" />
-              </video>
+              <ReactPlayer url='https://www.youtube.com/watch?v=YtvkS0BfCgA&t=9s' width={'100%'} height={460} />
             </div>
           </div>
         </div>
