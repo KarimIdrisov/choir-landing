@@ -363,7 +363,7 @@ const Home = () => {
                         </tr>
                         <tr>
                           <td>B3</td>
-                          <td>Народные хоры/ансамбли</td>
+                          <td>Камерные хоры</td>
                           <td>от 12</td>
                         </tr>
                         <tr>
@@ -389,21 +389,31 @@ const Home = () => {
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>ФЕСТИВАЛЬ</AccordionItemButton>
+                    <AccordionItemButton>Фестиваль</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      С 24 по 28 октября 2023 года во Владивостоке пройдет II Дальневосточная хоровая олимпиада. Вторая хоровая олимпиада – это всероссийский фестиваль и конкурс хорового искусства с международным участием. Олимпиада включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты, мастер-классы от членов жюри мирового уровня, торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.
+                    В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>МАСТЕР-КЛАССЫ</AccordionItemButton>
+                    <AccordionItemButton>Мастер-классы</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Первая хоровая олимпиада собрала более 2000 участников и стала настоящим праздником хоровой музыки. Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой, но значимый вклад в поддержку и развитие хорового искусства!
+                    В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>Курсы повышения квалификации </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                    Допускается участие в мероприятиях Олимпиады всех желающих в качестве слушателей с получением удостоверения о прохождении курсов повышения квалификации в объеме 36 часов. Участники курсов получат возможность посещения всех конкурсных прослушиваний, фестивальных концертов, мастер-классов, церемоний открытия и закрытия Олимпиады, круглого стола для руководителей.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -432,7 +442,7 @@ const Home = () => {
                 </div>
 
               </div>
-              Заявки принимаются на электронную почту <b>с 99999 до 10 сентября 2023 г.</b>
+              Заявки на участие во II Дальневосточной хоровой олимпиаде принимаются по электронному адресу fareastchoir@gmail.com до <b>10 сентября 2023 года.</b>
             </div>
           </div>
         </div>
@@ -442,14 +452,14 @@ const Home = () => {
         <div className={styles.wrapper}>
           <div className={styles.participants} id="participants">
             <div className={styles.paragraphTitle}>участники</div>
-            Список участников будет добавлен позже
+            Список участников будет опубликован после окончания приема заявок.
           </div>
         </div>
 
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
-          <div className={styles.jury} id="jury">
+          {/* <div className={styles.jury} id="jury">
             <div className={styles.paragraphTitle}>ЖЮРИ</div>
 
             <div className={styles.juryList}>
@@ -536,6 +546,10 @@ const Home = () => {
 "
               />
             </div>
+          </div> */}
+          <div className={styles.participants} id="jury">
+            <div className={styles.paragraphTitle}>жюри</div>
+            Состав жюри II Дальневосточной хоровой олимпиады будет объявлен позже.
           </div>
         </div>
       </FadeInSection>
