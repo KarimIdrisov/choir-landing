@@ -40,7 +40,9 @@ import A6 from "../../assets/images/IMG_2087-min.jpg";
 import A7 from "../../assets/images/IMG_5197-min.jpg";
 import A8 from "../../assets/images/IMG_3448-min.jpg";
 
-import S1 from '../../assets/images/Slide1.jpg'
+import S1 from '../../assets/images/Slide1.jpg';
+import S2 from '../../assets/images/S2.jpg';
+import S3 from '../../assets/images/S3.jpg';
 import { useNavigate } from "react-router-dom";
 
 function FadeInSection(props) {
@@ -218,7 +220,7 @@ const Home = () => {
             </div>
             <div className={styles.slideImage}>
               <img
-                src={S1}
+                src={S2}
                 width={'100%'}
                 height={'100%'}
 
@@ -226,23 +228,7 @@ const Home = () => {
             </div>
             <div className={styles.slideImage}>
               <img
-                src={S1}
-                width={'100%'}
-                height={'100%'}
-
-              />
-            </div>
-            <div className={styles.slideImage}>
-              <img
-                src={S1}
-                width={'100%'}
-                height={'100%'}
-
-              />
-            </div>
-            <div className={styles.slideImage}>
-              <img
-                src={S1}
+                src={S3}
                 width={'100%'}
                 height={'100%'}
 
