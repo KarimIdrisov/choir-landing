@@ -44,6 +44,7 @@ import S1 from '../../assets/images/Slide1.jpg';
 import S2 from '../../assets/images/S2.jpg';
 import S3 from '../../assets/images/S3.jpg';
 import { useNavigate } from "react-router-dom";
+import ReactPlayer from "react-player/youtube";
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -180,10 +181,10 @@ const Home = () => {
   const nextSlide = () => {
     const container = document.querySelector(`.${styles.photosAlbums}`);
     let scrollAmount = 0;
-    const slideTimer = setInterval(function(){
+    const slideTimer = setInterval(function () {
       container.scrollLeft += 20;
       scrollAmount += 10;
-      if(scrollAmount >= 320){
+      if (scrollAmount >= 320) {
         window.clearInterval(slideTimer);
       }
     }, 25);
@@ -192,10 +193,10 @@ const Home = () => {
   const prevSlide = () => {
     const container = document.querySelector(`.${styles.photosAlbums}`);
     let scrollAmount = 0;
-    const slideTimer = setInterval(function(){
+    const slideTimer = setInterval(function () {
       container.scrollLeft -= 20;
       scrollAmount += 10;
-      if(scrollAmount >= 320){
+      if (scrollAmount >= 320) {
         window.clearInterval(slideTimer);
       }
     }, 25);
@@ -203,7 +204,7 @@ const Home = () => {
 
   return (
     <div
-    style={{ position: 'relative'}}
+      style={{ position: 'relative' }}
       ref={contentRef}
       onScroll={handleScroll}
     >
@@ -276,9 +277,7 @@ const Home = () => {
             </div>
 
             <div className={styles.video}>
-              <video controls>
-                <source src="https://www.youtube.com/watch?v=YtvkS0BfCgA&t=9s" type="video/mp4" />
-              </video>
+              <ReactPlayer url='https://www.youtube.com/watch?v=YtvkS0BfCgA&t=9s' width={'100%'} height={460} />
             </div>
           </div>
         </div>
@@ -350,7 +349,7 @@ const Home = () => {
                         </tr>
                         <tr>
                           <td>B3</td>
-                          <td>Народные хоры/ансамбли</td>
+                          <td>Камерные хоры</td>
                           <td>от 12</td>
                         </tr>
                         <tr>
@@ -376,21 +375,31 @@ const Home = () => {
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>ФЕСТИВАЛЬ</AccordionItemButton>
+                    <AccordionItemButton>Фестиваль</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      С 24 по 28 октября 2023 года во Владивостоке пройдет II Дальневосточная хоровая олимпиада. Вторая хоровая олимпиада – это всероссийский фестиваль и конкурс хорового искусства с международным участием. Олимпиада включает в себя конкурсные прослушивания в 12 номинациях, фестивальные концерты, мастер-классы от членов жюри мирового уровня, торжественные церемонии открытия и закрытия, а также незабываемый заряд вдохновения.
+                    В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>МАСТЕР-КЛАССЫ</AccordionItemButton>
+                    <AccordionItemButton>Мастер-классы</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Первая хоровая олимпиада собрала более 2000 участников и стала настоящим праздником хоровой музыки. Вместе с вами мы можем сделать Олимпиаду доброй традицией и внести небольшой, но значимый вклад в поддержку и развитие хорового искусства!
+                    В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>Курсы повышения квалификации </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                    Допускается участие в мероприятиях Олимпиады всех желающих в качестве слушателей с получением удостоверения о прохождении курсов повышения квалификации в объеме 36 часов. Участники курсов получат возможность посещения всех конкурсных прослушиваний, фестивальных концертов, мастер-классов, церемоний открытия и закрытия Олимпиады, круглого стола для руководителей.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -419,7 +428,7 @@ const Home = () => {
                 </div>
 
               </div>
-              Заявки принимаются на электронную почту <b>с 99999 до 10 сентября 2023 г.</b>
+              Заявки на участие во II Дальневосточной хоровой олимпиаде принимаются по электронному адресу fareastchoir@gmail.com до <b>10 сентября 2023 года.</b>
             </div>
           </div>
         </div>
@@ -429,14 +438,14 @@ const Home = () => {
         <div className={styles.wrapper}>
           <div className={styles.participants} id="participants">
             <div className={styles.paragraphTitle}>участники</div>
-            Список участников будет добавлен позже
+            Список участников будет опубликован после окончания приема заявок.
           </div>
         </div>
 
       </FadeInSection>
       <FadeInSection>
         <div className={styles.wrapper}>
-          <div className={styles.jury} id="jury">
+          {/* <div className={styles.jury} id="jury">
             <div className={styles.paragraphTitle}>ЖЮРИ</div>
 
             <div className={styles.juryList}>
@@ -523,6 +532,10 @@ const Home = () => {
 "
               />
             </div>
+          </div> */}
+          <div className={styles.participants} id="jury">
+            <div className={styles.paragraphTitle}>жюри</div>
+            Состав жюри II Дальневосточной хоровой олимпиады будет объявлен позже.
           </div>
         </div>
       </FadeInSection>
@@ -581,7 +594,7 @@ const Home = () => {
               <div className={styles.photosAlbums}>
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-1")}
+                  onClick={() => redirect("/gallery-album/Церемония открытия Олимпиады")}
                 >
                   <img src={A1} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -591,7 +604,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-2")}
+                  onClick={() => redirect("/gallery-album/Конкурсные прослушивания 26.10")}
                 >
                   <img src={A2} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -601,7 +614,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-3")}
+                  onClick={() => redirect("/gallery-album/Концерт народных хоров в Филармонии 26.10")}
                 >
                   <img src={A3} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -611,7 +624,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-4")}
+                  onClick={() => redirect("/gallery-album/Концерт академических хоров в Мариинском театре 26.10")}
                 >
                   <img src={A4} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -621,7 +634,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-5")}
+                  onClick={() => redirect("/gallery-album/Конкурсные прослушивания 27.10")}
                 >
                   <img src={A5} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -631,7 +644,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-6")}
+                  onClick={() => redirect("/gallery-album/Дружеский концерт 27.10")}
                 >
                   <img src={A6} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -641,7 +654,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-7")}
+                  onClick={() => redirect("/gallery-album/Концерт духовной музыки 28.10")}
                 >
                   <img src={A7} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>
@@ -651,7 +664,7 @@ const Home = () => {
 
                 <div
                   className={styles.photoMain}
-                  onClick={() => redirect("/photo-album-8")}
+                  onClick={() => redirect("/gallery-album/Церемония закрытия")}
                 >
                   <img src={A8} className={styles.backPhoto} />
                   <div className={styles.photoMainTitle}>

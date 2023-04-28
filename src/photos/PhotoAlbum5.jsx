@@ -112,7 +112,7 @@ import A105 from '../assets/images/BA2A1802-min.jpg';
 
 import ImageGallery from 'react-image-gallery';
 
-export const PhotoAlbum5 = withLayout(() => {
+export const PhotoAlbum5 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -536,18 +536,9 @@ export const PhotoAlbum5 = withLayout(() => {
     },
   ];
 
-  const navigate = useNavigate();
-  const onMain = () => {
-    navigate("/");
-  };
-
   return (
     <div className={styles.wrapper}>
-      <button onClick={onMain} className={styles.mainBtn}>
-        На главную
-      </button>
-
       <ImageGallery items={photos} />
     </div>
   );
-});
+};

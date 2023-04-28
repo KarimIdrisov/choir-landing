@@ -38,7 +38,7 @@ import A32 from '../assets/images/IMG_5197-min.jpg';
 
 import ImageGallery from 'react-image-gallery';
 
-export const PhotoAlbum7 = withLayout(() => {
+export const PhotoAlbum7 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -177,11 +177,7 @@ export const PhotoAlbum7 = withLayout(() => {
 
   return (
     <div className={styles.wrapper}>
-      <button onClick={onMain} className={styles.mainBtn}>
-        На главную
-      </button>
-
       <ImageGallery items={photos} />
     </div>
   );
-});
+};

@@ -31,7 +31,7 @@ import A25 from '../assets/images/IMG_2010.jpg';
 
 import ImageGallery from 'react-image-gallery';
 
-export const PhotoAlbum3 = withLayout(() => {
+export const PhotoAlbum3 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -134,19 +134,10 @@ export const PhotoAlbum3 = withLayout(() => {
       thumbnail: A25
     },
   ];
-
-  const navigate = useNavigate();
-  const onMain = () => {
-    navigate("/");
-  };
-
   return (
     <div className={styles.wrapper}>
-      <button onClick={onMain} className={styles.mainBtn}>
-        На главную
-      </button>
 
       <ImageGallery items={photos} />
     </div>
   );
-});
+};

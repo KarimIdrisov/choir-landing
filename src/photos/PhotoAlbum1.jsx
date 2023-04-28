@@ -29,7 +29,7 @@ import A22 from '../assets/images/IMG_1631.jpg';
 
 import ImageGallery from 'react-image-gallery';
 
-export const PhotoAlbum1 = withLayout(() => {
+export const PhotoAlbum1 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -125,18 +125,9 @@ export const PhotoAlbum1 = withLayout(() => {
     },
   ];
 
-  const navigate = useNavigate();
-  const onMain = () => {
-    navigate("/");
-  };
-
   return (
     <div className={styles.wrapper}>
-      <button onClick={onMain} className={styles.mainBtn}>
-        На главную
-      </button>
-
       <ImageGallery items={photos} />
     </div>
   );
-});
+};

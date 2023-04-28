@@ -11,6 +11,7 @@ import { PhotoAlbum6 } from "../photos/PhotoAlbum6";
 import { PhotoAlbum7 } from "../photos/PhotoAlbum7";
 import { PhotoAlbum8 } from "../photos/PhotoAlbum8";
 import Gallery from "../pages/Gallery/Gallery";
+import GalleryAlbum from "../pages/GalleryAlbum/GalleryAlbum";
 
 const AppRouter = () => {
   return (
@@ -26,6 +27,7 @@ const AppRouter = () => {
         <Route path="/photo-album-7" element={<PhotoAlbum7 />} />
         <Route path="/photo-album-8" element={<PhotoAlbum8 />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery-album/:album" element={<GalleryAlbum />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
