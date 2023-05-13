@@ -30,7 +30,6 @@ export const Footer = () => {
                                 <div className={styles.info}>
                                     Елена Петухова
                                     <br />
-                                    <br />
                                     +7 (924) 236 67 03
                                 </div>
                             </div>
@@ -40,7 +39,6 @@ export const Footer = () => {
                                 </div>
                                 <div className={styles.info}>
                                     Юлия Новикова
-                                    <br />
                                     <br />
                                     +7 (914) 690 57 13
                                 </div>

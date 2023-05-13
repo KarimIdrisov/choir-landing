@@ -389,7 +389,7 @@ const Home = () => {
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>Фестиваль</AccordionItemButton>
+                    <AccordionItemButton>ФЕСТИВАЛЬ</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
@@ -399,7 +399,7 @@ const Home = () => {
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>Мастер-классы</AccordionItemButton>
+                    <AccordionItemButton>МАСТЕР-КЛАССЫ</AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
@@ -409,7 +409,7 @@ const Home = () => {
                 </AccordionItem>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton>Курсы повышения квалификации </AccordionItemButton>
+                    <AccordionItemButton>КУРСЫ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
@@ -442,7 +442,7 @@ const Home = () => {
                 </div>
 
               </div>
-              Заявки на участие во II Дальневосточной хоровой олимпиаде принимаются по электронному адресу fareastchoir@gmail.com до <b>10 сентября 2023 года.</b>
+              Заявки на участие во II Дальневосточной хоровой олимпиаде принимаются по электронному адресу fareastchoir@gmail.com до <br/><b>10 сентября 2023 года.</b>
             </div>
           </div>
         </div>

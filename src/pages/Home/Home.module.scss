@@ -325,7 +325,7 @@
 }
 
 .rules {
-    text-align: center;
+    text-align: left;
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 125px;
@@ -789,7 +789,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 150px;
-
+    
 }
 
 .venuesList {
@@ -822,10 +822,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    text-align: left;
     margin-bottom: 24px;
+
+    .places {
+        display: flex;
+    }
 
     @media (max-width: 1290px) {
         grid-template-columns: 1fr;
+        text-align: center;
 
         .places {
             display: none !important;
@@ -919,6 +925,7 @@
 }
 
 .galleryButtons button {
+    cursor: pointer;
     height: 36px;
     width: 36px;
     border: none;
@@ -948,6 +955,7 @@
     font-size: 18px;
     line-height: 24px;
     color: #303030;
+padding-top: 8px;
 }
 
 .results {
