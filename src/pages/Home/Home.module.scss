@@ -747,28 +747,27 @@
 }
 
 .juryList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     gap: 30px;
-    
+
     @media (max-width: 1260px) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 760px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    @media (max-width: 660px) {
+    @media (max-width: 560px) {
         display: grid;
         grid-template-columns: 1fr;
     }
 }
 
 .juryList img {
-    width: 256px;
-    height: 280px;
+    width: 216px;
+    height: 240px;
     border-radius: 8px;
 }
 
