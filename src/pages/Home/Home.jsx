@@ -20,10 +20,14 @@ import { useWindowSize } from "../../common/useWindowSize";
 import J1 from "../../assets/images/Соловьев.jpg";
 import J2 from "../../assets/images/Екимов.jpg";
 import J3 from "../../assets/images/Славкин.jpg";
-import J4 from "../../assets/images/Синенко.jpg";
-import J5 from "../../assets/images/Брызжина.jpg";
+import J4 from "../../assets/images/Климанов.jpg";
+import J5 from "../../assets/images/Тамидарова.jpg";
 import J6 from "../../assets/images/Чао.jpg";
-import { ControlledRefModalJury } from "../../components/Modal/JuryModal";
+import J7 from "../../assets/images/Алешко.jpg";
+import J8 from "../../assets/images/Сергеевна.jpg";
+import { ControlledRefModalJury,  } from "../../components/Modal/JuryModal";
+import { ControlledRefModalPart,  } from "../../components/Modal/PartModal";
+
 
 import V1 from "../../assets/images/Синий зал ДВФУ.jpg";
 import V2 from "../../assets/images/Средний зал.jpg";
@@ -46,6 +50,113 @@ import S2 from '../../assets/images/S2.jpg';
 import S3 from '../../assets/images/S3.jpg';
 import { useNavigate } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
+
+import P104 from '../../assets/images/part/1.jpg';
+import P103 from '../../assets/images/part/1.jpg';
+import P102 from '../../assets/images/part/2.jpg';
+import P101 from '../../assets/images/part/3.jpg';
+import P100 from '../../assets/images/part/4.jpg';
+import P99 from '../../assets/images/part/5.jpg';
+import P98 from '../../assets/images/part/6.jpg';
+import P97 from '../../assets/images/part/7.jpg';
+import P96 from '../../assets/images/part/8.jpg';
+import P95 from '../../assets/images/part/9.jpg';
+import P94 from '../../assets/images/part/10.jpg';
+import P93 from '../../assets/images/part/11.jpg';
+import P92 from '../../assets/images/part/12.jpg';
+import P91 from '../../assets/images/part/13.jpg';
+import P90 from '../../assets/images/part/14.jpg';
+import P89 from '../../assets/images/part/15.jpg';
+import P88 from '../../assets/images/part/16.jpg';
+import P87 from '../../assets/images/part/17.jpg';
+import P86 from '../../assets/images/part/18.jpg';
+import P85 from '../../assets/images/part/19.jpg';
+import P84 from '../../assets/images/part/20.jpg';
+import P83 from '../../assets/images/part/21.jpg';
+import P82 from '../../assets/images/part/22.jpg';
+import P81 from '../../assets/images/part/23.jpg';
+import P80 from '../../assets/images/part/24.jpg';
+import P79 from '../../assets/images/part/25.jpg';
+import P78 from '../../assets/images/part/26.jpg';
+import P77 from '../../assets/images/part/27.jpg';
+import P76 from '../../assets/images/part/28.jpg';
+import P75 from '../../assets/images/part/29.jpg';
+import P74 from '../../assets/images/part/30.jpg';
+import P73 from '../../assets/images/part/31.jpg';
+import P72 from '../../assets/images/part/32.jpg';
+import P71 from '../../assets/images/part/33.jpg';
+import P70 from '../../assets/images/part/34.jpg';
+import P69 from '../../assets/images/part/35.jpg';
+import P68 from '../../assets/images/part/36.jpg';
+import P67 from '../../assets/images/part/37.jpg';
+import P66 from '../../assets/images/part/38.jpg';
+import P65 from '../../assets/images/part/39.jpg';
+import P64 from '../../assets/images/part/40.jpg';
+import P63 from '../../assets/images/part/41.jpg';
+import P62 from '../../assets/images/part/42.jpg';
+import P61 from '../../assets/images/part/43.jpg';
+import P60 from '../../assets/images/part/44.jpg';
+import P59 from '../../assets/images/part/45.jpg';
+import P58 from '../../assets/images/part/46.jpg';
+import P57 from '../../assets/images/part/47.jpg';
+import P56 from '../../assets/images/part/48.jpg';
+import P55 from '../../assets/images/part/49.jpg';
+import P54 from '../../assets/images/part/50.jpg';
+import P53 from '../../assets/images/part/51.jpg';
+import P52 from '../../assets/images/part/52.jpg';
+import P51 from '../../assets/images/part/53.jpg';
+import P50 from '../../assets/images/part/54.jpg';
+import P49 from '../../assets/images/part/55.jpg';
+import P48 from '../../assets/images/part/56.jpg';
+import P47 from '../../assets/images/part/57.jpg';
+import P46 from '../../assets/images/part/58.jpg';
+import P45 from '../../assets/images/part/59.jpg';
+import P44 from '../../assets/images/part/60.jpg';
+import P43 from '../../assets/images/part/61.jpg';
+import P42 from '../../assets/images/part/62.jpg';
+import P41 from '../../assets/images/part/63.jpg';
+import P40 from '../../assets/images/part/64.jpg';
+import P39 from '../../assets/images/part/65.jpg';
+import P38 from '../../assets/images/part/66.jpg';
+import P37 from '../../assets/images/part/67.jpg';
+import P36 from '../../assets/images/part/68.jpg';
+import P35 from '../../assets/images/part/69.jpg';
+import P34 from '../../assets/images/part/70.jpg';
+import P33 from '../../assets/images/part/71.jpg';
+import P32 from '../../assets/images/part/72.jpg';
+import P31 from '../../assets/images/part/73.jpg';
+import P30 from '../../assets/images/part/74.jpg';
+import P29 from '../../assets/images/part/75.jpg';
+import P28 from '../../assets/images/part/76.jpg';
+import P27 from '../../assets/images/part/77.jpg';
+import P26 from '../../assets/images/part/76.jpg';
+import P25 from '../../assets/images/part/79.jpg';
+import P24 from '../../assets/images/part/80.jpg';
+import P23 from '../../assets/images/part/81.jpg';
+import P22 from '../../assets/images/part/82.jpg';
+import P21 from '../../assets/images/part/83.jpg';
+import P20 from '../../assets/images/part/84.jpg';
+import P19 from '../../assets/images/part/85.jpg';
+import P18 from '../../assets/images/part/86.jpg';
+import P17 from '../../assets/images/part/87.jpg';
+import P16 from '../../assets/images/part/88.jpg';
+import P15 from '../../assets/images/part/89.jpg';
+import P14 from '../../assets/images/part/90.jpg';
+import P13 from '../../assets/images/part/91.jpg';
+import P12 from '../../assets/images/part/92.jpg';
+import P11 from '../../assets/images/part/93.jpg';
+import P10 from '../../assets/images/part/94.jpg';
+import P9 from '../../assets/images/part/96.jpg';
+import P8 from '../../assets/images/part/97.jpg';
+import P7 from '../../assets/images/part/98.jpg';
+import P6 from '../../assets/images/part/99.jpg';
+import P5 from '../../assets/images/part/100.jpg';
+import P4 from '../../assets/images/part/101.jpg';
+import P3 from '../../assets/images/part/102.jpg';
+import P2 from '../../assets/images/part/103.jpg';
+import P1 from '../../assets/images/part/104.jpg';
+import P105 from '../../assets/images/part/105.jpg';
+import P1000 from '../../assets/images/part/95.jpg';
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -202,6 +313,527 @@ const Home = () => {
       }
     }, 25);
   }
+
+  const [fullPart, setFullPart] = useState(false);
+  const participants = [
+    {
+      image: P1,
+      short: "Детский хор «Соловушки»",
+      type: 'A2',
+    },
+    {
+      image: P2,
+      short: "Детско-юношеская хоровая капелла «Школьные годы»",
+      type: 'A2, C1',
+    },
+    {
+      image: P3,
+      short: "Камерный хор «Мадригал»",
+      type: 'B3, C1',
+    },
+    {
+      image: P4,
+      short: "Детский образцовый фолклорный ансамбль «Хорохоня»",
+      type: 'C3',
+    },
+    {
+      image: P5,
+      short: "Детский хор «Кантилена» им. И.Л. Сарнацкой",
+      type: 'A2, C1, C2',
+    },
+    {
+      image: P6,
+      short: "Вокальный ансамбль «Весёлые нотки»",
+      type: 'A4',
+    },
+    {
+      image: P7,
+      short: "Хор «Brevis» ГБОУ ДО ЦТРиМЭО «Радость»",
+      type: 'A2, C1, C2',
+    },
+    {
+      image: P8,
+      short: "Старший хор ГБОУ ДО ЦТРиМЭО «Радость»",
+      type: 'A2',
+    },
+
+    {
+      image: P9,
+      short: "«Соловушка» МКУ ДО «ДШИ» с. Рощино",
+      type: 'A4, C1, C2',
+    },
+    {
+      image: P1000,
+      short: "«Кантилена» МБУДО «ЦДМШ»",
+      type: 'B1, C1',
+    },
+    {
+      image: P10,
+      short: "Специальный хор «Гармония» МБУ ДО «Детская музыкальная школа №1  г. Южно-Сахалинска»",
+      type: 'C2',
+    },
+    {
+      image: P11,
+      short: "Вокальный ансамбль «Камертон» МБУ ДО «Детская музыкальная школа №1 г. Южно-Сахалинска»",
+      type: 'A4',
+    },
+    {
+      image: P12,
+      short: "Младший специальный хор «Весёлые нотки» МБУ ДО «Детская музыкальная школа №1 г. Южно-Сахалинска»",
+      type: 'A1',
+    },
+    {
+      image: P13,
+      short: "Академический народный хор «РОССИЯНЕ» Учебно-методического центра культуры и народного творчества, г. Чита",
+      type: 'B2',
+    },
+    {
+      image: P14,
+      short: "Вокальный ансамбль «Элегия» учебно-методического центра культуры и народного творчества, г. Чита",
+      type: 'B4',
+    },
+
+    {
+      image: P15,
+      short: "Образцовый коллектив хор девушек «Лира»",
+      type: 'B1, C1',
+    },
+    {
+      image: P16,
+      short: "Образцовый академический хор МБУ ДО «Детская музыкальная школа Амурского муниципального района»",
+      type: 'A2',
+    },
+    {
+      image: P17,
+      short: "Младший вокальный ансамбль Образцового академического хора МБУ ДО «Детская музыкальная школа Амурского муниципального района»",
+      type: 'A4',
+    },
+    {
+      image: P18,
+      short: "Старший вокальный ансамбль Образцового академического хора МБУ ДО «Детская музыкальная школа Амурского муниципального района»",
+      type: 'A4',
+    },
+    {
+      image: P19,
+      short: "Амурский камерный хор «Возрождение»",
+      type: 'B3, C1',
+    },
+    {
+      image: P20,
+      short: "Вокальный ансамбль «Fides» КГБПОУ Камчатский колледж искусств",
+      type: 'B4, C2',
+    },
+    {
+      image: P21,
+      short: "Народный коллектив Академический хор «Кредо»",
+      type: 'B2',
+    },
+    {
+      image: P22,
+      short: "Вокальный ансамбль «Созвучие» МБУ ДО «ЭДШИ АМР»",
+      type: 'A4',
+    },
+    {
+      image: P23,
+      short: "Женский академический хор КГБПОУ «Хабаровский краевой колледж искусств»",
+      type: 'A4, C1',
+    },
+    {
+      image: P24,
+      short: "Студенческий хор «Вместе» ФГБОУ ВО «Забайкальский государственный университет»",
+      type: 'B2',
+    },
+    {
+      image: P25,
+      short: "Хор «Мелодия» МБУДО «Жуковская детская школа искусств №1»",
+      type: 'A2, C2',
+    },
+    {
+      image: P28,
+      short: "Образцовый художественный коллектив Министерства образования и науки академический хор «Детство»",
+      type: 'A2, C1',
+    },
+    {
+      image: P29,
+      short: "Концертный хор «Крылья» Музыкальная школа имени композитора Евгения Крылатова",
+      type: 'A2',
+    },
+    {
+      image: P30,
+      short: "Фольклорный ансамбль «За реченькой диво» МБУ ДО «Детская школа искусств №3»",
+      type: 'C3',
+    },
+    {
+      image: P31,
+      short: "Архиерейский мужской хор «Знамение»",
+      type: 'B4, C1',
+    },
+    {
+      image: P32,
+      short: "Капелла мальчиков и юношей Свердловской государственной детской филармонии",
+      type: 'A3, B1, C1, C2',
+    },
+    {
+      image: P33,
+      short: "Специальный хор «Капель» МБ ОУ ДО «Детская школа искусств» МО «Холмский городской округ»",
+      type: 'A2',
+    },
+    {
+      image: P34,
+      short: "Детский народный хор «Златица» МБУДО «Детская школа искусств «Этнос»",
+      type: 'C3',
+    },
+    {
+      image: P35,
+      short: "Детский народный хор «Цветень» МБУДО «Детская школа искусств «Этнос»",
+      type: 'C3',
+    },
+    {
+      image: P36,
+      short: "Народный хор «С песней по жизни»",
+      type: 'C4',
+    },
+    {
+      image: P37,
+      short: "Народный ансамбль казачьей песни «Гуляй, братки»",
+      type: 'C4',
+    },
+    {
+      image: P38,
+      short: "Образцовый вокальный ансамбль «Весёлые нотки»",
+      type: 'A4',
+    },
+    {
+      image: P39,
+      short: "Вокальный ансамбль «Консонанс» МБУ ДО «Детская школа искусств №8» города Иркутска",
+      type: 'A4',
+    },
+    {
+      image: P40,
+      short: "Детский академический хор «ЛИРА» МБУ ДО «Детская школа искусств» Вяземского района",
+      type: 'A2',
+    },
+    {
+      image: P41,
+      short: "Образцовый ансамбль русской песни «Аюшки» (старший состав казачьей песни)",
+      type: 'C4',
+    },
+    {
+      image: P42,
+      short: "«Юные хористы» МБУ ДО «Детская школа искусств р.п.Хор муниципального района имени Лазо»",
+      type: 'A2',
+    },
+    {
+      image: P43,
+      short: "Академический женский хор «Прелюдия»",
+      type: 'B1',
+    },
+    {
+      image: P44,
+      short: "«Живая традиция» МБУ ДО ДШИ Ольгинский МО пгт Ольга",
+      type: 'C3',
+    },
+    {
+      image: P45,
+      short: "Хор «Montem» Санкт-Петербургский Горный университет императрицы Екатерины II",
+      type: 'B3, C1, C2',
+    },
+    {
+      image: P46,
+      short: "Студенческий хор русской песни «Кросно» КГБПОУ «Хабаровский колледж искусств»",
+      type: 'C4',
+    },
+    {
+      image: P47,
+      short: "Заслуженный творческий коллектив Приморского края Народный студенческий хор «Покров» ДВФУ",
+      type: 'C4',
+    },
+    {
+      image: P48,
+      short: "Народный хор «Черемушки» Районный дом культуры пгт Смоляниново",
+      type: 'B4',
+    },
+    {
+      image: P49,
+      short: "Вокальный ансамбль «Музыкальная волна» МКУДО ДШИ №2",
+      type: 'A4',
+    },
+    {
+      image: P50,
+      short: "Младший хор «Искорки» МБУДО «Детская школа искусств №6 г. Владивостока",
+      type: 'A1',
+    },
+    {
+      image: P51,
+      short: "Образцовый хор «Мальчиши» МБУДО «Детская школа искусств №6 г. Владивостока",
+      type: 'A3',
+    },
+    {
+      image: P52,
+      short: "Образцовый хор «Радуга» МБУДО «Детская школа искусств №6 г. Владивостока",
+      type: 'A2',
+    },
+    {
+      image: P53,
+      short: "Ансамбль русской песни «Белые россы» ГАПОУ «Приморский краевой колледж культуры»",
+      type: 'C4',
+    },
+    {
+      image: P54,
+      short: "Тюнгюлюнский народный хоровой коллектив Республики Саха (Якутия)",
+      type: 'B2, B4, C1, C4',
+    },
+    {
+      image: P55,
+      short: "Ансамбль народной песни «КАЛИНКА» МКУ ДО «Тернейская ДШИ»",
+      type: 'C3',
+    },
+    {
+      image: P56,
+      short: "Заслуженный коллектив самодеятельного художественного творчества Приморского края Народный хор русской песни",
+      type: 'C4',
+    },
+    {
+      image: P57,
+      short: "Фольклорный ансамбль «Белые росы»",
+      type: 'C4',
+    },
+    {
+      image: P58,
+      short: "Народный ансамбль русской песни «Берегиня»",
+      type: 'C4',
+    },
+    {
+      image: P59,
+      short: "Хор «Маячок» Детской школы искусств ДВГИИ",
+      type: 'A2',
+    },
+    {
+      image: P60,
+      short: "Заслуженный коллектив Приморского края народный хор русской песни «Приморские узоры» (п. Кавалерово)",
+      type: 'C4',
+    },
+    {
+      image: P61,
+      short: "Народная вокальная группа «Мужской разговор» (п. Кавалерово)",
+      type: 'C4',
+    },
+    {
+      image: P62,
+      short: "Вокальный ансамбль «Фантазёры «МКУДО «Детская школа искусств № 1» Артемовского городского округа",
+      type: 'A4',
+    },
+    {
+      image: P63,
+      short: "Народный хор «Улыбка» МБУК «Дом культуры «Традиции и современность»",
+      type: 'C4',
+    },
+    {
+      image: P64,
+      short: "Украинский народный хор им. А. Криля «Горлица» МБУК «Дом культуры «Традиции и современность»",
+      type: 'C4',
+    },
+    {
+      image: P65,
+      short: "Заслуженный коллектив Приморского края народный хор «Дети войны» МБУК «Дом культуры «Традиции и современность»",
+      type: 'C4',
+    },
+    {
+      image: P66,
+      short: "Вокальная группа «Русская песня« МБУК «Дом культуры «Традиции и современность»",
+      type: 'B4',
+    },
+    {
+      image: P67,
+      short: "Народный коллектив любительского художественного творчества «Ансамбль эстрадной песни «Ритмы Ретро»",
+      type: 'B4',
+    },
+    {
+      image: P68,
+      short: "«Прелестные глазки старший состав» МАУ ДО «Детская музыкальная школа № 6»",
+      type: 'A4, C1',
+    },
+    {
+      image: P69,
+      short: "«Прелестные глазки младший состав» МАУ ДО «Детская музыкальная школа № 6»",
+      type: 'A4',
+    },
+    {
+      image: P70,
+      short: "Образцовый коллектив хор народной песни «Оберег»",
+      type: 'C3',
+    },
+    {
+      image: P71,
+      short: "«Школьный вальс» Детская школа искусств Приморского краевого колледжа искусств",
+      type: 'A2',
+    },
+    {
+      image: P72,
+      short: "Ансамбль народной песни «СВЕТОЧ» МКУ ДО «ДШИ» с. Рощино",
+      type: 'C3',
+    },
+    {
+      image: P73,
+      short: "Любительский самодеятельный коллектив народного творчества ансамбль русской песни «Веренея»",
+      type: 'C4',
+    },
+    {
+      image: P74,
+      short: "Вокальный ансамбль «Диез» МБУДО «ДШИ ХМР»",
+      type: 'A4',
+    },
+    {
+      image: P75,
+      short: "Студия народной песни  «Вьюнок» МАУ ДО г. Хабаровска «Центр эстетического воспитания детей «Отрада»",
+      type: 'C3',
+    },
+    {
+      image: P76,
+      short: "Заслуженный коллектив Приморского края Образцовый ансамбль народной песни «Звонница» (младшая группа)",
+      type: 'C3',
+    },
+    {
+      image: P77,
+      short: "Заслуженный коллектив Приморского края Образцовый ансамбль народной песни «Звонница» (старшая группа)",
+      type: 'C3',
+    },
+    {
+      image: P78,
+      short: "Ансамбль народной песни «Ярица» ГАПОУ «Приморский краевой колледж искусств»",
+      type: 'C4',
+    },
+    {
+      image: P79,
+      short: "Заслуженный коллектив народного творчества образцовый хор народной песни «Млада»",
+      type: 'C3, C4',
+    },
+    {
+      image: P80,
+      short: "Младший хор Заслуженного коллектива ПК образцовой хоровой студии «Камертон»",
+      type: 'A1',
+    },
+    {
+      image: P81,
+      short: "Старший хор Заслуженного коллектива ПК образцовой хоровой студии «Камертон»",
+      type: 'C2',
+    },
+    {
+      image: P82,
+      short: "Хор мальчиков и юношей Заслуженного коллектива ПК образцовой хоровой студии «Камертон»",
+      type: 'A3',
+    },
+    {
+      image: P83,
+      short: "Сводный хор Студии народного творчества «Елань» МАУДО ДЮЦ «Сказка», КДШИ при ХККИ",
+      type: 'C3',
+    },
+    {
+      image: P84,
+      short: "Народный коллектив вокальный ансамбль «Пой, Friend!»",
+      type: 'B3, B4, C1',
+    },
+    {
+      image: P85,
+      short: "Серебряные нотки МБУДО «Детская школа искусств №4 г. Владивостока»",
+      type: 'A2',
+    },
+    {
+      image: P86,
+      short: "Академический хор Дальневосточного федерального университета",
+      type: 'B2',
+    },
+    {
+      image: P87,
+      short: "Ансамбль народной песни «Купаленка» МАУ ДО ЦЭВД «Отрада», г. Хабаровск",
+      type: 'С3',
+    },
+    {
+      image: P88,
+      short: "Младший хор «Фантазия» МБУДО «ДШИ № 8 им. А. В. Воробьёва г. Владивостока»",
+      type: 'A1',
+    },
+    {
+      image: P89,
+      short: "Младший хор мальчиков «Like music» Центральная детская музыкальная школа им. Б.Г. Павликовской",
+      type: 'C4',
+    },
+    {
+      image: P90,
+      short: "Хор младших классов «Акварель» МБУ ДО «Городская детская хоровая школа» НГО",
+      type: 'A1',
+    },
+    {
+      image: P91,
+      short: "Хор мальчиков и юношей «Рондо» МБУ ДО «Городская детская хоровая школа» НГО",
+      type: 'A3',
+    },
+    {
+      image: P92,
+      short: "Ансамбль русской песни «Елань»",
+      type: 'C4',
+    },
+    {
+      image: P93,
+      short: "Наяхинский народный хор имени Семена Гаврильевича Васильева",
+      type: 'B2',
+    },
+    {
+      image: P94,
+      short: "Майинский народный хор им. Н.Н. Васильевой",
+      type: 'B2',
+    },
+    {
+      image: P95,
+      short: "Хор младших классов «Светлячок» МБУДО «Детская школа искусств №1 им. С. Прокофьева г. Владивостока»",
+      type: 'A1',
+    },
+    {
+      image: P96,
+      short: "Хор старших классов «Алые паруса» МБУДО «Детская школа искусств №1 им. С. Прокофьева г. Владивостока»",
+      type: 'A2',
+    },
+    {
+      image: P97,
+      short: "Народный ансамбль русской песни «Прялица» МБУ Городской Центр Культуры",
+      type: 'C4',
+    },
+    {
+      image: P98,
+      short: "Камерный хор Дальневосточного государственного института искусств",
+      type: 'B3',
+    },
+    {
+      image: P99,
+      short: "Младший хор «Веснушки» МБУДО «ДМШ №2 г. Владивостока»",
+      type: 'A1',
+    },
+    {
+      image: P100,
+      short: "Старший хор «Весенние голоса» МБУДО «ДМШ №2 г. Владивостока»",
+      type: 'A2',
+    },
+    {
+      image: P101,
+      short: "Хор старших классов «Ассоль» МБУДО «ДШИ №3 г. Владивостока»",
+      type: 'A2',
+    },
+    {
+      image: P102,
+      short: "Хор «Аллегри» МБУ ДО «ДШИ №5»",
+      type: 'A1',
+    },
+    {
+      image: P103,
+      short: "Хор «Музыкальный калейдоскоп» МБУДО Детская Школа Искусств №7",
+      type: 'C2',
+    },
+    {
+      image: P105,
+      short: "Сводный хор «Радость» МОГБУ ДО «Ольская детская школа искусств» и ДШИ при ГАПОУ МКИ",
+      type: 'A2',
+    },
+  ]
 
   return (
     <div
@@ -392,7 +1024,7 @@ const Home = () => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                    В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
+                      В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -402,7 +1034,7 @@ const Home = () => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                    В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
+                      В рамках Дальневосточной хоровой олимпиады пройдут торжественные церемонии открытия и закрытия, а также фестивальные концерты участников на лучших площадках Владивостока.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -412,7 +1044,7 @@ const Home = () => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                    Допускается участие в мероприятиях Олимпиады всех желающих в качестве слушателей с получением удостоверения о прохождении курсов повышения квалификации в объеме 36 часов. Участники курсов получат возможность посещения всех конкурсных прослушиваний, фестивальных концертов, мастер-классов, церемоний открытия и закрытия Олимпиады, круглого стола для руководителей.
+                      Допускается участие в мероприятиях Олимпиады всех желающих в качестве слушателей с получением удостоверения о прохождении курсов повышения квалификации в объеме 36 часов. Участники курсов получат возможность посещения всех конкурсных прослушиваний, фестивальных концертов, мастер-классов, церемоний открытия и закрытия Олимпиады, круглого стола для руководителей.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -447,7 +1079,7 @@ const Home = () => {
                 </div>
 
               </div>
-              Заявки на участие во II Дальневосточной хоровой олимпиаде принимаются по электронному адресу fareastchoir@gmail.com до <br/><b>10 сентября 2023 года.</b>
+              Приём заявок окончен.
             </div>
           </div>
         </div>
@@ -457,7 +1089,33 @@ const Home = () => {
         <div className={styles.wrapper}>
           <div className={styles.participants} id="participants">
             <div className={styles.paragraphTitle}>участники</div>
-            Список участников будет опубликован после окончания приема заявок.
+
+            <div
+              className={styles.participantsTable}
+              style={{ maxHeight: fullPart ? "100%" : "1000px" }}
+            >
+              {participants.map((item) => (
+                <ControlledRefModalPart item={item} />
+              ))}
+            </div>
+
+            <div
+              className={styles.moreButton}
+              onClick={() => {
+                if (fullPart) {
+                  const elementToScroll = document.getElementById(
+                    "#participants"?.replace("#", "")
+                  );
+                  window.scrollTo({
+                    top: elementToScroll.offsetTop - 100,
+                    behavior: "smooth",
+                  });
+                }
+                setFullPart(!fullPart);
+              }}
+            >
+              <button>{fullPart ? "СКРЫТЬ" : "ПОКАЗАТЬ ВСЕХ"}</button>
+            </div>
           </div>
         </div>
 
@@ -465,15 +1123,16 @@ const Home = () => {
       <FadeInSection>
         <div className={styles.wrapper}>
           <div className={styles.jury} id="jury">
-            <div className={styles.paragraphTitle}>ЖЮРИ</div>
 
             <div className={styles.juryList}>
+
+              <div className={styles.juryTitle} style={{ textAlign: 'left' }}>ЖЮРИ</div>
               <ControlledRefModalJury
                 trigger={
                   <div className={styles.juryItem}>
                     <img src={J1} width={265} height={345} alt="jury" />
                     <span className={styles.juryName}>
-                      АЛЕКСАНДР <br /> СОЛОВЬЕВ
+                      Александр Соловьев
                     </span>
                   </div>
                 }
@@ -502,13 +1161,13 @@ const Home = () => {
               <ControlledRefModalJury
                 trigger={
                   <div className={styles.juryItem}>
-                    <img src={J2} alt="jury" />
+                    <img src={J4} alt="jury" />
                     <span className={styles.juryName}>
-                      СЕМЁН <br /> КЛИМАНОВ
+                      Семён Климанов
                     </span>
                   </div>
                 }
-                image={J2}
+                image={J4}
                 bio="Семён Михайлович Климанов (Минск, Беларусь)
                 С 2022 года заведующий кафедрой хорового дирижирования, выпускник Белорусской государственной академии музыки (класс народного артиста СССР, профессора В.В.Ровдо).
                 Постоянно принимает участие в работе жюри республиканских и международных творческих конкурсов, смотров, отборов, проводимых как в Республике Беларусь, так и за ее пределами. Проводит дирижерские мастер-классы, тренинги и открытые лекции. Является сопредседателем Ассоциации руководителей хоров мальчиков и юношей Белорусского союза музыкальных деятелей, членом оргкомитета республиканских конкурсов.
@@ -522,7 +1181,7 @@ const Home = () => {
                   <div className={styles.juryItem}>
                     <img src={J3} alt="jury" />
                     <span className={styles.juryName}>
-                      МИХАИЛ <br /> СЛАВКИН
+                      Михаил Славкин
                     </span>
                   </div>
                 }
@@ -538,7 +1197,7 @@ const Home = () => {
                   <div className={styles.juryItem}>
                     <img src={J5} alt="jury" />
                     <span className={styles.juryName}>
-                      МИЛЯУША <br /> ТАМИНДАРОВА
+                      Миляуша Таминдарова
                     </span>
                   </div>
                 }
@@ -557,7 +1216,7 @@ const Home = () => {
                   <div className={styles.juryItem}>
                     <img src={J6} alt="jury" />
                     <span className={styles.juryName}>
-                      ВАН <br /> ЧАО
+                      Ван Чао
                     </span>
                   </div>
                 }
@@ -568,6 +1227,30 @@ const Home = () => {
                 Член 3-го Международного конкурса хорового дирижирования имени Б.Г.Тевлина, член 15-го и 16-го Китайских международных хоровых фестивалей, главный режиссер 15-го Китайского хорового фестиваля, директор Китайско-Российского международного хорового семинара Российско-Китайского фестиваля культуры, член экспертного комитета Венского международного молодежного музыкального фестиваля, директор Форума хорового саммита Китайских университетов.
                 
                 Дирижерские и творческие работы Ван Чао получили 29 наград международных и 34 награды китайских конкурсов. Репрезентативным работами стали произведения для солистов, хора, а также симфония «Гэн Цзишан», симфоническая поэма «Свет», фортепианная сюита «Сцена детства» и многие другие. Подготовленный им «Сборник выдающихся хоровых произведений для колледжей и университетов» стал ведущим учебником в Китае, несколько альбомов были изданы в китайских звукозаписывающих компаниях."
+              />
+              <ControlledRefModalJury
+                trigger={
+                  <div className={styles.juryItem}>
+                    <img src={J7} alt="jury" />
+                    <span className={styles.juryName}>
+                      Елена Алешко
+                    </span>
+                  </div>
+                }
+                image={J7}
+                bio=""
+              />
+              <ControlledRefModalJury
+                trigger={
+                  <div className={styles.juryItem}>
+                    <img src={J8} alt="jury" />
+                    <span className={styles.juryName}>
+                      Татьяна Сергеева
+                    </span>
+                  </div>
+                }
+                image={J8}
+                bio=""
               />
             </div>
           </div>
