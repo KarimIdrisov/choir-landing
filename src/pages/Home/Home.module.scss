@@ -324,9 +324,20 @@
     height: 461px;
 }
 
+
+.rulesButtons {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    div {
+        flex-basis: 33%;
+    }
+}
+
 .rules {
     text-align: left;
-    max-width: 1200px;
+    max-width: 892px;
     margin: 0 auto;
     padding-bottom: 125px;
 
@@ -337,7 +348,7 @@
 
 .rulesContent {
     display: grid;
-    grid-template-columns: 206px 1fr;
+    grid-template-columns: 1fr;
     gap: 102px;
 
 
@@ -348,7 +359,7 @@
 }
 
 .rulesTitle {
-    text-align: center;
+    padding-left: 120px;
     display: block;
     font-family: 'FoglihtenNo06';
     font-style: normal;
@@ -465,21 +476,35 @@
 }
 
 .documents {
-    text-align: center;
-    max-width: 1200px;
+    max-width: 892px;
     margin: 0 auto;
     padding-bottom: 125px;
 }
 
+.documentsTitle {
+    padding-left: 120px;
+    display: block;
+    font-family: 'FoglihtenNo06';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 81px;
+    margin-bottom: 20px;
+    color: #303030;
+
+    @media (max-width: 800px) {
+        font-size: 38px;
+    }
+}
+
 .documentsContent {
+
     text-align: left;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     color: #303030;
 
-    max-width: 785px;
-    margin: 0 auto;
 
     @media (max-width: 900px) {
         margin: 0 20px;
@@ -604,6 +629,7 @@
 }
 
 .paragraphTitle {
+    margin-right: 260px;
     text-align: center;
     font-family: 'FoglihtenNo06';
     font-style: normal;
