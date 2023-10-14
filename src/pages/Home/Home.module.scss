@@ -612,7 +612,7 @@
 
 .participants {
     text-align: left;
-    max-width: 1200px;
+    max-width: 1460px;
     margin: 0 auto;
 
 
@@ -655,7 +655,7 @@
     margin-bottom: 50px;
     overflow: hidden;
 
-    @media (max-width: 1680px) {
+    @media (max-width: 1480px) {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -731,7 +731,7 @@
     justify-content: center;
     text-align: left;
     gap: 10px;
-    max-width: 350px;
+    max-width: 277px;
 }
 
 .participantType {
