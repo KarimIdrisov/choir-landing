@@ -1,8 +1,7 @@
+import { useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { withLayout } from "../../layout/Layout";
-import { useAnimation } from "framer-motion";
 
-import styles from "./Home.module.scss";
 import {
   Accordion,
   AccordionItem,
@@ -10,58 +9,54 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import Slider from "react-slick";
+import nextIcon from "../../assets/icons/left.svg";
 import pdfLogo from "../../assets/icons/pdf.svg";
 import prevIcon from "../../assets/icons/right.svg";
-import nextIcon from "../../assets/icons/left.svg";
-import { VenueCard } from "../../components/VenueCard/VenueCard";
-import Slider from "react-slick";
 import { useWindowSize } from "../../common/useWindowSize";
+import { VenueCard } from "../../components/VenueCard/VenueCard";
+import styles from "./Home.module.scss";
 
-import J1 from "../../assets/images/Соловьев.jpg";
-import J2 from "../../assets/images/Екимов.jpg";
-import J3 from "../../assets/images/Славкин.jpg";
+import J7 from "../../assets/images/Алешко.jpg";
 import J4 from "../../assets/images/Климанов.jpg";
+import J8 from "../../assets/images/Сергеевна.jpg";
+import J3 from "../../assets/images/Славкин.jpg";
+import J1 from "../../assets/images/Соловьев.jpg";
 import J5 from "../../assets/images/Тамидарова.jpg";
 import J6 from "../../assets/images/Чао.jpg";
-import J7 from "../../assets/images/Алешко.jpg";
-import J8 from "../../assets/images/Сергеевна.jpg";
 import { ControlledRefModalJury, } from "../../components/Modal/JuryModal";
 import { ControlledRefModalPart, } from "../../components/Modal/PartModal";
 
 
-import V1 from "../../assets/images/Синий зал ДВФУ.jpg";
-import V2 from "../../assets/images/Средний зал.jpg";
-import V3 from "../../assets/images/Мариинка.jpg";
-import V4 from "../../assets/images/Приморская краевая филармония.jpg";
 import V5 from "../../assets/images/Евангелическо-Лютеранская церковь.jpg";
+import V4 from "../../assets/images/Приморская краевая филармония.jpg";
+import V1 from "../../assets/images/Синий зал ДВФУ.jpg";
 import V6 from "../../assets/images/Собор.jpg";
+import V2 from "../../assets/images/Средний зал.jpg";
 
-import A1 from "../../assets/images/IMG_1354.jpg";
-import A2 from "../../assets/images/BA2A8620-min.jpg";
-import A3 from "../../assets/images/IMG_2010.jpg";
-import A4 from "../../assets/images/IMG_5258-min.jpg";
 import A5 from "../../assets/images/BA2A0695-min.jpg";
+import A2 from "../../assets/images/BA2A8620-min.jpg";
+import A1 from "../../assets/images/IMG_1354.jpg";
+import A3 from "../../assets/images/IMG_2010.jpg";
 import A6 from "../../assets/images/IMG_2087-min.jpg";
-import A7 from "../../assets/images/IMG_5197-min.jpg";
 import A8 from "../../assets/images/IMG_3448-min.jpg";
+import A7 from "../../assets/images/IMG_5197-min.jpg";
+import A4 from "../../assets/images/IMG_5258-min.jpg";
 
-import S1 from '../../assets/images/Slide1.jpg';
+import ReactPlayer from "react-player/youtube";
+import { useNavigate } from "react-router-dom";
 import S2 from '../../assets/images/S2.jpg';
 import S3 from '../../assets/images/S3.jpg';
-import { useNavigate } from "react-router-dom";
-import ReactPlayer from "react-player/youtube";
+import S1 from '../../assets/images/Slide1.jpg';
 
-import P104 from '../../assets/images/part/1.jpg';
 import P103 from '../../assets/images/part/1.jpg';
-import P102 from '../../assets/images/part/2.jpg';
-import P101 from '../../assets/images/part/3.jpg';
-import P100 from '../../assets/images/part/4.jpg';
-import P99 from '../../assets/images/part/5.jpg';
-import P98 from '../../assets/images/part/6.jpg';
-import P97 from '../../assets/images/part/7.jpg';
-import P96 from '../../assets/images/part/8.jpg';
-import P95 from '../../assets/images/part/9.jpg';
 import P94 from '../../assets/images/part/10.jpg';
+import P5 from '../../assets/images/part/100.jpg';
+import P4 from '../../assets/images/part/101.jpg';
+import P3 from '../../assets/images/part/102.jpg';
+import P2 from '../../assets/images/part/103.jpg';
+import P1 from '../../assets/images/part/104.jpg';
+import P105 from '../../assets/images/part/105.jpg';
 import P93 from '../../assets/images/part/11.jpg';
 import P92 from '../../assets/images/part/12.jpg';
 import P91 from '../../assets/images/part/13.jpg';
@@ -71,6 +66,7 @@ import P88 from '../../assets/images/part/16.jpg';
 import P87 from '../../assets/images/part/17.jpg';
 import P86 from '../../assets/images/part/18.jpg';
 import P85 from '../../assets/images/part/19.jpg';
+import P102 from '../../assets/images/part/2.jpg';
 import P84 from '../../assets/images/part/20.jpg';
 import P83 from '../../assets/images/part/21.jpg';
 import P82 from '../../assets/images/part/22.jpg';
@@ -81,6 +77,7 @@ import P78 from '../../assets/images/part/26.jpg';
 import P77 from '../../assets/images/part/27.jpg';
 import P76 from '../../assets/images/part/28.jpg';
 import P75 from '../../assets/images/part/29.jpg';
+import P101 from '../../assets/images/part/3.jpg';
 import P74 from '../../assets/images/part/30.jpg';
 import P73 from '../../assets/images/part/31.jpg';
 import P72 from '../../assets/images/part/32.jpg';
@@ -91,6 +88,7 @@ import P68 from '../../assets/images/part/36.jpg';
 import P67 from '../../assets/images/part/37.jpg';
 import P66 from '../../assets/images/part/38.jpg';
 import P65 from '../../assets/images/part/39.jpg';
+import P100 from '../../assets/images/part/4.jpg';
 import P64 from '../../assets/images/part/40.jpg';
 import P63 from '../../assets/images/part/41.jpg';
 import P62 from '../../assets/images/part/42.jpg';
@@ -101,6 +99,7 @@ import P58 from '../../assets/images/part/46.jpg';
 import P57 from '../../assets/images/part/47.jpg';
 import P56 from '../../assets/images/part/48.jpg';
 import P55 from '../../assets/images/part/49.jpg';
+import P99 from '../../assets/images/part/5.jpg';
 import P54 from '../../assets/images/part/50.jpg';
 import P53 from '../../assets/images/part/51.jpg';
 import P52 from '../../assets/images/part/52.jpg';
@@ -111,6 +110,7 @@ import P48 from '../../assets/images/part/56.jpg';
 import P47 from '../../assets/images/part/57.jpg';
 import P46 from '../../assets/images/part/58.jpg';
 import P45 from '../../assets/images/part/59.jpg';
+import P98 from '../../assets/images/part/6.jpg';
 import P44 from '../../assets/images/part/60.jpg';
 import P43 from '../../assets/images/part/61.jpg';
 import P42 from '../../assets/images/part/62.jpg';
@@ -121,16 +121,15 @@ import P38 from '../../assets/images/part/66.jpg';
 import P37 from '../../assets/images/part/67.jpg';
 import P36 from '../../assets/images/part/68.jpg';
 import P35 from '../../assets/images/part/69.jpg';
+import P97 from '../../assets/images/part/7.jpg';
 import P34 from '../../assets/images/part/70.jpg';
 import P33 from '../../assets/images/part/71.jpg';
 import P32 from '../../assets/images/part/72.jpg';
 import P31 from '../../assets/images/part/73.jpg';
 import P30 from '../../assets/images/part/74.jpg';
-import P29 from '../../assets/images/part/75.jpg';
 import P28 from '../../assets/images/part/76.jpg';
-import P27 from '../../assets/images/part/77.jpg';
-import P26 from '../../assets/images/part/76.jpg';
 import P25 from '../../assets/images/part/79.jpg';
+import P96 from '../../assets/images/part/8.jpg';
 import P24 from '../../assets/images/part/80.jpg';
 import P23 from '../../assets/images/part/81.jpg';
 import P22 from '../../assets/images/part/82.jpg';
@@ -141,22 +140,17 @@ import P18 from '../../assets/images/part/86.jpg';
 import P17 from '../../assets/images/part/87.jpg';
 import P16 from '../../assets/images/part/88.jpg';
 import P15 from '../../assets/images/part/89.jpg';
+import P95 from '../../assets/images/part/9.jpg';
 import P14 from '../../assets/images/part/90.jpg';
 import P13 from '../../assets/images/part/91.jpg';
 import P12 from '../../assets/images/part/92.jpg';
 import P11 from '../../assets/images/part/93.jpg';
 import P10 from '../../assets/images/part/94.jpg';
+import P1000 from '../../assets/images/part/95.jpg';
 import P9 from '../../assets/images/part/96.jpg';
 import P8 from '../../assets/images/part/97.jpg';
 import P7 from '../../assets/images/part/98.jpg';
 import P6 from '../../assets/images/part/99.jpg';
-import P5 from '../../assets/images/part/100.jpg';
-import P4 from '../../assets/images/part/101.jpg';
-import P3 from '../../assets/images/part/102.jpg';
-import P2 from '../../assets/images/part/103.jpg';
-import P1 from '../../assets/images/part/104.jpg';
-import P105 from '../../assets/images/part/105.jpg';
-import P1000 from '../../assets/images/part/95.jpg';
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
@@ -446,8 +440,8 @@ const Home = () => {
     },
     {
       image: P25,
-      short: "Концертный хор «Крылья» Музыкальная школа имени композитора Евгения Крылатова (Пермь)",
-      type: 'A2, C1',
+      short: "Образцовый вокальный ансамбль «Светлячок» МКОУ ДО ДШИ (Николаевск-на Амуре)",
+      type: 'A4',
     },
     {
       image: P28,
@@ -511,8 +505,8 @@ const Home = () => {
     },
     {
       image: P41,
-      short: "Образцовый ансамбль русской песни «Аюшки» (старший состав казачьей песни) (c. Тополево, Хабаровский край)",
-      type: 'C4',
+      short: "Концертный хор «Крылья» Музыкальная школа имени композитора Евгения Крылатова (Пермь)",
+      type: 'A2, C1',
     },
     {
       image: P42,
