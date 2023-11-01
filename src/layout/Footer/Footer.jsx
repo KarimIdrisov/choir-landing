@@ -1,8 +1,8 @@
 import React from "react";
 
-import styles from './Footer.module.scss';
 import Icons from "../../common/icons";
 import { Logo } from "../../components/Logo";
+import styles from './Footer.module.scss';
 
 export const Footer = () => {
 
