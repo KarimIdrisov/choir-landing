@@ -1400,7 +1400,7 @@ const Home = () => {
             <div className={styles.results}>
               <div className={styles.downloadResult}>
                 <a href="/Результаты2.pdf" download={"Результаты.pdf"}>
-                  2022
+                  2023
                 </a>
               </div>
             </div>
